@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../zdk-dist/css/zdk-materialize.css">
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="../zdk-dist/js/utils/require.js"></script>
+    <script type="text/javascript" src="../zdk-dist/js/require-config.js">
+    </script>
+    <!--<script type="text/javascript" src="../zdk-dist/js/components/waves.js"></script>-->
+    <style>
+        .test-container button {
+            background-color: #4a148c;
+        }
+
+        .test-container .test {
+            background-color: #00acc1;
+        }
+
+        .test {
+            background-color: #00C853;
+        }
+    </style>
+</head>
+<body>
+    <div class="zdk-materialize" style="width: auto; min-width: 100px; max-width: 700px; height: 500px; position: relative; margin: 50px auto; align-content: center">
+        <button class="waves-effect waves-light btn">button</button>
+        <button class="waves-effect waves-light btn">button</button>
+        <button class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</button>
+        <button class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</button>
+        <div class="fixed-action-btn horizontal click-to-toggle" style="top: 45px; right: 24px;">
+            <a class="btn-floating btn-large red">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+                <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+                <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+            </ul>
+        </div>
+        <div class="fixed-action-btn horizontal click-to-toggle" style="top: 125px; right: 24px;">
+            <a class="btn-floating btn-large red">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+                <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+                <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+            </ul>
+        </div>
+        <a class="add-wave-effect-btn btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+    </div>
+    <div class="test-container" style="position: absolute;top: 0;">
+        <div class="mini-container">
+            <button class="test">sdfsdfsdfs</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        require(['jquery', 'zdkmaterial/waves', 'zdkmaterial/buttons'], function($, Waves) {
+            $(document).ready(function($){
+                $('.add-wave-effect-btn').click(function(){
+                    $('.zdk-materialize').prepend('<button class="waves-effect waves-light btn">button</button>');
+                });
+            }) ;
+        });
+    </script>
+</body>
+</html>
