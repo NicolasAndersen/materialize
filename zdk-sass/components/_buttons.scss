@@ -1,7 +1,5 @@
-// shared styles
-
-.#{$namespace} {
-
+#{$namespace} {
+  // shared styles
   .btn,
   .btn-flat {
     border: $button-border;
