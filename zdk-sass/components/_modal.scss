@@ -1,4 +1,4 @@
-.modal {
+.zm-modal {
   @extend .z-depth-4;
 
   display: none;
@@ -16,54 +16,55 @@
   will-change: top, opacity;
 
   @media #{$medium-and-down} {
-   width: 80%;
+    width: 80%;
   }
 
-  h1,h2,h3,h4 {
+  h1, h2, h3, h4 {
     margin-top: 0;
   }
 
-  .modal-content {
+  .zm-modal-content {
     padding: 24px;
   }
-  .modal-close {
+  .zm-modal-close {
     cursor: pointer;
   }
 
-  .modal-footer {
+  .zm-modal-footer {
     border-radius: 0 0 2px 2px;
     background-color: #fafafa;
     padding: 4px 6px;
     height: 56px;
     width: 100%;
 
-    .btn, .btn-flat {
+    .zm-btn, .zm-btn-flat {
       float: right;
       margin: 6px 0;
     }
   }
 }
-.lean-overlay {
-    position: fixed;
-    z-index:999;
-    top: -100px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 125%;
-    width: 100%;
-    background: #000;
-    display: none;
 
-    will-change: opacity;
+.zm-lean-overlay {
+  position: fixed;
+  z-index: 999;
+  top: -100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125%;
+  width: 100%;
+  background: #000;
+  display: none;
+
+  will-change: opacity;
 }
 
 // Modal with fixed action footer
-.modal.modal-fixed-footer {
+.zm-modal.zm-modal-fixed-footer {
   padding: 0;
   height: 70%;
 
-  .modal-content {
+  .zm-modal-content {
     position: absolute;
     height: calc(100% - 56px);
     max-height: 100%;
@@ -71,15 +72,15 @@
     overflow-y: auto;
   }
 
-  .modal-footer {
-    border-top: 1px solid rgba(0,0,0,.1);
+  .zm-modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, .1);
     position: absolute;
     bottom: 0;
   }
 }
 
 // Modal Bottom Sheet Style
-.modal.bottom-sheet {
+.zm-modal.bottom-sheet {
   top: auto;
   bottom: -100%;
   margin: 0;

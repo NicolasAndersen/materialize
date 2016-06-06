@@ -1,25 +1,25 @@
-.materialboxed {
+.zm-materialboxed {
   display: block;
   cursor: zoom-in;
   position: relative;
   transition: opacity .4s;
 
   &:hover {
-    &:not(.active) {
+    &:not(.zm-active) {
       opacity: .8;
     }
     will-change: left, top, width, height;
   }
 }
 
-.materialboxed.active {
+.zm-materialboxed.zm-active {
   cursor: zoom-out;
 }
 
-#materialbox-overlay {
-  position:fixed;
-  top:0;
-  left:0;
+#zm-materialbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
   background-color: #292929;
@@ -27,7 +27,12 @@
 
   will-change: opacity;
 }
-.materialbox-caption {
+
+.zm-materialbox-overlay {
+  @extend #zm-materialbox-overlay;
+}
+
+.zm-materialbox-caption {
   position: fixed;
   display: none;
   color: #fff;

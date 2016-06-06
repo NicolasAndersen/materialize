@@ -20,19 +20,16 @@ body {
   margin: 0;
 }
 
+/* HTML5 display definitions
+   ========================================================================== */
 
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
 #{$namespace} {
-
-  /* HTML5 display definitions
-     ========================================================================== */
-
-  /**
-   * Correct `block` display not defined for any HTML5 element in IE 8/9.
-   * Correct `block` display not defined for `details` or `summary` in IE 10/11
-   * and Firefox.
-   * Correct `block` display not defined for `main` in IE 11.
-   */
-
   article,
   aside,
   details,
@@ -251,7 +248,6 @@ body {
    * 2. Correct font properties not being inherited.
    * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
    */
-
   button,
   input,
   optgroup,

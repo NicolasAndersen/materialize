@@ -1,4 +1,4 @@
-.side-nav {
+.zm-side-nav {
   position: fixed;
   width: 240px;
   left: 0;
@@ -27,16 +27,17 @@
     transform: translateX(100%);
   }
 
-  .collapsible {
+  .zm-collapsible {
     margin: 0;
   }
-
 
   li {
     float: none;
     line-height: $sidenav-item-height;
 
-    &.active { background-color: rgba(0,0,0,.05); }
+    &.zm-active {
+      background-color: rgba(0, 0, 0, .05);
+    }
   }
 
   a {
@@ -47,23 +48,32 @@
     line-height: $sidenav-item-height;
     padding: 0 $sidenav-padding-right;
 
-    &:hover { background-color: rgba(0,0,0,.05);}
+    &:hover {
+      background-color: rgba(0, 0, 0, .05);
+    }
 
-    &.btn, &.btn-large, &.btn-flat, &.btn-floating {
+    &.zm-btn, &.zm-btn-large, &.zm-btn-flat, &.zm-btn-floating {
       margin: 10px 15px;
     }
 
-    &.btn,
-    &.btn-large,
-    &.btn-floating { color: $button-raised-color; }
-    &.btn-flat { color: $button-flat-color; }
+    &.zm-btn,
+    &.zm-btn-large,
+    &.zm-btn-floating {
+      color: $button-raised-color;
+    }
+    &.zm-btn-flat {
+      color: $button-flat-color;
+    }
 
-    &.btn:hover,
-    &.btn-large:hover { background-color: lighten($button-raised-background, 5%); }
-    &.btn-floating:hover { background-color: $button-raised-background; }
+    &.zm-btn:hover,
+    &.zm-btn-large:hover {
+      background-color: lighten($button-raised-background, 5%);
+    }
+    &.zm-btn-floating:hover {
+      background-color: $button-raised-background;
+    }
   }
 }
-
 
 // Touch interaction
 .drag-target {
@@ -74,9 +84,8 @@
   z-index: 998;
 }
 
-
 // Hidden side-nav for all sizes
-.side-nav.fixed {
+.zm-side-nav.zm-fixed {
   a {
     display: block;
     padding: 0 $sidenav-padding-right;
@@ -84,9 +93,8 @@
   }
 }
 
-
 // Fixed side-nav shown
-.side-nav.fixed {
+.zm-side-nav.zm-fixed {
   left: 0;
   transform: translateX(0);
   position: fixed;
@@ -100,7 +108,7 @@
 
 // Fixed sideNav hide on smaller
 @media #{$medium-and-down} {
-  .side-nav.fixed {
+  .zm-side-nav.zm-fixed {
     transform: translateX(-105%);
 
     &.right-aligned {
@@ -109,15 +117,13 @@
   }
 }
 
-
-.side-nav .collapsible-body li.active,
-.side-nav.fixed .collapsible-body li.active {
+.zm-side-nav .zm-collapsible-body li.zm-active,
+.zm-side-nav.zm-fixed .zm-collapsible-body li.zm-active {
   background-color: $primary-color;
   a {
     color: $sidenav-bg-color;
   }
 }
-
 
 #sidenav-overlay {
   position: fixed;
@@ -126,7 +132,7 @@
   right: 0;
 
   height: 120vh;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, .5);
   z-index: 997;
 
   will-change: opacity;

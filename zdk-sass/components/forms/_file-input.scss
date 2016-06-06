@@ -9,9 +9,11 @@
     padding-left: 10px;
   }
 
-  input.file-path { width: 100%; }
+  input.file-path {
+    width: 100%;
+  }
 
-  .btn {
+  .zm-btn {
     float: left;
     height: $input-height;
     line-height: $input-height;

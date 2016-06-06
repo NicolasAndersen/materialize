@@ -3,16 +3,19 @@
   max-width: 1280px;
   width: 90%;
 }
+
 @media #{$medium-and-up} {
   .zm-container {
     width: 85%;
   }
 }
+
 @media #{$large-and-up} {
   .zm-container {
     width: 70%;
   }
 }
+
 .zm-container .zm-row {
   margin-left: (-1 * $gutter-width / 2);
   margin-right: (-1 * $gutter-width / 2);
@@ -32,7 +35,6 @@
     padding-top: 0;
   }
 }
-
 
 .zm-row {
   margin-left: auto;

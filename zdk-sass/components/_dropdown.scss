@@ -1,4 +1,4 @@
-.dropdown-content {
+.zm-dropdown-content {
   @extend .z-depth-1;
   background-color: $dropdown-bg-color;
   margin: 0;
@@ -21,15 +21,15 @@
     text-align: left;
     text-transform: none;
 
-    &:hover, &.active, &.selected {
+    &:hover, &.zm-active, &.zm-selected {
       background-color: $dropdown-hover-bg-color;
     }
 
-    &.active.selected {
+    &.zm-active.zm-selected {
       background-color: darken($dropdown-hover-bg-color, 5%);
     }
 
-    &.divider {
+    &.zm-divider {
       min-height: 0;
       height: 1px;
     }

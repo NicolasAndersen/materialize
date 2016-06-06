@@ -7,7 +7,7 @@
 
 input[type=range],
 input[type=range] + .thumb {
-  @extend .no-select;
+  @extend .zm-no-select;
   cursor: pointer;
 }
 
@@ -47,7 +47,7 @@ input[type=range] + .thumb {
     transform: rotate(45deg);
   }
 
-  &.active {
+  &.zm-active {
     border-radius: 50% 50% 50% 0;
 
     .value {

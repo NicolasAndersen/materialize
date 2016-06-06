@@ -12,8 +12,8 @@
   .tab {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
     display: block;
     float: left;
     text-align: center;
@@ -41,7 +41,7 @@
       }
     }
 
-    &.disabled a {
+    &.zm-disabled a {
       color: lighten($tabs-text-color, 20%);
       cursor: default;
     }
