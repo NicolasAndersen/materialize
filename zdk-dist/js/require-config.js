@@ -15,15 +15,24 @@ require.config({
         'velocity': 'utils/jquery/velocity.min',
         'zdkmaterial/groupButton': 'widget/group-button',
         'zdkmaterial/buttons': 'components/buttons',
+        'zdkmaterial/dropdown': 'components/dropdown',
         'zdkmaterial/waves': 'components/waves'
     },
     shim: {
         'velocity': ['jquery'],
         'jquery/ui': ['jquery'],
         'zdkmaterial/buttons': ['jquery', 'velocity'],
+        'zdkmaterial/dropdown': ['jquery', 'jquery/ui'],
         'zdkmaterial/waves': {
             'exports': 'Waves'
         },
         'zdkmaterial/groupButton': ['jquery', 'jquery/ui/widget']
     }
 });
+
+require([
+    'jquery',
+    'zdkmaterial/waves',
+    'zdkmaterial/buttons',
+    'zdkmaterial/dropdown'
+]);

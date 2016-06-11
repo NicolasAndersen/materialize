@@ -1,0 +1,55 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../zdk-dist/css/zdk-materialize.css">
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="../zdk-dist/js/utils/require.js"></script>
+    <script type="text/javascript" src="../zdk-dist/js/require-config.js"></script>
+    <style>
+        .test-container button {
+            background-color: #4a148c;
+        }
+
+        .test-container .test {
+            background-color: #00acc1;
+        }
+
+        .test {
+            background-color: #00C853;
+        }
+    </style>
+</head>
+<body>
+<div style="width: auto; min-width: 100px; max-width: 700px; height: 500px; position: relative; margin: 50px auto; align-content: center">
+    <div class="zm-collection zm">
+        <a href="#!" class="zm-collection-item zm">Alan<span class="zm-badge zm zm-red" data-badge-caption="custom caption">1</span></a>
+        <a href="#!" class="zm-collection-item zm">Alan<span class="zm-new zm-badge zm zm-blue" data-badge-caption="custom caption">4</span></a>
+        <a href="#!" class="zm-collection-item zm">Alan</a>
+        <a href="#!" class="zm-collection-item zm">Alan<span class="zm-badge zm" data-badge-caption="custom caption">14</span></a>
+    </div>
+    <ul id="dropdown2" class="zm-dropdown-content zm">
+        <li class="zm"><a href="#!" class="zm">one<span class="zm-badge zm">1</span></a></li>
+        <li class="zm"><a href="#!" class="zm">two<span class="zm-new zm-badge zm">1</span></a></li>
+        <li class="zm"><a href="#!" class="zm">three</a></li>
+    </ul>
+    <a class="zm-btn zm-dropdown-button zm" href="#!" data-activates="dropdown2">Dropdown<i class="zm-mdi-navigation-arrow-drop-down zm-right zm"></i></a>
+    <nav class="zm">
+        <div class="zm-nav-wrapper zm">
+            <a href="" class="zm-brand-logo zm">Logo</a>
+            <ul id="nav-mobile" class="zm-right zm-hide-on-med-and-down zm">
+                <li class="zm"><a href="" class="zm">sass</a></li>
+                <li class="zm"><a href="" class="zm">sass <span class="zm-new zm-badge zm">4</span></a></li>
+                <li class="zm"><a href="" class="zm">sass</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="test-container" style="position: absolute;top: 0;">
+    <div class="mini-container">
+        <button class="test">sdfsdfsdfs</button>
+    </div>
+</div>
+</body>
+</html>
