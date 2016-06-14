@@ -2036,10 +2036,11 @@ th.zm {
 html {
   box-sizing: border-box; }
 
-.zm {
+.zm, .zm:before, .zm:after {
   box-sizing: inherit; }
-  .zm *, .zm *:before, .zm *:after {
-    box-sizing: inherit; }
+
+.zm *, .zm *:before, .zm *:after {
+  box-sizing: inherit; }
 
 ul.zm {
   padding: 0;
@@ -2084,11 +2085,11 @@ a.zm {
 .z-depth-5 {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22); }
 
-.hoverable {
+.zm-hoverable {
   transition: box-shadow .25s;
   box-shadow: 0; }
 
-.hoverable:hover {
+.zm-hoverable:hover {
   transition: box-shadow .25s;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 

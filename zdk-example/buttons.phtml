@@ -1,25 +1,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="../zdk-dist/css/zdk-materialize.css">
-    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="../zdk-dist/js/utils/require.js"></script>
-    <script type="text/javascript" src="../zdk-dist/js/require-config.js"></script>
-    <style>
-        .test-container button {
-            background-color: #4a148c;
-        }
-
-        .test-container .test {
-            background-color: #00acc1;
-        }
-
-        .test {
-            background-color: #00C853;
-        }
-    </style>
+    <title>Buttons</title>
+    <?php include './include/head.html'?>
 </head>
 <body>
     <div class="zm" style="width: auto; min-width: 100px; max-width: 700px; height: 500px; position: relative; margin: 50px auto; align-content: center">
@@ -27,7 +10,7 @@
         <button class="waves-effect waves-light zm-btn zm">button</button>
         <button class="waves-effect waves-light zm-btn zm"><i class="material-icons zm-left zm">cloud</i>button</button>
         <button class="waves-effect waves-light zm-btn zm"><i class="material-icons zm-right zm">cloud</i>button</button>
-        <div class="zm-fixed-action-btn zm-horizontal click-to-toggle zm" style="top: 45px; right: 24px;">
+        <div data-materialize-init="true" class="zm-fixed-action-btn zm-horizontal zm" style="top: 45px; right: 24px;">
             <a class="zm-btn-floating zm-btn-large zm-red">
                 <i class="material-icons">menu</i>
             </a>
@@ -38,7 +21,7 @@
                 <li><a class="zm-btn-floating zm-blue zm"><i class="material-icons zm">attach_file</i></a></li>
             </ul>
         </div>
-        <div class="zm-fixed-action-btn zm-horizontal click-to-toggle zm" style="top: 125px; right: 24px;">
+        <div data-materialize-init="true" class="zm-fixed-action-btn zm-horizontal zm-click-to-toggle zm xinchao" style="top: 125px; right: 24px;">
             <a class="zm-btn-floating zm-btn-large zm-red zm">
                 <i class="material-icons zm">menu</i>
             </a>
@@ -51,6 +34,7 @@
         </div>
         <a class="add-wave-effect-btn zm-btn-floating zm-btn-large waves-effect waves-light zm-red zm"><i class="material-icons">add</i></a>
     </div>
+    <div data-test-1="1" class="xinchao cac ban data den" data-test-2="{my_%real{ly:s#tra`n[ge_i]d_n^@a|me>}"></div>
     <div class="test-container" style="position: absolute;top: 0;">
         <div class="mini-container">
             <button class="test">sdfsdfsdfs</button>

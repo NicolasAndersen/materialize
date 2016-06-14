@@ -2,17 +2,20 @@ require.config({
     baseUrl: '../zdk-dist/js',
     map: {
         '*' : {
-            'zdkmaterial/waves': 'components/waves-initial'
+            'zdkmaterial/waves': 'components/waves-initial',
+            'classnames': 'lib/classnames',
+            'classnames-prefix': 'utils/classnames-prefix',
+            'selector-builder': 'utils/selector-builder'
         },
         'components/waves-initial': {
             'zdkmaterial/waves': 'zdkmaterial/waves'
         }
     },
     paths: {
-        'jquery': 'utils/jquery/jquery-1.9.1.min',
-        'jquery/ui': 'utils/jquery/jquery-ui',
-        'jquery/ui/widget': 'utils/jquery/jquery.widget',
-        'velocity': 'utils/jquery/velocity.min',
+        'jquery': 'lib/jquery/jquery-1.9.1.min',
+        'jquery/ui': 'lib/jquery/jquery-ui',
+        'jquery/ui/widget': 'lib/jquery/jquery.widget',
+        'velocity': 'lib/jquery/velocity.min',
         'zdkmaterial/groupButton': 'widget/group-button',
         'zdkmaterial/buttons': 'components/buttons',
         'zdkmaterial/dropdown': 'components/dropdown',
@@ -21,13 +24,21 @@ require.config({
     shim: {
         'velocity': ['jquery'],
         'jquery/ui': ['jquery'],
-        'zdkmaterial/buttons': ['jquery', 'velocity'],
-        'zdkmaterial/dropdown': ['jquery', 'jquery/ui'],
         'zdkmaterial/waves': {
             'exports': 'Waves'
         },
+        'classnames-prefix': {
+            'exports': 'classnamesPrefix'
+        },
+        'selector-builder': {
+            'exports': 'selectorBuilder'
+        },
         'zdkmaterial/groupButton': ['jquery', 'jquery/ui/widget']
-    }
+    },
+    deps: [
+        'classnames-prefix',
+        'selector-builder'
+    ]
 });
 
 require([

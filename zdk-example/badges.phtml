@@ -1,12 +1,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="../zdk-dist/css/zdk-materialize.css">
-    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="../zdk-dist/js/utils/require.js"></script>
-    <script type="text/javascript" src="../zdk-dist/js/require-config.js"></script>
+    <title>Badges</title>
+    <?php include './include/head.html'?>
 </head>
 <body>
 <div style="width: auto; min-width: 100px; max-width: 700px; height: 500px; position: relative; margin: 50px auto; align-content: center">
@@ -21,7 +17,7 @@
         <li class="zm"><a href="#!" class="zm">two<span class="zm-new zm-badge zm">1</span></a></li>
         <li class="zm"><a href="#!" class="zm">three</a></li>
     </ul>
-    <a class="zm-btn zm-dropdown-button zm" href="#!" data-activates="dropdown2">Dropdown<i class="zm-mdi-navigation-arrow-drop-down zm-right zm"></i></a>
+    <a data-materialize-init="true" class="zm-btn zm-dropdown-button zm" href="#!" data-activates="dropdown2">Dropdown<i class="zm-mdi-navigation-arrow-drop-down zm-right zm"></i></a>
     <nav class="zm">
         <div class="zm-nav-wrapper zm">
             <a href="" class="zm-brand-logo zm">Logo</a>
