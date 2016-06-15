@@ -102,12 +102,17 @@
         }
     };
 
+
     SelectorBuilder.prototype.buildNomal = function (seperator) {
         var tagName = this.tagName || '';
         seperator = '' + (seperator || '');
         this.selectorValue = tagName + this.selectors.join(seperator);
 
         return this.selectorValue;
+    };
+
+    SelectorBuilder.prototype.toString = function () {
+        return this.build();
     };
 
     $z.utils.selector = function (options) {
