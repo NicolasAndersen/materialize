@@ -2091,11 +2091,12 @@ th.zm {
 html {
   box-sizing: border-box; }
 
-.zm, .zm:before, .zm:after {
-  box-sizing: inherit; }
-
-.zm *, .zm *:before, .zm *:after {
-  box-sizing: inherit; }
+.zm {
+  box-sizing: border-box; }
+  .zm::before, .zm::after {
+    box-sizing: border-box; }
+  .zm *, .zm *::before, .zm *::after {
+    box-sizing: inherit; }
 
 ul.zm {
   padding: 0;

@@ -3,3 +3,16 @@
 //     -moz-box-shadow: $args1, $args2;
 //     box-shadow: $args1, $args2;
 // }
+
+@mixin boxsizingBorderBox {
+  box-sizing: border-box;
+  &::before, &::after {
+    box-sizing: border-box;
+  }
+
+  & {
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+  }
+}

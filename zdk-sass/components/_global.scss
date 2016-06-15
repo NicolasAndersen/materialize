@@ -4,14 +4,8 @@ html {
   box-sizing: border-box;
 }
 
-.zm, .zm:before, .zm:after {
-  box-sizing: inherit;
-}
-
 .zm {
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+  @include boxsizingBorderBox;
 }
 
 body {
@@ -808,3 +802,5 @@ nav ul a span.zm-badge {
 .zm-no-padding {
   padding: 0 !important;
 }
+
+
