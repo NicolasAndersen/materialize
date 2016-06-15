@@ -9,29 +9,44 @@
         factory(jQuery, Zendkofy);
     }
 }(function ($, $z) {
-    $(document).ready(function() {
+    $(document).ready(function () {
 
         $(document).on('click.card', '[data-materialize-init=true].zm-card', function (e) {
-            if ($(this).find('> .zm-card-reveal').length) {
-                if ($(e.target).is($('.zm-card-reveal .zm-card-title')) || $(e.target).is($('.zm-card-reveal .zm-card-title i'))) {
+            var $card = $(this),
+                $cardReveal = $card.find('> .zm-card-reveal');
+            if ($cardReveal.length) {
+                var $target = $(e.target),
+                    $cardTitle = $cardReveal.find('.zm-card-title'),
+                    $cardTitleIcon = $cardTitle.find('i');
+
+                var $activator = $card.find('.zm-activator'),
+                    $activatorIcon = $activator.find('i');
+
+                if ($target.is($cardTitle) || $target.is($cardTitleIcon)) {
                     // Make Reveal animate down and display none
-                    $(this).find('.zm-card-reveal').velocity(
+                    $cardReveal.velocity(
                         {translateY: 0}, {
-                            duration: 225,
+                            duration: 300,
                             queue: false,
                             easing: 'easeInOutQuad',
-                            complete: function() { $(this).css({ display: 'none'}); }
+                            complete: function () {
+                                $(this).css({display: 'none'});
+                            }
                         }
                     );
                 }
-                else if ($(e.target).is($('.zm-card .zm-activator')) ||
-                    $(e.target).is($('.zm-card .zm-activator i')) ) {
-                    $(e.target).closest('.zm-card').css('overflow', 'hidden');
-                    $(this).find('.zm-card-reveal').css({ display: 'block'}).velocity("stop", false).velocity({translateY: '-100%'}, {duration: 300, queue: false, easing: 'easeInOutQuad'});
+                else if ($target.is($activator) || $target.is($activatorIcon)) {
+                    $card.css('overflow', 'hidden');
+                    $cardReveal.css({display: 'block'}).velocity("stop", false).velocity(
+                        {translateY: '-100%'}, {
+                            duration: 300,
+                            queue: false,
+                            easing: 'easeInOutQuad'
+                        });
                 }
             }
 
-            $('.zm-card-reveal').closest('.zm-card').css('overflow', 'hidden');
+            $card.css('overflow', 'hidden');
         });
 
     });

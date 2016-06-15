@@ -2096,7 +2096,7 @@ html {
   .zm::before, .zm::after {
     box-sizing: border-box; }
   .zm *, .zm *::before, .zm *::after {
-    box-sizing: inherit; }
+    box-sizing: border-box; }
 
 ul.zm {
   padding: 0;
