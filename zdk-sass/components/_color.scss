@@ -372,10 +372,10 @@ $colors: (
         color: $color_value !important;
       }
     } @else if $color_name != "shades" {
-      .zm-#{$color_name}.#{$color_type} {
+      .zm-#{$color_name}.zm-#{$color_type} {
         background-color: $color_value !important;
       }
-      .zm-#{$color_name}-text.text-#{$color_type} {
+      .zm-#{$color_name}-text.zm-text-#{$color_type} {
         color: $color_value !important;
       }
     }

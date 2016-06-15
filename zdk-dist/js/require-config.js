@@ -2,48 +2,54 @@ require.config({
     baseUrl: '../zdk-dist/js',
     map: {
         '*' : {
-            'zdkmaterial/waves': 'components/waves-initial',
+            'zendkofy/material/waves': 'components/waves-initial',
             'classnames': 'lib/classnames',
             'classnames-prefix': 'utils/classnames-prefix',
-            'selector-builder': 'utils/selector-builder'
+            'zendkofy/material/buttons': 'components/buttons',
+            'zendkofy/material/dropdown': 'components/dropdown',
+            'zendkofy/material/cards': 'components/cards',
+            'zendkofy': 'utils/zendkofy',
+            'zendkofy/init': 'utils/zendkofy/init',
+            'zendkofy/default': 'utils/zendkofy/default',
+            'zendkofy/classnames': 'utils/zendkofy/classnames',
+            'zendkofy/selector-builder': 'utils/zendkofy/selector-builder',
+            'zendkofy/selector-class': 'utils/zendkofy/selector-class',
+            'zendkofy/selector-attribute': 'utils/zendkofy/selector-attribute'
         },
         'components/waves-initial': {
-            'zdkmaterial/waves': 'zdkmaterial/waves'
+            'zendkofy/material/waves': 'zendkofy/material/waves'
         }
     },
     paths: {
-        'jquery': 'lib/jquery/jquery-1.9.1.min',
+        // 'jquery': 'lib/jquery/jquery-1.9.1.min',
+        'jquery': 'lib/jquery/jquery-3.0.0',
         'jquery/ui': 'lib/jquery/jquery-ui',
         'jquery/ui/widget': 'lib/jquery/jquery.widget',
         'velocity': 'lib/jquery/velocity.min',
-        'zdkmaterial/groupButton': 'widget/group-button',
-        'zdkmaterial/buttons': 'components/buttons',
-        'zdkmaterial/dropdown': 'components/dropdown',
-        'zdkmaterial/waves': 'components/waves'
+        'zendkofy/material/groupButton': 'widget/group-button',
+        'zendkofy/material/waves': 'components/waves'
     },
     shim: {
         'velocity': ['jquery'],
         'jquery/ui': ['jquery'],
-        'zdkmaterial/waves': {
+        'zendkofy/material/waves': {
             'exports': 'Waves'
         },
-        'classnames-prefix': {
-            'exports': 'classnamesPrefix'
+        'zendkofy': {
+            'exports': 'Zendkofy'
         },
-        'selector-builder': {
-            'exports': 'selectorBuilder'
-        },
-        'zdkmaterial/groupButton': ['jquery', 'jquery/ui/widget']
+        'zendkofy/material/groupButton': ['jquery', 'jquery/ui/widget']
     },
     deps: [
-        'classnames-prefix',
-        'selector-builder'
+        'zendkofy/selector-builder',
+        'zendkofy'
     ]
 });
 
 require([
     'jquery',
-    'zdkmaterial/waves',
-    'zdkmaterial/buttons',
-    'zdkmaterial/dropdown'
+    'zendkofy/material/waves',
+    'zendkofy/material/buttons',
+    'zendkofy/material/dropdown',
+    'zendkofy/material/cards'
 ]);

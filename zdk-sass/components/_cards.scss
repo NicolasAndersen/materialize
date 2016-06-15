@@ -110,7 +110,8 @@
     border-top: 1px solid rgba(160, 160, 160, .2);
     padding: $card-padding;
 
-    a:not(.zm-btn):not(.zm-btn-large):not(.zm-btn-floating) {
+
+    a.zm-card-link {
       color: $card-link-color;
       margin-right: $card-padding;
       transition: color .3s ease;

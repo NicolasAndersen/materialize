@@ -2,17 +2,17 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define(["jquery", "classnames-prefix", "velocity"], factory);
+        define(["jquery", "zendkofy", "velocity"], factory);
     } else {
 
         // Browser globals
-        factory(jQuery, classnamesPrefix);
+        factory(jQuery, Zendkofy);
     }
-}(function ($, classnamesPrefix) {
-    var clp = classnamesPrefix.classnames;
-    var btnFloatingSelector = 'ul .' + clp('btn-floating'),
-        classHorizontal = clp('horizontal'),
-        classActive = clp('active');
+}(function ($, $z) {
+    var selector = $z.utils.selector;
+    var btnFloatingSelector = 'ul ' + $z.utils.selectorClass('btn-floating'),
+        classHorizontal = $z.utils.classnames('horizontal'),
+        classActive = $z.utils.classnames('active');
 
     $(document).ready(function () {
 
@@ -29,12 +29,16 @@
                 var $this = $(this);
                 closeFABMenu($this);
             }
-        }, '[data-materialize-init=true].' + clp('fixed-action-btn') + ':not(.' + clp('click-to-toggle') + ')');
+        }, selector().attrs('data-materialize-init', 'true')
+            .classes('fixed-action-btn')
+            .not(selector().classes('click-to-toggle')).build()
+        );
 
         // Toggle-on-click behaviour.
         $(document).on(
             'click.fixedActionBtn',
-            '[data-materialize-init=true].' + clp('fixed-action-btn') + '.' + clp('click-to-toggle') + ' > a',
+            selector().attrs('data-materialize-init', 'true')
+                .classes(['fixed-action-btn', 'click-to-toggle']).build() + ' > a',
             function (e) {
             var $this = $(this);
             var $menu = $this.parent();

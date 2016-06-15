@@ -2,15 +2,14 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define(["jquery", "classnames-prefix", "jquery/ui"], factory);
+        define(["jquery", "zendkofy", "jquery/ui"], factory);
     } else {
 
         // Browser globals
-        factory(jQuery, classnamesPrefix);
+        factory(jQuery, Zendkofy);
     }
-}(function ($, classnamesPrefix) {
-    var clp = classnamesPrefix.classnames;
-    var classActive = clp('active');
+}(function ($, $z) {
+    var classActive = $z.utils.classnames('active');
     
     // Add posibility to scroll to selected option
     // usefull for select for example
@@ -267,6 +266,6 @@
     }; // End dropdown plugin
 
     $(document).ready(function () {
-        $('[data-materialize-init=true].' + clp('dropdown-button')).dropdown();
+        $('[data-materialize-init=true].' + $z.utils.classnames('dropdown-button')).dropdown();
     });
 }));
