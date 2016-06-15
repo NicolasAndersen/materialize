@@ -4055,6 +4055,12 @@ button.zm-btn-floating {
     font-size: 16px;
     line-height: 32px;
     padding-left: 8px; }
+  .zm-chip i.zm-material-icons {
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 8px; }
 
 .zm-chips {
   border: none;

@@ -6,7 +6,7 @@
     } else {
 
         // Browser globals
-        factory(jQuery, Zendkofy);
+        factory(jQuery);
     }
 }(function ($) {
     $.fn.extend({

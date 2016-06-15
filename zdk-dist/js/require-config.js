@@ -8,6 +8,7 @@ require.config({
             'zendkofy/material/buttons': 'components/buttons',
             'zendkofy/material/dropdown': 'components/dropdown',
             'zendkofy/material/cards': 'components/cards',
+            'zendkofy/material/chips': 'components/chips',
             'zendkofy': 'utils/zendkofy',
             'zendkofy/init': 'utils/zendkofy/init',
             'zendkofy/default': 'utils/zendkofy/default',
@@ -51,5 +52,6 @@ require([
     'zendkofy/material/waves',
     'zendkofy/material/buttons',
     'zendkofy/material/dropdown',
-    'zendkofy/material/cards'
+    'zendkofy/material/cards',
+    'zendkofy/material/chips'
 ]);

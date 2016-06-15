@@ -2,13 +2,13 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define(["jquery", "zendkofy", "velocity"], factory);
+        define(["jquery", "velocity"], factory);
     } else {
 
         // Browser globals
-        factory(jQuery, Zendkofy);
+        factory(jQuery);
     }
-}(function ($, $z) {
+}(function ($) {
     var btnFloatingSelector = 'ul .zm-btn-floating',
         classHorizontal = 'zm-horizontal',
         classActive = 'zm-active';
