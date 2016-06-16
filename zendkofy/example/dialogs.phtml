@@ -2,15 +2,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Dialogs</title>
-    <?php include './include/head.html'?>
+    <?php include './include/head.html' ?>
 </head>
 <body>
 <div class="zdk-container zdk" style="position: relative; top: 20px;">
     <div class="zdk-row">
         <div class="zdk-col zdk-s12 zdk-m9 zdk-l10">
             <div class="zdk-row">
-                <div class="zdk-col zdk-s12 zdk-m6">
+                <div class="zdk-col zdk-s12 zdk-m2">
                     <a class="zdk-btn zdk" onclick="Zendkofy.toast('I am a toast', 2000)">Toast!</a>
+                    <!-- data-position can be : bottom, top, left, or right -->
+                </div>
+            </div>
+            <div class="zdk-row">
+                <!-- data-delay controls delay before tooltip shows (in milliseconds)-->
+
+                <div class="zdk-col zdk-s12 zdk-m2"><a data-materialize-init="true" class="zdk-btn zdk-tooltipped zdk"
+                                                       data-position="bottom" data-delay="50"
+                                                       data-tooltip="I am tooltip">Hover me!</a>
+                </div>
+                <div class="zdk-col zdk-s12 zdk-m2"><a data-materialize-init="true" class="zdk-btn zdk-tooltipped zdk"
+                                                       data-position="top" data-delay="50" data-tooltip="I am tooltip">Hover
+                        me!</a>
+                </div>
+                <div class="zdk-col zdk-s12 zdk-m2"><a data-materialize-init="true" class="zdk-btn zdk-tooltipped zdk"
+                                                       data-position="left" data-delay="50" data-tooltip="I am tooltip">Hover
+                        me!</a>
+                </div>
+                <div class="zdk-col zdk-s12 zdk-m2"><a data-materialize-init="true" class="zdk-btn zdk-tooltipped zdk"
+                                                       data-position="right" data-delay="50"
+                                                       data-tooltip="I am tooltip">Hover me!</a>
                 </div>
             </div>
         </div>
