@@ -86,23 +86,19 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 //
-a {
-  &.zdk {
-    background-color: transparent;
-  }
-}
+//a {
+//  background-color: transparent;
+//}
 
 /**
  * Improve readability of focused elements when they are also in an
  * active/hover state.
  */
 
-a:active,
-a:hover {
-  &.zdk {
-    outline: 0;
-  }
-}
+//a:active,
+//a:hover {
+//  outline: 0;
+//}
 /* Text-level semantics
    ========================================================================== */
 

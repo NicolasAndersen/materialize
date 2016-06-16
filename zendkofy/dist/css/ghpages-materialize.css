@@ -1,3 +1,4 @@
+/****/
 .zdk-materialize-red {
   background-color: #e51c23 !important; }
 
@@ -1600,6 +1601,7 @@
 .zdk-transparent-text {
   color: transparent !important; }
 
+/****/
 /* ==========================================================================
    Materialize variables
    ========================================================================== */
@@ -1678,6 +1680,7 @@
    ========================================================================== */
 /* 24. Progress Bar
    ========================================================================== */
+/****/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -1755,17 +1758,10 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-a.zdk {
-  background-color: transparent; }
-
 /**
  * Improve readability of focused elements when they are also in an
  * active/hover state.
  */
-a:active.zdk,
-a:hover.zdk {
-  outline: 0; }
-
 /* Text-level semantics
    ========================================================================== */
 /**
@@ -2025,6 +2021,7 @@ td,
 th {
   padding: 0; }
 
+/****/
 html {
   box-sizing: border-box; }
 
@@ -2039,11 +2036,6 @@ ul {
   ul li {
     list-style-type: none; }
 
-a.zdk {
-  color: #039be5;
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent; }
-
 .zdk-valign-wrapper {
   display: flex;
   align-items: center; }
@@ -2056,7 +2048,7 @@ a.zdk {
 .zdk-z-depth-0 {
   box-shadow: none !important; }
 
-.zdk-z-depth-1, nav, .zdk-card-panel, .zdk-card, .zdk-toast, .zdk-btn, .zdk-btn-large, .zdk-btn-floating, .zdk-dropdown-content, .zdk-collapsible, .zdk-side-nav {
+.zdk-z-depth-1, .zdk-nav-container, .zdk-card-panel, .zdk-card, .zdk-toast, .zdk-btn, .zdk-btn-large, .zdk-btn-floating, .zdk-dropdown-content, .zdk-collapsible, .zdk-side-nav {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .zdk-z-depth-1-half, .zdk-btn:hover, .zdk-btn-large:hover, .zdk-btn-floating:hover {
@@ -2391,6 +2383,7 @@ td, th {
       .zdk-collection .zdk-collection-item.zdk-active .zdk-secondary-content {
         color: #fff; }
   .zdk-collection a.zdk-collection-item {
+    text-decoration: none;
     display: block;
     transition: .25s;
     color: #26a69a; }
@@ -2566,6 +2559,7 @@ input[type=range] + .thumb {
 .zdk-no-padding {
   padding: 0 !important; }
 
+/****/
 /* This is needed for some mobile phones to display the Google Icon font properly */
 .zdk-material-icons {
   text-rendering: optimizeLegibility;
@@ -2591,6 +2585,7 @@ input[type=range] + .thumb {
   -moz-font-feature-settings: 'liga';
   -moz-osx-font-smoothing: grayscale; }
 
+/****/
 .zdk-container {
   margin: 0 auto;
   max-width: 1280px;
@@ -3029,127 +3024,136 @@ input[type=range] + .thumb {
       .zdk-row .zdk-col.zdk-push-l12 {
         left: 100%; } }
 
-nav {
+/****/
+.zdk-nav-container {
+  display: block;
   color: #fff;
   background-color: #ee6e73;
   width: 100%;
   height: 56px;
   line-height: 56px; }
-  nav a {
-    color: #fff; }
-  nav i,
-  nav [class^="mdi-"], nav [class*="mdi-"],
-  nav i.zdk-material-icons {
+  .zdk-nav-container a.zdk-brand-logo {
+    text-decoration: none; }
+  .zdk-nav-container i,
+  .zdk-nav-container [class^="mdi-"], .zdk-nav-container [class*="mdi-"],
+  .zdk-nav-container i.zdk-material-icons {
     display: block;
     font-size: 2rem;
     height: 56px;
     line-height: 56px; }
-  nav .zdk-nav-wrapper {
+  .zdk-nav-container .zdk-nav-wrapper {
     position: relative;
     height: 100%; }
   @media only screen and (min-width: 993px) {
-    nav a.zdk-button-collapse {
+    .zdk-nav-container a.zdk-button-collapse {
       display: none; } }
-  nav .zdk-button-collapse {
+  .zdk-nav-container .zdk-button-collapse {
     float: left;
     position: relative;
     z-index: 1;
     height: 56px; }
-    nav .zdk-button-collapse i {
+    .zdk-nav-container .zdk-button-collapse i {
       font-size: 2.7rem;
       height: 56px;
       line-height: 56px; }
-  nav .zdk-brand-logo {
+  .zdk-nav-container .zdk-brand-logo {
     position: absolute;
     color: #fff;
     display: inline-block;
     font-size: 2.1rem;
     padding: 0;
     white-space: nowrap; }
-    nav .zdk-brand-logo.center {
+    .zdk-nav-container .zdk-brand-logo.center {
       left: 50%;
       transform: translateX(-50%); }
     @media only screen and (max-width: 992px) {
-      nav .zdk-brand-logo {
+      .zdk-nav-container .zdk-brand-logo {
         left: 50%;
         transform: translateX(-50%); }
-        nav .zdk-brand-logo.zdk-left, nav .zdk-brand-logo.zdk-right {
+        .zdk-nav-container .zdk-brand-logo.zdk-left, .zdk-nav-container .zdk-brand-logo.zdk-right {
           padding: 0;
           transform: none; }
-        nav .zdk-brand-logo.zdk-left {
+        .zdk-nav-container .zdk-brand-logo.zdk-left {
           left: 0.5rem; }
-        nav .zdk-brand-logo.zdk-right {
+        .zdk-nav-container .zdk-brand-logo.zdk-right {
           right: 0.5rem;
           left: auto; } }
-    nav .zdk-brand-logo.zdk-right {
+    .zdk-nav-container .zdk-brand-logo.zdk-right {
       right: 0.5rem;
       padding: 0; }
-    nav .zdk-brand-logo i,
-    nav .zdk-brand-logo [class^="mdi-"], nav .zdk-brand-logo [class*="mdi-"],
-    nav .zdk-brand-logo i.zdk-material-icons {
+    .zdk-nav-container .zdk-brand-logo i,
+    .zdk-nav-container .zdk-brand-logo [class^="mdi-"], .zdk-nav-container .zdk-brand-logo [class*="mdi-"],
+    .zdk-nav-container .zdk-brand-logo i.zdk-material-icons {
       float: left;
       margin-right: 15px; }
-  nav ul {
+  .zdk-nav-container ul.navbar-links {
     margin: 0; }
-    nav ul li {
+    .zdk-nav-container ul.navbar-links li.navbar-link-item {
       transition: background-color .3s;
       float: left;
       padding: 0; }
-      nav ul li.zdk-active {
+      .zdk-nav-container ul.navbar-links li.navbar-link-item.zdk-active {
         background-color: rgba(0, 0, 0, 0.1); }
-    nav ul a {
-      transition: background-color .3s;
-      font-size: 1rem;
-      color: #fff;
-      display: block;
-      padding: 0 15px;
-      cursor: pointer; }
-      nav ul a.zdk-btn, nav ul a.zdk-btn-large, nav ul a.zdk-btn-large, nav ul a.zdk-btn-flat, nav ul a.zdk-btn-floating {
-        margin-top: -2px;
-        margin-left: 15px;
-        margin-right: 15px; }
-      nav ul a:hover {
-        background-color: rgba(0, 0, 0, 0.1); }
-    nav ul.zdk-left {
+      .zdk-nav-container ul.navbar-links li.navbar-link-item > a {
+        transition: background-color .3s;
+        font-size: 1rem;
+        color: #fff;
+        display: block;
+        padding: 0 15px;
+        cursor: pointer;
+        text-decoration: none; }
+        .zdk-nav-container ul.navbar-links li.navbar-link-item > a.zdk-btn, .zdk-nav-container ul.navbar-links li.navbar-link-item > a.zdk-btn-large, .zdk-nav-container ul.navbar-links li.navbar-link-item > a.zdk-btn-large, .zdk-nav-container ul.navbar-links li.navbar-link-item > a.zdk-btn-flat, .zdk-nav-container ul.navbar-links li.navbar-link-item > a.zdk-btn-floating {
+          margin-top: -2px;
+          margin-left: 15px;
+          margin-right: 15px; }
+        .zdk-nav-container ul.navbar-links li.navbar-link-item > a:hover {
+          background-color: rgba(0, 0, 0, 0.1); }
+    .zdk-nav-container ul.navbar-links.zdk-left {
       float: left; }
-  nav form {
+  .zdk-nav-container form {
     height: 100%; }
-  nav .zdk-input-field {
+  .zdk-nav-container .zdk-input-field {
     margin: 0;
     height: 100%; }
-    nav .zdk-input-field input {
+    .zdk-nav-container .zdk-input-field input {
       height: 100%;
       font-size: 1.2rem;
       border: none;
       padding-left: 2rem; }
-      nav .zdk-input-field input:focus, nav .zdk-input-field input[type=text]:valid, nav .zdk-input-field input[type=password]:valid, nav .zdk-input-field input[type=email]:valid, nav .zdk-input-field input[type=url]:valid, nav .zdk-input-field input[type=date]:valid {
+      .zdk-nav-container .zdk-input-field input:focus, .zdk-nav-container .zdk-input-field input[type=text]:valid, .zdk-nav-container .zdk-input-field input[type=password]:valid, .zdk-nav-container .zdk-input-field input[type=email]:valid, .zdk-nav-container .zdk-input-field input[type=url]:valid, .zdk-nav-container .zdk-input-field input[type=date]:valid {
         border: none;
         box-shadow: none; }
-    nav .zdk-input-field label {
+    .zdk-nav-container .zdk-input-field label {
       top: 0;
       left: 0; }
-      nav .zdk-input-field label i {
+      .zdk-nav-container .zdk-input-field label i {
         color: rgba(255, 255, 255, 0.7);
         transition: color .3s; }
-      nav .zdk-input-field label.zdk-active i {
+      .zdk-nav-container .zdk-input-field label.zdk-active i {
         color: #fff; }
-      nav .zdk-input-field label.zdk-active {
+      .zdk-nav-container .zdk-input-field label.zdk-active {
         transform: translateY(0); }
 
 .zdk-navbar-fixed {
   position: relative;
   height: 56px;
   z-index: 998; }
-  .zdk-navbar-fixed nav {
+  .zdk-navbar-fixed .zdk-nav-container {
     position: fixed; }
 
 @media only screen and (min-width: 601px) {
-  nav, nav .zdk-nav-wrapper i, nav a.zdk-button-collapse, nav a.zdk-button-collapse i {
+  .zdk-nav-container {
     height: 64px;
     line-height: 64px; }
+    .zdk-nav-container .zdk-nav-wrapper i,
+    .zdk-nav-container a.zdk-button-collapse,
+    .zdk-nav-container a.zdk-button-collapse i {
+      height: 64px;
+      line-height: 64px; }
 
   .zdk-navbar-fixed {
     height: 64px; } }
+/****/
 @font-face {
   font-family: "Roboto";
   src: local(Roboto Thin), url("../fonts/roboto/Roboto-Thin.eot");
@@ -3175,29 +3179,12 @@ nav {
   src: url("../fonts/roboto/Roboto-Bold.eot");
   src: url("../fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700; }
-a.zdk {
-  text-decoration: none; }
-
-html {
-  line-height: 1.5;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  color: rgba(0, 0, 0, 0.87); }
-  @media only screen and (min-width: 0) {
-    html {
-      font-size: 14px; } }
-  @media only screen and (min-width: 992px) {
-    html {
-      font-size: 14.5px; } }
-  @media only screen and (min-width: 1200px) {
-    html {
-      font-size: 15px; } }
-
+/****/
 h1.zdk, h2.zdk, h3.zdk, h4.zdk, h5.zdk, h6.zdk {
   font-weight: 400;
   line-height: 1.1; }
 
-h1 a.zdk, h2 a.zdk, h3 a.zdk, h4 a.zdk, h5 a.zdk, h6 a.zdk {
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: inherit; }
 
 h1.zdk {
@@ -3314,6 +3301,7 @@ small {
     .zdk-flow-text {
       font-size: 1.2rem; } }
 
+/****/
 .zdk-card-panel {
   box-sizing: border-box;
   transition: box-shadow .25s;
@@ -3421,6 +3409,7 @@ small {
       cursor: pointer;
       display: block; }
 
+/****/
 #zdk-toast-container {
   display: block;
   position: fixed;
@@ -3770,6 +3759,8 @@ button.zdk-btn-floating {
     .zdk-dropdown-content li.zdk-divider {
       min-height: 0;
       height: 1px; }
+    .zdk-dropdown-content li > a {
+      text-decoration: none; }
     .zdk-dropdown-content li > a, .zdk-dropdown-content li > span {
       font-size: 16px;
       color: #26a69a;

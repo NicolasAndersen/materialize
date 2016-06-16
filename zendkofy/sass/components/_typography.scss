@@ -1,29 +1,27 @@
 
-a {
-  &.zdk {
-    text-decoration: none;
-  }
-}
+//a {
+//  text-decoration: none;
+//}
 
-html{
-  line-height: 1.5;
-
-  @media only screen and (min-width: 0) {
-    font-size: 14px;
-  }
-
-  @media only screen and (min-width: $medium-screen) {
-    font-size: 14.5px;
-  }
-
-  @media only screen and (min-width: $large-screen) {
-    font-size: 15px;
-  }
-
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  color: $off-black;
-}
+//html{
+//  line-height: 1.5;
+//
+//  @media only screen and (min-width: 0) {
+//    font-size: 14px;
+//  }
+//
+//  @media only screen and (min-width: $medium-screen) {
+//    font-size: 14.5px;
+//  }
+//
+//  @media only screen and (min-width: $large-screen) {
+//    font-size: 15px;
+//  }
+//
+//  font-family: "Roboto", sans-serif;
+//  font-weight: normal;
+//  color: $off-black;
+//}
 h1, h2, h3, h4, h5, h6 {
   &.zdk {
     font-weight: 400;
@@ -33,9 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // Header Styles
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  &.zdk {
-    font-weight: inherit;
-  }
+  font-weight: inherit;
 }
 
 h1.zdk { font-size: $h1-fontsize; line-height: 110%; margin: ($h1-fontsize / 2) 0 ($h1-fontsize / 2.5) 0;}

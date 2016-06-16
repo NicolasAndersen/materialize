@@ -27,3 +27,13 @@
   }
 }
 
+
+@mixin mix-a {
+  background-color: transparent;
+  text-decoration: none;
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+}
+

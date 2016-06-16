@@ -266,6 +266,6 @@
     }; // End dropdown plugin
 
     $(document).ready(function () {
-        $('[data-materialize-init=true].zm-dropdown-button').dropdown();
+        $('[data-materialize-init=true].zdk-dropdown-button').dropdown();
     });
 }));
