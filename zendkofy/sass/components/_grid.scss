@@ -1,0 +1,146 @@
+.zdk-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+@media #{$medium-and-up} {
+  .zdk-container {
+    width: 85%;
+  }
+}
+@media #{$large-and-up} {
+  .zdk-container {
+    width: 70%;
+  }
+}
+.zdk-container .zdk-row {
+  margin-left: (-1 * $gutter-width / 2);
+  margin-right: (-1 * $gutter-width / 2);
+}
+
+.zdk-section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &.zdk-no-pad {
+    padding: 0;
+  }
+  &.zdk-no-pad-bot {
+    padding-bottom: 0;
+  }
+  &.zdk-no-pad-top {
+    padding-top: 0;
+  }
+}
+
+
+.zdk-row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  // Clear floating children
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .zdk-col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 $gutter-width / 2;
+
+    &[class*="push-"],
+    &[class*="pull-"] {
+      position: relative;
+    }
+
+    $i: 1;
+    @while $i <= $num-cols {
+      $perc: unquote((100 / ($num-cols / $i)) + "%");
+      &.zdk-s#{$i} {
+        width: $perc;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+      }
+      $i: $i + 1;
+    }
+
+    $i: 1;
+    @while $i <= $num-cols {
+      $perc: unquote((100 / ($num-cols / $i)) + "%");
+      &.zdk-offset-s#{$i} {
+        margin-left: $perc;
+      }
+      &.zdk-pull-s#{$i} {
+        right: $perc;
+      }
+      &.zdk-push-s#{$i} {
+        left: $perc;
+      }
+      $i: $i + 1;
+    }
+
+    @media #{$medium-and-up} {
+
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.zdk-m#{$i} {
+          width: $perc;
+          margin-left: auto;
+          left: auto;
+          right: auto;
+        }
+        $i: $i + 1
+      }
+
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.zdk-offset-m#{$i} {
+          margin-left: $perc;
+        }
+        &.zdk-pull-m#{$i} {
+          right: $perc;
+        }
+        &.zdk-push-m#{$i} {
+          left: $perc;
+        }
+        $i: $i + 1;
+      }
+    }
+
+    @media #{$large-and-up} {
+
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.zdk-l#{$i} {
+          width: $perc;
+          margin-left: auto;
+          left: auto;
+          right: auto;
+        }
+        $i: $i + 1;
+      }
+
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.zdk-offset-l#{$i} {
+          margin-left: $perc;
+        }
+        &.zdk-pull-l#{$i} {
+          right: $perc;
+        }
+        &.zdk-push-l#{$i} {
+          left: $perc;
+        }
+        $i: $i + 1;
+      }
+    }
+  }
+}
