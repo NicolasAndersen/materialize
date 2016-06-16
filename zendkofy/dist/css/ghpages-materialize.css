@@ -1687,14 +1687,6 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
-
 /**
  * Remove default margin.
  */
@@ -1709,29 +1701,29 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
+article.zdk,
+aside.zdk,
+details.zdk,
+figcaption.zdk,
+figure.zdk,
+footer.zdk,
+header.zdk,
+hgroup.zdk,
+main.zdk,
+menu.zdk,
+nav.zdk,
+section.zdk,
+summary.zdk {
   display: block; }
 
 /**
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-audio,
-canvas,
-progress,
-video {
+audio.zdk,
+canvas.zdk,
+progress.zdk,
+video.zdk {
   display: inline-block;
   /* 1 */
   vertical-align: baseline;
@@ -1741,7 +1733,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-audio:not([controls]) {
+audio:not([controls]).zdk {
   display: none;
   height: 0; }
 
@@ -1749,8 +1741,8 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
  */
-[hidden],
-template {
+[hidden].zdk,
+template.zdk {
   display: none; }
 
 /* Links
@@ -1774,57 +1766,57 @@ a:hover.zdk {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-abbr[title] {
+abbr[title].zdk {
   border-bottom: 1px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-b,
-strong {
+b.zdk,
+strong.zdk {
   font-weight: bold; }
 
 /**
  * Address styling not present in Safari and Chrome.
  */
-dfn {
+dfn.zdk {
   font-style: italic; }
 
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-h1 {
+h1.zdk {
   font-size: 2em;
   margin: 0.67em 0; }
 
 /**
  * Address styling not present in IE 8/9.
  */
-mark {
+mark.zdk {
   background: #ff0;
   color: #000; }
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-small {
+small.zdk {
   font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-sub,
-sup {
+sub.zdk,
+sup.zdk {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
 
-sup {
+sup.zdk {
   top: -0.5em; }
 
-sub {
+sub.zdk {
   bottom: -0.25em; }
 
 /* Embedded content
@@ -1832,13 +1824,13 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
-img {
+img.zdk {
   border: 0; }
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-svg:not(:root) {
+svg:not(:root).zdk {
   overflow: hidden; }
 
 /* Grouping content
@@ -1846,29 +1838,29 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
-figure {
+figure.zdk {
   margin: 1em 40px; }
 
 /**
  * Address differences between Firefox and other browsers.
  */
-hr {
+hr.zdk {
   box-sizing: content-box;
   height: 0; }
 
 /**
  * Contain overflow in all browsers.
  */
-pre {
+pre.zdk {
   overflow: auto; }
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-code,
-kbd,
-pre,
-samp {
+code.zdk,
+kbd.zdk,
+pre.zdk,
+samp.zdk {
   font-family: monospace, monospace;
   font-size: 1em; }
 
@@ -1884,11 +1876,11 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-button,
-input,
-optgroup,
-select,
-textarea {
+button.zdk,
+input.zdk,
+optgroup.zdk,
+select.zdk,
+textarea.zdk {
   color: inherit;
   /* 1 */
   font: inherit;
@@ -1947,7 +1939,7 @@ input::-moz-focus-inner.zdk {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-input {
+input.zdk {
   line-height: normal; }
 
 /**
@@ -1957,8 +1949,8 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"].zdk,
+input[type="radio"].zdk {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -1969,15 +1961,15 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button.zdk,
+input[type="number"]::-webkit-outer-spin-button.zdk {
   height: auto; }
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
-input[type="search"] {
+input[type="search"].zdk {
   -webkit-appearance: textfield;
   /* 1 */
   box-sizing: content-box;
@@ -1988,14 +1980,14 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button.zdk,
+input[type="search"]::-webkit-search-decoration.zdk {
   -webkit-appearance: none; }
 
 /**
  * Define consistent border, margin, and padding.
  */
-fieldset {
+fieldset.zdk {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
@@ -2004,7 +1996,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-legend {
+legend.zdk {
   border: 0;
   /* 1 */
   padding: 0;
@@ -2013,14 +2005,14 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-textarea {
+textarea.zdk {
   overflow: auto; }
 
 /**
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-optgroup {
+optgroup.zdk {
   font-weight: bold; }
 
 /* Tables
@@ -2028,12 +2020,12 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
-table {
+table.zdk {
   border-collapse: collapse;
   border-spacing: 0; }
 
-td,
-th {
+td.zdk,
+th.zdk {
   padding: 0; }
 
 /****/
@@ -3208,7 +3200,7 @@ h1.zdk, h2.zdk, h3.zdk, h4.zdk, h5.zdk, h6.zdk {
   font-weight: 400;
   line-height: 1.1; }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a.zdk, h2 a.zdk, h3 a.zdk, h4 a.zdk, h5 a.zdk, h6 a.zdk {
   font-weight: inherit; }
 
 h1.zdk {
@@ -3241,13 +3233,13 @@ h6.zdk {
   line-height: 110%;
   margin: 0.5rem 0 0.4rem 0; }
 
-em {
+em.zdk {
   font-style: italic; }
 
-strong {
+strong.zdk {
   font-weight: 500; }
 
-small {
+small.zdk {
   font-size: 75%; }
 
 .zdk-light, footer.zdk-page-footer .zdk-footer-copyright {

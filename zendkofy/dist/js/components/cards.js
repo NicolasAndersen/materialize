@@ -15,7 +15,7 @@
                 $cardReveal = $card.find('> .zdk-card-reveal');
             $cardReveal.velocity(
                 {translateY: 0}, {
-                    duration: 300,
+                    duration: 500,
                     queue: false,
                     easing: 'easeInOutQuad',
                     complete: function () {
@@ -32,7 +32,7 @@
 
             $cardReveal.css({display: 'block'}).velocity("stop", false).velocity(
                 {translateY: '-100%'}, {
-                    duration: 300,
+                    duration: 500,
                     queue: false,
                     easing: 'easeInOutQuad'
                 });

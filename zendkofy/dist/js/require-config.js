@@ -9,13 +9,17 @@ require.config({
             'zendkofy/material/dropdown': 'components/dropdown',
             'zendkofy/material/cards': 'components/cards',
             'zendkofy/material/chips': 'components/chips',
+            'zendkofy/material/tabs': 'components/tabs',
+            'zendkofy/material/toasts': 'components/toasts',
             'zendkofy': 'utils/zendkofy',
             'zendkofy/init': 'utils/zendkofy/init',
             'zendkofy/default': 'utils/zendkofy/default',
             'zendkofy/classnames': 'utils/zendkofy/classnames',
             'zendkofy/selector-builder': 'utils/zendkofy/selector-builder',
             'zendkofy/selector-class': 'utils/zendkofy/selector-class',
-            'zendkofy/selector-attribute': 'utils/zendkofy/selector-attribute'
+            'zendkofy/selector-attribute': 'utils/zendkofy/selector-attribute',
+            'zendkofy/material/guid': 'utils/zendkofy/guid',
+            'zendkofy/material/element-or-parent-is-fixed': 'utils/zendkofy/element-or-parent-is-fixed',
         },
         'components/waves-initial': {
             'zendkofy/material/waves': 'zendkofy/material/waves'
@@ -27,6 +31,7 @@ require.config({
         'jquery/ui': 'lib/jquery/jquery-ui',
         'jquery/ui/widget': 'lib/jquery/jquery.widget',
         'velocity': 'lib/jquery/velocity.min',
+        'hammer': 'lib/hammer.min',
         'zendkofy/material/groupButton': 'widget/group-button',
         'zendkofy/material/waves': 'components/waves'
     },
@@ -38,6 +43,9 @@ require.config({
         },
         'zendkofy': {
             'exports': 'Zendkofy'
+        },
+        'hammer': {
+            'exports': 'Hammer'
         },
         'zendkofy/material/groupButton': ['jquery', 'jquery/ui/widget']
     },
@@ -53,5 +61,7 @@ require([
     'zendkofy/material/buttons',
     'zendkofy/material/dropdown',
     'zendkofy/material/cards',
-    'zendkofy/material/chips'
+    'zendkofy/material/chips',
+    'zendkofy/material/tabs',
+    'zendkofy/material/toasts',
 ]);

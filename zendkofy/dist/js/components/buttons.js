@@ -10,6 +10,8 @@
     }
 }(function ($) {
     var btnFloatingSelector = 'ul .zdk-btn-floating',
+        btnFloatingHoverSelector = '[data-materialize-init=true].zdk-fixed-action-btn:not(.zdk-click-to-toggle)',
+        btnFloatingClickSelector = '[data-materialize-init=true].zdk-fixed-action-btn.zdk-click-to-toggle > a',
         classHorizontal = 'zdk-horizontal',
         classActive = 'zdk-active';
 
@@ -82,12 +84,12 @@
             'mouseleave.fixedActionBtn': function (e) {
                 $(this).closeFABMenu();
             }
-        }, '[data-materialize-init=true].zdk-fixed-action-btn:not(.zdk-click-to-toggle)');
+        }, btnFloatingHoverSelector);
 
         // Toggle-on-click behaviour.
         $(document).on(
             'click.fixedActionBtn',
-            '[data-materialize-init=true].zdk-fixed-action-btn.zdk-click-to-toggle > a',
+            btnFloatingClickSelector,
             function (e) {
                 var $this = $(this);
                 var $menu = $this.parent();

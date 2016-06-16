@@ -8,7 +8,9 @@
             'zendkofy/classnames',
             'zendkofy/selector-attribute',
             'zendkofy/selector-class',
-            'zendkofy/selector-builder'
+            'zendkofy/selector-builder',
+            'zendkofy/material/guid',
+            'zendkofy/material/element-or-parent-is-fixed'
         ], factory );
     } else {
 

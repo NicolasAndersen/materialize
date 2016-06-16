@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs</title>
+    <?php include './include/head.html'?>
+</head>
+<body>
+<div class="zdk-container zdk" style="position: relative; top: 20px;">
+    <div class="zdk-row">
+        <div class="zdk-col zdk-s12">
+            <ul data-materialize-init="true" class="zdk-tabs zdk-z-depth-1">
+                <li class="zdk-tab zdk-col zdk-s3"><a href="#test1" class="zdk">Test 1</a></li>
+                <li class="zdk-tab zdk-col zdk-s3"><a class="zdk-active zdk" href="#test2">Test 2</a></li>
+                <li class="zdk-tab zdk-col zdk-s3 zdk-disabled"><a class="zdk" href="#test3">Disabled Tab</a></li>
+                <li class="zdk-tab zdk-col zdk-s3"><a class="zdk" href="#test4">Test 4</a></li>
+            </ul>
+        </div>
+        <div id="test1" class="zdk-col zdk-s12">Test 1</div>
+        <div id="test2" class="zdk-col zdk-s12">Test 2</div>
+        <div id="test3" class="zdk-col zdk-s12">Test 3</div>
+        <div id="test4" class="zdk-col zdk-s12">Test 4</div>
+    </div>
+</div>
+</body>
+</html>
