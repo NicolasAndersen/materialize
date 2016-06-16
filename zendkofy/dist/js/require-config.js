@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: '../zdk-dist/js',
+    baseUrl: '../dist/js',
     map: {
         '*' : {
             'zendkofy/material/waves': 'components/waves-initial',

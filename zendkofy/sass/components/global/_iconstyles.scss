@@ -1,0 +1,26 @@
+// Icon Styles
+
+i {
+  line-height: inherit;
+
+  &.zdk-left {
+    float: left;
+    margin-right: 15px;
+  }
+  &.zdk-right {
+    float: right;
+    margin-left: 15px;
+  }
+  &.tiny {
+    font-size: 1rem;
+  }
+  &.zdk-small {
+    font-size: 2rem;
+  }
+  &.zdk-medium {
+    font-size: 4rem;
+  }
+  &.zdk-large {
+    font-size: 6rem;
+  }
+}

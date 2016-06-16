@@ -1,44 +1,44 @@
 
 
-.card-panel {
+.zdk-card-panel {
   transition: box-shadow .25s;
   padding: $card-padding;
   margin: $element-top-margin 0 $element-bottom-margin 0;
   border-radius: 2px;
-  @extend .z-depth-1;
+  @extend .zdk-z-depth-1;
   background-color: $card-bg-color;
 }
 
-.card {
+.zdk-card {
   position: relative;
   margin: $element-top-margin 0 $element-bottom-margin 0;
   background-color: $card-bg-color;
   transition: box-shadow .25s;
   border-radius: 2px;
-  @extend .z-depth-1;
+  @extend .zdk-z-depth-1;
 
 
-  .card-title {
+  .zdk-card-title {
     font-size: 24px;
     font-weight: 300;
-    &.activator {
+    &.zdk-activator {
       cursor: pointer;
     }
   }
 
   // Card Sizes
-  &.small, &.medium, &.large {
+  &.zdk-small, &.zdk-medium, &.zdk-large {
     position: relative;
 
-    .card-image {
+    .zdk-card-image {
       max-height: 60%;
       overflow: hidden;
     }
-    .card-content {
+    .zdk-card-content {
       max-height: 40%;
       overflow: hidden;
     }
-    .card-action {
+    .zdk-card-action {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -46,31 +46,31 @@
     }
   }
 
-  &.small {
+  &.zdk-small {
     height: 300px;
   }
 
-  &.medium {
+  &.zdk-medium {
     height: 400px;
   }
 
-  &.large {
+  &.zdk-large {
     height: 500px;
   }
 
-  &.sticky-action {
-    .card-action {
+  &.zdk-sticky-action {
+    .zdk-card-action {
       z-index: 2;
     }
 
-    .card-reveal {
+    .zdk-card-reveal {
       z-index: 1;
       padding-bottom: 64px;
     }
   }
 
 
-  .card-image {
+  .zdk-card-image {
     position: relative;
 
     // Image background for content
@@ -85,7 +85,7 @@
       width: 100%;
     }
 
-    .card-title {
+    .zdk-card-title {
       color: $card-bg-color;
       position: absolute;
       bottom: 0;
@@ -95,7 +95,7 @@
 
   }
 
-  .card-content {
+  .zdk-card-content {
     padding: $card-padding;
     border-radius: 0 0 2px 2px;
 
@@ -103,12 +103,12 @@
       margin: 0;
       color: inherit;
     }
-    .card-title {
+    .zdk-card-title {
       line-height: 48px;
     }
   }
 
-  .card-action {
+  .zdk-card-action {
     position: relative;
     background-color: inherit;
     border-top: 1px solid rgba(160,160,160,.2);
@@ -124,7 +124,7 @@
     }
   }
 
-  .card-reveal {
+  .zdk-card-reveal {
     padding: $card-padding;
     position: absolute;
     background-color: $card-bg-color;
@@ -135,7 +135,7 @@
     z-index: 3;
     display: none;
 
-    .card-title {
+    .zdk-card-title {
       cursor: pointer;
       display: block;
     }

@@ -1,0 +1,15 @@
+// Footer
+footer.zdk-page-footer {
+  margin-top: 20px;
+  padding-top: 20px;
+  background-color: $footer-bg-color;
+
+  .zdk-footer-copyright {
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    color: rgba(255,255,255,.8);
+    background-color: rgba(51,51,51,.08);
+    @extend .zdk-light;
+  }
+}

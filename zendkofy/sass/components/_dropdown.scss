@@ -1,5 +1,5 @@
-.dropdown-content {
-  @extend .z-depth-1;
+.zdk-dropdown-content {
+  @extend .zdk-z-depth-1;
   background-color: $dropdown-bg-color;
   margin: 0;
   display: none;
@@ -21,15 +21,15 @@
     text-align: left;
     text-transform: none;
 
-    &:hover, &.zdk-active, &.selected {
+    &:hover, &.zdk-active, &.zdk-selected {
       background-color: $dropdown-hover-bg-color;
     }
 
-    &.zdk-active.selected {
+    &.zdk-active.zdk-selected {
       background-color: darken($dropdown-hover-bg-color, 5%);
     }
 
-    &.divider {
+    &.zdk-divider {
       min-height: 0;
       height: 1px;
     }

@@ -1,6 +1,6 @@
 nav {
   color: $navbar-font-color;
-  @extend .z-depth-1;
+  @extend .zdk-z-depth-1;
   background-color: $primary-color;
   width: 100%;
   height: $navbar-height-mobile;
@@ -17,18 +17,18 @@ nav {
     line-height: $navbar-height-mobile;
   }
 
-  .nav-wrapper {
+  .zdk-nav-wrapper {
     position: relative;
     height: 100%;
   }
 
   @media #{$large-and-up} {
-    a.button-collapse { display: none; }
+    a.zdk-button-collapse { display: none; }
   }
 
 
   // Collapse button
-  .button-collapse {
+  .zdk-button-collapse {
     float: left;
     position: relative;
     z-index: 1;
@@ -60,19 +60,19 @@ nav {
       left: 50%;
       transform: translateX(-50%);
 
-      &.left, &.right {
+      &.zdk-left, &.zdk-right {
         padding: 0;
         transform: none;
       }
 
-      &.left { left: 0.5rem; }
-      &.right {
+      &.zdk-left { left: 0.5rem; }
+      &.zdk-right {
         right: 0.5rem;
         left: auto;
       }
     }
 
-    &.right {
+    &.zdk-right {
       right: 0.5rem;
       padding: 0;
     }
@@ -118,7 +118,7 @@ nav {
       }
     }
 
-    &.left {
+    &.zdk-left {
       float: left;
     }
   }
@@ -128,7 +128,7 @@ nav {
     height: 100%;
   }
 
-  .input-field {
+  .zdk-input-field {
     margin: 0;
     height: 100%;
 
@@ -162,7 +162,7 @@ nav {
 }
 
 // Fixed Navbar
-.navbar-fixed {
+.zdk-navbar-fixed {
   position: relative;
   height: $navbar-height-mobile;
   z-index: 998;
@@ -172,11 +172,11 @@ nav {
   }
 }
 @media #{$medium-and-up} {
-  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+  nav, nav .zdk-nav-wrapper i, nav a.zdk-button-collapse, nav a.zdk-button-collapse i {
     height: $navbar-height;
     line-height: $navbar-height;
   }
-  .navbar-fixed {
+  .zdk-navbar-fixed {
     height: $navbar-height;
   }
 }

@@ -33,7 +33,7 @@
   width: 48px;
   height: 48px;
 
-  &.small {
+  &.zdk-small {
     width: 36px;
     height: 36px;
   }
@@ -236,7 +236,7 @@
   border-color: inherit;
 }
 
-.gap-patch .circle {
+.gap-patch .zdk-circle {
   width: 1000%;
   left: -450%;
 }
@@ -249,7 +249,7 @@
   overflow: hidden;
   border-color: inherit;
 
-  .circle {
+  .zdk-circle {
     width: 200%;
     height: 100%;
     border-width: 3px; /* STROKEWIDTH */
@@ -265,13 +265,13 @@
     bottom: 0;
   }
 
-  &.left .circle {
+  &.zdk-left .zdk-circle {
     left: 0;
     border-right-color: transparent !important;
     -webkit-transform: rotate(129deg);
     transform: rotate(129deg);
   }
-  &.right .circle {
+  &.zdk-right .zdk-circle {
     left: -100%;
     border-left-color: transparent !important;
     -webkit-transform: rotate(-129deg);
@@ -281,13 +281,13 @@
 
 
 
-.zdk-active .circle-clipper.left .circle {
+.zdk-active .circle-clipper.zdk-left .zdk-circle {
   /* duration: ARCTIME */
   -webkit-animation: left-spin 1333ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
   animation: left-spin 1333ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
 }
 
-.zdk-active .circle-clipper.right .circle {
+.zdk-active .circle-clipper.zdk-right .zdk-circle {
   /* duration: ARCTIME */
   -webkit-animation: right-spin 1333ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
   animation: right-spin 1333ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;

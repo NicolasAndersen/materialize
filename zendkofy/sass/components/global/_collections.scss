@@ -1,0 +1,95 @@
+// Collections
+.zdk-collection {
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  border: 1px solid $collection-border-color;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+
+  .zdk-collection-item {
+    background-color: $collection-bg-color;
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid $collection-border-color;
+
+    // Avatar Collection
+    &.zdk-avatar {
+      min-height: 84px;
+      padding-left: 72px;
+      position: relative;
+
+      .zdk-circle {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        overflow: hidden;
+        left: 15px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      i.zdk-circle {
+        font-size: 18px;
+        line-height: 42px;
+        color: #fff;
+        background-color: #999;
+        text-align: center;
+      }
+
+
+      .zdk-title {
+        font-size: 16px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .zdk-secondary-content {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
+
+    }
+
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.zdk-active {
+      background-color: $collection-active-bg-color;
+      color: $collection-active-color;
+
+      .zdk-secondary-content {
+        color: #fff;
+      }
+    }
+  }
+  a.zdk-collection-item {
+    display: block;
+    transition: .25s;
+    color: $collection-link-color;
+    &:not(.zdk-active) {
+      &:hover {
+        background-color: $collection-hover-bg-color;
+      }
+    }
+  }
+
+  &.zdk-with-header {
+    .zdk-collection-header {
+      background-color: $collection-bg-color;
+      border-bottom: 1px solid $collection-border-color;
+      padding: 10px 20px;
+    }
+    .zdk-collection-item {
+      padding-left: 30px;
+    }
+    .zdk-collection-item.zdk-avatar {
+      padding-left: 72px;
+    }
+  }
+
+}

@@ -1,0 +1,54 @@
+
+.zdk-pagination {
+
+  li {
+    display: inline-block;
+    border-radius: 2px;
+    text-align: center;
+    vertical-align: top;
+    height: 30px;
+
+    a {
+      color: #444;
+      display: inline-block;
+      font-size: 1.2rem;
+      padding: 0 10px;
+      line-height: 30px;
+    }
+
+    &.zdk-active a { color: #fff; }
+
+    &.zdk-active { background-color: $primary-color; }
+
+    &.zdk-disabled a {
+      cursor: default;
+      color: #999;
+    }
+
+    i {
+      font-size: 2rem;
+    }
+  }
+
+
+  li.zdk-pages ul li {
+    display: inline-block;
+    float: none;
+  }
+}
+@media #{$medium-and-down} {
+  .zdk-pagination {
+    width: 100%;
+
+    li.zdk-prev,
+    li.zdk-next {
+      width: 10%;
+    }
+
+    li.zdk-pages {
+      width: 80%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+}

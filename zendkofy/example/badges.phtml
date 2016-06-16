@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Badges</title>
+    <?php include './include/head.html'?>
+</head>
+<body>
+<div style="width: auto; min-width: 100px; max-width: 700px; height: 500px; position: relative; margin: 50px auto; align-content: center">
+    <div class="zdk-collection zm">
+        <a href="#!" class="zdk-collection-item zm">Alan<span class="zdk-badge zm zdk-red" data-badge-caption="custom caption">1</span></a>
+        <a href="#!" class="zdk-collection-item zm">Alan<span class="zdk-new zdk-badge zm zdk-blue" data-badge-caption="custom caption">4</span></a>
+        <a href="#!" class="zdk-collection-item zm">Alan</a>
+        <a href="#!" class="zdk-collection-item zm">Alan<span class="zdk-badge zm" data-badge-caption="custom caption">14</span></a>
+    </div>
+    <ul id="dropdown2" class="zdk-dropdown-content zm">
+        <li class="zm"><a href="#!" class="zm">one<span class="zdk-badge zm">1</span></a></li>
+        <li class="zm"><a href="#!" class="zm">two<span class="zdk-new zdk-badge zm">1</span></a></li>
+        <li class="zm"><a href="#!" class="zm">three</a></li>
+    </ul>
+    <a data-materialize-init="true" class="zdk-btn zdk-dropdown-button zm" href="#!" data-activates="dropdown2">Dropdown<i class="zdk-mdi-navigation-arrow-drop-down zdk-right zm"></i></a>
+    <nav class="zm">
+        <div class="zdk-nav-wrapper zm">
+            <a href="" class="zdk-brand-logo zm">Logo</a>
+            <ul id="nav-mobile" class="zdk-right zdk-hide-on-med-and-down zm">
+                <li class="zm"><a href="" class="zm">sass</a></li>
+                <li class="zm"><a href="" class="zm">sass <span class="zdk-new zdk-badge zm">4</span></a></li>
+                <li class="zm"><a href="" class="zm">sass</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+</body>
+</html>

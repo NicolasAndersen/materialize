@@ -28,7 +28,7 @@
     $(document).ready(function () {
         // Handle removal of static chips.
         $(document).on('click', '.zm-chip .zm-close', function (e) {
-            var $chips = $(this).closest('.chips');
+            var $chips = $(this).closest('.zdk-chips');
             if ($chips.data('initialized')) {
                 return;
             }
@@ -205,7 +205,7 @@
             $chips.data('chips').forEach(function (elem) {
                 html += self.renderChip(elem);
             });
-            html += '<input class="input" placeholder="">';
+            html += '<input class="zdk-input" placeholder="">';
             $chips.html(html);
             self.setPlaceholder($chips);
         };

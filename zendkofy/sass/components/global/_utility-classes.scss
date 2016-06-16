@@ -1,0 +1,74 @@
+// hoverable
+.zdk-hoverable {
+  transition: box-shadow .25s;
+  box-shadow: 0;
+}
+
+.zdk-hoverable:hover {
+  transition: box-shadow .25s;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+// Pushpin
+.zdk-pin-top, .zdk-pin-bottom {
+  position: relative;
+}
+
+.zdk-pinned {
+  position: fixed !important;
+}
+
+
+.zdk-hide {
+  display: none !important;
+}
+
+// Text Align
+.zdk-left-align {
+  text-align: left;
+}
+.zdk-right-align {
+  text-align: right
+}
+.center, .center-align {
+  text-align: center;
+}
+
+.zdk-left {
+  float: left !important;
+}
+.zdk-right {
+  float: right !important;
+}
+
+// No Text Select
+.zdk-no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.zdk-circle {
+  border-radius: 50%;
+}
+
+.zdk-center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.zdk-truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.zdk-no-padding {
+  padding: 0 !important;
+}

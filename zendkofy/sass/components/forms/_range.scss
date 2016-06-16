@@ -7,7 +7,7 @@
 
 input[type=range],
 input[type=range] + .thumb {
-  @extend .no-select;
+  @extend .zdk-no-select;
   cursor: pointer;
 }
 

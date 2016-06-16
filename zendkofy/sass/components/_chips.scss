@@ -1,4 +1,4 @@
-.chip {
+.zdk-chip {
   display: inline-block;
   height: 32px;
   font-size: 13px;
@@ -19,7 +19,7 @@
     border-radius: 50%;
   }
 
-  .close {
+  .zdk-close {
     cursor: pointer;
     float: right;
     font-size: 16px;
@@ -28,7 +28,7 @@
   }
 }
 
-.chips {
+.zdk-chips {
   border: none;
   border-bottom: 1px solid $chip-border-color;
   box-shadow: none;
@@ -38,7 +38,7 @@
   padding-bottom: $chip-margin;
   transition: all .3s;
 
-  &.focus {
+  &.zdk-focus {
     border-bottom: 1px solid $chip-selected-color;
     box-shadow: 0 1px 0 0 $chip-selected-color;
   }
@@ -47,12 +47,12 @@
     cursor: text;
   }
 
-  .chip.selected {
+  .zdk-chip.zdk-selected {
     background-color: $chip-selected-color;
     color: #fff;
   }
 
-  .input {
+  .zdk-input {
     background: none;
     border: 0;
     color: rgba(0,0,0,.6);
@@ -67,7 +67,7 @@
     width: 120px !important;
   }
 
-  .input:focus {
+  .zdk-input:focus {
     border: 0 !important;
     box-shadow: none !important;
   }
