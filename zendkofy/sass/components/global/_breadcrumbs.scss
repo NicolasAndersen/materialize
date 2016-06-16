@@ -1,6 +1,5 @@
 .zdk-breadcrumb {
   font-size: 18px;
-  color: rgba(255,255,255, .7);
 
   i,
   [class^="mdi-"], [class*="mdi-"],
@@ -25,6 +24,10 @@
 
   &:first-child:before {
     display: none;
+  }
+
+  &:not(:last-child) {
+    color: rgba(255,255,255, .7);
   }
 
   &:last-child {

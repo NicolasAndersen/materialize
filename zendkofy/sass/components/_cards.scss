@@ -116,12 +116,12 @@
     border-top: 1px solid rgba(160,160,160,.2);
     padding: $card-padding;
 
-    a:not(.zdk-btn):not(.zdk-btn-large):not(.zdk-btn-floating) {
+    a.zdk-card-link {
       color: $card-link-color;
       margin-right: $card-padding;
       transition: color .3s ease;
       text-transform: uppercase;
-
+      text-decoration: none;
       &:hover { color: $card-link-color-light; }
     }
   }

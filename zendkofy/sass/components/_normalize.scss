@@ -85,20 +85,24 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-//
-//a {
-//  background-color: transparent;
-//}
+
+a {
+  &.zdk {
+    background-color: transparent;
+  }
+}
 
 /**
  * Improve readability of focused elements when they are also in an
  * active/hover state.
  */
 
-//a:active,
-//a:hover {
-//  outline: 0;
-//}
+a:active,
+a:hover {
+  &.zdk {
+    outline: 0;
+  }
+}
 /* Text-level semantics
    ========================================================================== */
 
@@ -248,7 +252,7 @@ samp {
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
 
-//button,
+button,
 input,
 optgroup,
 select,
@@ -262,9 +266,11 @@ textarea {
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
 
-//button {
-//  overflow: visible;
-//}
+button {
+  &.zdk {
+    overflow: visible;
+  }
+}
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
@@ -273,9 +279,11 @@ textarea {
  * Correct `select` style inheritance in Firefox.
  */
 
-//button,
+button,
 select {
-  text-transform: none;
+  &.zdk {
+    text-transform: none;
+  }
 }
 
 /**
@@ -286,31 +294,37 @@ select {
  *    `input` and others.
  */
 
-//button,
+button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
+  &.zdk {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+  }
 }
 
 /**
  * Re-set default cursor for disabled elements.
  */
 
-//button[disabled],
+button[disabled],
 html input[disabled] {
-  cursor: default;
+  &.zdk {
+    cursor: default;
+  }
 }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
 
-//button::-moz-focus-inner,
+button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+  &.zdk {
+    border: 0;
+    padding: 0;
+  }
 }
 
 /**

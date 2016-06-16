@@ -1758,10 +1758,17 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
+a.zdk {
+  background-color: transparent; }
+
 /**
  * Improve readability of focused elements when they are also in an
  * active/hover state.
  */
+a:active.zdk,
+a:hover.zdk {
+  outline: 0; }
+
 /* Text-level semantics
    ========================================================================== */
 /**
@@ -1877,6 +1884,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
+button,
 input,
 optgroup,
 select,
@@ -1891,13 +1899,17 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
+button.zdk {
+  overflow: visible; }
+
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-select {
+button.zdk,
+select.zdk {
   text-transform: none; }
 
 /**
@@ -1907,9 +1919,10 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button.zdk,
+html input[type="button"].zdk,
+input[type="reset"].zdk,
+input[type="submit"].zdk {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -1918,13 +1931,15 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-html input[disabled] {
+button[disabled].zdk,
+html input[disabled].zdk {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-input::-moz-focus-inner {
+button::-moz-focus-inner.zdk,
+input::-moz-focus-inner.zdk {
   border: 0;
   padding: 0; }
 
@@ -2036,6 +2051,11 @@ ul {
   ul li {
     list-style-type: none; }
 
+a.zdk {
+  color: #039be5;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent; }
+
 .zdk-valign-wrapper {
   display: flex;
   align-items: center; }
@@ -2048,10 +2068,10 @@ ul {
 .zdk-z-depth-0 {
   box-shadow: none !important; }
 
-.zdk-z-depth-1, .zdk-nav-container, .zdk-card-panel, .zdk-card, .zdk-toast, .zdk-btn, .zdk-btn-large, .zdk-btn-floating, .zdk-dropdown-content, .zdk-collapsible, .zdk-side-nav {
+.zdk-z-depth-1, .zdk-nav-container, .zdk-card-panel, .zdk-card, .zdk-toast, .zdk-btn, .zdk-btn-large, button.zdk.zdk-btn, a.zdk.zdk-btn, .zdk-btn-floating, .zdk-dropdown-content, .zdk-collapsible, .zdk-side-nav {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
-.zdk-z-depth-1-half, .zdk-btn:hover, .zdk-btn-large:hover, .zdk-btn-floating:hover {
+.zdk-z-depth-1-half, .zdk-btn:hover, .zdk-btn-large:hover, button.zdk.zdk-btn:hover, a.zdk.zdk-btn:hover, .zdk-btn-floating:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
 .zdk-z-depth-2 {
@@ -2134,8 +2154,7 @@ video.zdk-responsive-video {
       overflow: hidden;
       white-space: nowrap; } }
 .zdk-breadcrumb {
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.7); }
+  font-size: 18px; }
   .zdk-breadcrumb i,
   .zdk-breadcrumb [class^="mdi-"], .zdk-breadcrumb [class*="mdi-"],
   .zdk-breadcrumb i.zdk-material-icons {
@@ -2155,6 +2174,8 @@ video.zdk-responsive-video {
     -webkit-font-smoothing: antialiased; }
   .zdk-breadcrumb:first-child:before {
     display: none; }
+  .zdk-breadcrumb:not(:last-child) {
+    color: rgba(255, 255, 255, 0.7); }
   .zdk-breadcrumb:last-child {
     color: #fff; }
 
@@ -3180,6 +3201,9 @@ input[type=range] + .thumb {
   src: url("../fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700; }
 /****/
+a.zdk {
+  text-decoration: none; }
+
 h1.zdk, h2.zdk, h3.zdk, h4.zdk, h5.zdk, h6.zdk {
   font-weight: 400;
   line-height: 1.1; }
@@ -3388,12 +3412,13 @@ small {
     background-color: inherit;
     border-top: 1px solid rgba(160, 160, 160, 0.2);
     padding: 20px; }
-    .zdk-card .zdk-card-action a:not(.zdk-btn):not(.zdk-btn-large):not(.zdk-btn-large):not(.zdk-btn-floating) {
+    .zdk-card .zdk-card-action a.zdk-card-link {
       color: #ffab40;
       margin-right: 20px;
       transition: color .3s ease;
-      text-transform: uppercase; }
-      .zdk-card .zdk-card-action a:not(.zdk-btn):not(.zdk-btn-large):not(.zdk-btn-large):not(.zdk-btn-floating):hover {
+      text-transform: uppercase;
+      text-decoration: none; }
+      .zdk-card .zdk-card-action a.zdk-card-link:hover {
         color: #ffd8a6; }
   .zdk-card .zdk-card-reveal {
     padding: 20px;
@@ -3449,7 +3474,7 @@ small {
   display: flex;
   align-items: center;
   justify-content: space-between; }
-  .zdk-toast .zdk-btn, .zdk-toast .zdk-btn-large, .zdk-toast .zdk-btn-flat {
+  .zdk-toast .zdk-btn, .zdk-toast .zdk-btn-large, .zdk-toast button.zdk.zdk-btn, .zdk-toast a.zdk.zdk-btn, .zdk-toast .zdk-btn-flat {
     margin: 0;
     margin-left: 3rem; }
   .zdk-toast.zdk-rounded {
@@ -3545,22 +3570,7 @@ small {
   transform-origin: 50% 10%;
   will-change: transform, opacity; }
 
-button.zdk-btn, button.zdk-btn-large {
-  font: inherit;
-  margin: 0;
-  text-indent: 0;
-  text-shadow: none;
-  word-spacing: normal;
-  text-rendering: auto;
-  align-items: flex-start;
-  -webkit-writing-mode: horizontal-tb;
-  -webkit-appearance: button;
-  overflow: visible; }
-  button.zdk-btn:focus, button.zdk-btn-large:focus {
-    outline: none;
-    background-color: #2ab7a9; }
-
-.zdk-btn, .zdk-btn-large,
+.zdk-btn, .zdk-btn-large, button.zdk.zdk-btn, a.zdk.zdk-btn,
 .zdk-btn-flat {
   box-sizing: border-box;
   border: none;
@@ -3573,35 +3583,43 @@ button.zdk-btn, button.zdk-btn-large {
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent; }
-  .zdk-btn::before, .zdk-btn-large::before, .zdk-btn::after, .zdk-btn-large::after,
+  .zdk-btn::before, .zdk-btn-large::before, button.zdk.zdk-btn::before, a.zdk.zdk-btn::before, .zdk-btn::after, .zdk-btn-large::after, button.zdk.zdk-btn::after, a.zdk.zdk-btn::after,
   .zdk-btn-flat::before,
   .zdk-btn-flat::after {
     box-sizing: border-box; }
 
-.zdk-btn.zdk-disabled, .zdk-disabled.zdk-btn-large,
+.zdk-btn.zdk-disabled, .zdk-disabled.zdk-btn-large, button.zdk-disabled.zdk.zdk-btn, a.zdk-disabled.zdk.zdk-btn,
 .zdk-btn-floating.zdk-disabled,
 .zdk-btn-large.zdk-disabled,
 .zdk-btn:disabled,
 .zdk-btn-large:disabled,
+button.zdk.zdk-btn:disabled,
+a.zdk.zdk-btn:disabled,
 .zdk-btn-large:disabled,
 .zdk-btn-floating:disabled,
 .zdk-btn[disabled],
 [disabled].zdk-btn-large,
+button[disabled].zdk.zdk-btn,
+a[disabled].zdk.zdk-btn,
 .zdk-btn-large[disabled],
 .zdk-btn-floating[disabled] {
   background-color: #DFDFDF !important;
   box-shadow: none;
   color: #9F9F9F !important;
   cursor: default; }
-  .zdk-btn.zdk-disabled *, .zdk-disabled.zdk-btn-large *,
+  .zdk-btn.zdk-disabled *, .zdk-disabled.zdk-btn-large *, button.zdk-disabled.zdk.zdk-btn *, a.zdk-disabled.zdk.zdk-btn *,
   .zdk-btn-floating.zdk-disabled *,
   .zdk-btn-large.zdk-disabled *,
   .zdk-btn:disabled *,
   .zdk-btn-large:disabled *,
+  button.zdk.zdk-btn:disabled *,
+  a.zdk.zdk-btn:disabled *,
   .zdk-btn-large:disabled *,
   .zdk-btn-floating:disabled *,
   .zdk-btn[disabled] *,
   [disabled].zdk-btn-large *,
+  button[disabled].zdk.zdk-btn *,
+  a[disabled].zdk.zdk-btn *,
   .zdk-btn-large[disabled] *,
   .zdk-btn-floating[disabled] * {
     pointer-events: none; }
@@ -3619,14 +3637,14 @@ button.zdk-btn, button.zdk-btn-large {
     background-color: #DFDFDF !important;
     color: #9F9F9F !important; }
 
-.zdk-btn i, .zdk-btn-large i,
+.zdk-btn i, .zdk-btn-large i, button.zdk.zdk-btn i, a.zdk.zdk-btn i,
 .zdk-btn-floating i,
 .zdk-btn-large i,
 .zdk-btn-flat i {
   font-size: 1.3rem;
   line-height: inherit; }
 
-.zdk-btn, .zdk-btn-large {
+.zdk-btn, .zdk-btn-large, button.zdk.zdk-btn, a.zdk.zdk-btn {
   text-decoration: none;
   color: #fff;
   background-color: #26a69a;
@@ -3634,7 +3652,7 @@ button.zdk-btn, button.zdk-btn-large {
   letter-spacing: .5px;
   transition: .2s ease-out;
   cursor: pointer; }
-  .zdk-btn:hover, .zdk-btn-large:hover {
+  .zdk-btn:hover, .zdk-btn-large:hover, button.zdk.zdk-btn:hover, a.zdk.zdk-btn:hover {
     background-color: #2bbbad; }
 
 .zdk-btn-floating {
@@ -4155,6 +4173,10 @@ button.zdk-btn-floating {
 
 select:focus {
   outline: 1px solid #c9f3ef; }
+
+button.zdk-btn:focus, button.zdk-btn-large:focus {
+  outline: none;
+  background-color: #2ab7a9; }
 
 label {
   font-size: 0.8rem;
@@ -4961,7 +4983,7 @@ select:disabled {
     padding-left: 10px; }
   .file-field input.file-path {
     width: 100%; }
-  .file-field .zdk-btn, .file-field .zdk-btn-large {
+  .file-field .zdk-btn, .file-field .zdk-btn-large, .file-field button.zdk.zdk-btn, .file-field a.zdk.zdk-btn {
     float: left;
     height: 3rem;
     line-height: 3rem; }
