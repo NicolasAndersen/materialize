@@ -12,7 +12,7 @@
     $.fn.extend({
         closeRevealCard: function () {
             var $card = $(this),
-                $cardReveal = $card.find('> .zm-card-reveal');
+                $cardReveal = $card.find('> .zdk-card-reveal');
             $cardReveal.velocity(
                 {translateY: 0}, {
                     duration: 300,
@@ -27,7 +27,7 @@
         },
         openRevealCard: function () {
             var $card = $(this),
-                $cardReveal = $card.find('> .zm-card-reveal');
+                $cardReveal = $card.find('> .zdk-card-reveal');
             $card.css('overflow', 'hidden');
 
             $cardReveal.css({display: 'block'}).velocity("stop", false).velocity(
@@ -40,13 +40,13 @@
     });
 
     $(document).ready(function () {
-        $(document).on('click.card', '[data-materialize-init=true].zm-card', function (e) {
+        $(document).on('click.card', '[data-materialize-init=true].zdk-card', function (e) {
             var $card = $(this),
-                $cardReveal = $card.find('> .zm-card-reveal');
+                $cardReveal = $card.find('> .zdk-card-reveal');
             if ($cardReveal.length) {
                 var $target = $(e.target),
-                    $cardTitle = $cardReveal.find('.zm-card-title, .zm-card-title i'),
-                    $activator = $card.find('.zm-activator, .zm-activator i');
+                    $cardTitle = $cardReveal.find('.zdk-card-title, .zdk-card-title i'),
+                    $activator = $card.find('.zdk-activator, .zdk-activator i');
 
                 if ($target.is($cardTitle)) {
                     $card.closeRevealCard();

@@ -18,7 +18,7 @@
 }(function($z) {
     'use strict';
     
-    $z.utils.DEFAULT.CLASSNAMES_PREFIX = 'zm-';
+    $z.utils.DEFAULT.CLASSNAMES_PREFIX = 'zdk-';
     $z.utils.DEFAULT.CLASSNAMES_SEPERATOR = ' ';
     
     return $z;

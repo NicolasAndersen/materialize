@@ -17,22 +17,22 @@
     };
 
     var CLASSNAME = {
-        CHIPS: 'zm-chips',
-        CHIP: 'zm-chip',
-        SELECTED: 'zm-selected',
-        FOCUS: 'zm-focus',
-        MATERIALIZE_ICON: 'zm-material-icons',
-        CLOSE: 'zm-close'
+        CHIPS: 'zdk-chips',
+        CHIP: 'zdk-chip',
+        SELECTED: 'zdk-selected',
+        FOCUS: 'zdk-focus',
+        MATERIALIZE_ICON: 'zdk-material-icons',
+        CLOSE: 'zdk-close'
     };
 
     $(document).ready(function () {
         // Handle removal of static chips.
-        $(document).on('click', '.zm-chip .zm-close', function (e) {
+        $(document).on('click', '.zdk-chip .zdk-close', function (e) {
             var $chips = $(this).closest('.zdk-chips');
             if ($chips.data('initialized')) {
                 return;
             }
-            $(this).closest('.zm-chip').remove();
+            $(this).closest('.zdk-chip').remove();
         });
     });
 
@@ -41,11 +41,11 @@
         this.$el = $(this);
         this.$document = $(document);
         this.SELS = {
-            CHIPS: '.zm-chips',
-            CHIP: '.zm-chip',
+            CHIPS: '.zdk-chips',
+            CHIP: '.zdk-chip',
             INPUT: 'input',
-            DELETE: '.zm-material-icons',
-            SELECTED_CHIP: '.zm-selected'
+            DELETE: '.zdk-material-icons',
+            SELECTED_CHIP: '.zdk-selected'
         };
 
         if ('data' === options) {

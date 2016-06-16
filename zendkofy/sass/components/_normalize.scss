@@ -85,9 +85,11 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
-
+//
 a {
-  background-color: transparent;
+  &.zdk {
+    background-color: transparent;
+  }
 }
 
 /**
@@ -97,9 +99,10 @@ a {
 
 a:active,
 a:hover {
-  outline: 0;
+  &.zdk {
+    outline: 0;
+  }
 }
-
 /* Text-level semantics
    ========================================================================== */
 

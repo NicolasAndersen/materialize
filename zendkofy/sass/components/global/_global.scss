@@ -32,11 +32,13 @@ ul {
 }
 
 a {
-	color: $link-color;
-	text-decoration: none;
+  &.zdk {
+    color: $link-color;
+    text-decoration: none;
 
-  // Gets rid of tap active state
-  -webkit-tap-highlight-color: transparent;
+    // Gets rid of tap active state
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 

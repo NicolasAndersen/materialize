@@ -2,14 +2,14 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define(["jquery", "zendkofy", "jquery/ui"], factory);
+        define(["jquery", "jquery/ui"], factory);
     } else {
 
         // Browser globals
-        factory(jQuery, Zendkofy);
+        factory(jQuery);
     }
 }(function ($, $z) {
-    var classActive = $z.utils.classnames('active');
+    var classActive = 'zdk-active';
     
     // Add posibility to scroll to selected option
     // usefull for select for example
