@@ -27,7 +27,7 @@
  */
 
 
-.preloader-wrapper {
+.zdk-preloader-wrapper {
   display: inline-block;
   position: relative;
   width: 48px;
@@ -38,7 +38,7 @@
     height: 36px;
   }
 
-  &.big {
+  &.zdk-big {
     width: 64px;
     height: 64px;
   }
@@ -58,7 +58,7 @@
   to { transform: rotate(360deg) }
 }
 
-.spinner-layer {
+.zdk-spinner-layer {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -66,23 +66,23 @@
   border-color: $spinner-default-color;
 }
 
-.spinner-blue,
-.spinner-blue-only {
+.zdk-spinner-blue,
+.zdk-spinner-blue-only {
   border-color: #4285f4;
 }
 
-.spinner-red,
-.spinner-red-only {
+.zdk-spinner-red,
+.zdk-spinner-red-only {
   border-color: #db4437;
 }
 
-.spinner-yellow,
-.spinner-yellow-only {
+.zdk-spinner-yellow,
+.zdk-spinner-yellow-only {
   border-color: #f4b400;
 }
 
-.spinner-green,
-.spinner-green-only {
+.zdk-spinner-green,
+.zdk-spinner-green-only {
   border-color: #0f9d58;
 }
 
@@ -99,35 +99,35 @@
  * specific properties properly, treats them as -webkit-animation, and overrides the
  * other animation rules. See https://github.com/Polymer/platform/issues/53.
  */
-.zdk-active .spinner-layer.spinner-blue {
+.zdk-active .zdk-spinner-layer.zdk-spinner-blue {
   /* durations: 4 * ARCTIME */
   -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, blue-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
   animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, blue-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
 }
 
-.zdk-active .spinner-layer.spinner-red {
+.zdk-active .zdk-spinner-layer.zdk-spinner-red {
   /* durations: 4 * ARCTIME */
   -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, red-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
   animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, red-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
 }
 
-.zdk-active .spinner-layer.spinner-yellow {
+.zdk-active .zdk-spinner-layer.zdk-spinner-yellow {
   /* durations: 4 * ARCTIME */
   -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, yellow-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
   animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, yellow-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
 }
 
-.zdk-active .spinner-layer.spinner-green {
+.zdk-active .zdk-spinner-layer.zdk-spinner-green {
   /* durations: 4 * ARCTIME */
   -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, green-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
   animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both, green-fade-in-out 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
 }
 
-.zdk-active .spinner-layer,
-.zdk-active .spinner-layer.spinner-blue-only,
-.zdk-active .spinner-layer.spinner-red-only,
-.zdk-active .spinner-layer.spinner-yellow-only,
-.zdk-active .spinner-layer.spinner-green-only {
+.zdk-active .zdk-spinner-layer,
+.zdk-active .zdk-spinner-layer.zdk-spinner-blue-only,
+.zdk-active .zdk-spinner-layer.zdk-spinner-red-only,
+.zdk-active .zdk-spinner-layer.zdk-spinner-yellow-only,
+.zdk-active .zdk-spinner-layer.zdk-spinner-green-only {
   /* durations: 4 * ARCTIME */
   opacity: 1;
   -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
@@ -226,7 +226,7 @@
  * Patch the gap that appear between the two adjacent div.circle-clipper while the
  * spinner is rotating (appears on Chrome 38, Safari 7.1, and IE 11).
  */
-.gap-patch {
+.zdk-gap-patch {
   position: absolute;
   top: 0;
   left: 45%;
@@ -236,12 +236,12 @@
   border-color: inherit;
 }
 
-.gap-patch .zdk-circle {
+.zdk-gap-patch .zdk-circle {
   width: 1000%;
   left: -450%;
 }
 
-.circle-clipper {
+.zdk-circle-clipper {
   display: inline-block;
   position: relative;
   width: 50%;
@@ -281,13 +281,13 @@
 
 
 
-.zdk-active .circle-clipper.zdk-left .zdk-circle {
+.zdk-active .zdk-circle-clipper.zdk-left .zdk-circle {
   /* duration: ARCTIME */
   -webkit-animation: left-spin 1333ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
   animation: left-spin 1333ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
 }
 
-.zdk-active .circle-clipper.zdk-right .zdk-circle {
+.zdk-active .zdk-circle-clipper.zdk-right .zdk-circle {
   /* duration: ARCTIME */
   -webkit-animation: right-spin 1333ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
   animation: right-spin 1333ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite both;
@@ -317,7 +317,7 @@
   to { transform: rotate(-130deg); }
 }
 
-#spinnerContainer.cooldown {
+#zdk-spinnerContainer.zdk-cooldown {
   /* duration: SHRINK_TIME */
   -webkit-animation: container-rotate 1568ms linear infinite, fade-out 400ms cubic-bezier(0.4, 0.0, 0.2, 1);
   animation: container-rotate 1568ms linear infinite, fade-out 400ms cubic-bezier(0.4, 0.0, 0.2, 1);

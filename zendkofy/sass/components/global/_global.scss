@@ -57,7 +57,7 @@ a {
 }
 
 // Z-levels
-@import "global/zdepth";
+@import "zdepth";
 
 // Dividers
 .zdk-divider {
@@ -74,7 +74,7 @@ blockquote {
 }
 
 // Icon Styles
-@import "global/iconstyles";
+@import "iconstyles";
 
 // Images
 img.zdk-responsive-img,
@@ -84,13 +84,13 @@ video.zdk-responsive-video {
 }
 
 // Pagination
-@import "global/pagination";
+@import "pagination";
 
 // Breadcrumbs
-@import "global/breadcrumbs";
+@import "breadcrumbs";
 
 // Parallax
-@import "global/parallax";
+@import "parallax";
 
 /*********************
   Transition Classes
@@ -109,7 +109,7 @@ ul.zdk-staggered-list li {
 /*********************
   Media Query Classes
 **********************/
-@import "global/media-query-class";
+@import "media-query-class";
 
 
 // Center text on mobile
@@ -120,13 +120,13 @@ ul.zdk-staggered-list li {
 }
 
 // Footer
-@import "global/footer";
+@import "footer";
 
 // Tables
-@import "global/table";
+@import "table";
 
 // Collections
-@import "global/collections";
+@import "collections";
 
 // Made less specific to allow easier overriding
 .zdk-secondary-content {
@@ -135,7 +135,7 @@ ul.zdk-staggered-list li {
 }
 
 // Badges
-@import "global/badges";
+@import "badges";
 
 nav ul a span.zdk-badge {
   position: static;
@@ -144,13 +144,13 @@ nav ul a span.zdk-badge {
 }
 
 // Responsive Videos
-@import "global/video";
+@import "video";
 
 // Progress Bar
-@import "global/progress-bar";
-@import "global/keyframes";
+@import "progress-bar";
+@import "keyframes";
 
 /*******************
   Utility Classes
 *******************/
-@import "global/utility-classes";
+@import "utility-classes";

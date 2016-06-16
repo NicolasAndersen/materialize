@@ -1,4 +1,4 @@
-.tabs {
+.zdk-tabs {
   display: flex;
   position: relative;
   overflow-x: auto;
@@ -9,7 +9,7 @@
   width: 100%;
   white-space: nowrap;
 
-  .tab {
+  .zdk-tab {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
@@ -46,7 +46,7 @@
       cursor: default;
     }
   }
-  .indicator {
+  .zdk-indicator {
     position: absolute;
     bottom: 0;
     height: 2px;

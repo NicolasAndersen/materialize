@@ -1,4 +1,4 @@
-.modal {
+.zdk-modal {
   @extend .zdk-z-depth-4;
 
   display: none;
@@ -23,14 +23,14 @@
     margin-top: 0;
   }
 
-  .modal-content {
+  .zdk-modal-content {
     padding: 24px;
   }
-  .modal-close {
+  .zdk-modal-close {
     cursor: pointer;
   }
 
-  .modal-footer {
+  .zdk-modal-footer {
     border-radius: 0 0 2px 2px;
     background-color: #fafafa;
     padding: 4px 6px;
@@ -43,7 +43,7 @@
     }
   }
 }
-.lean-overlay {
+.zdk-lean-overlay {
     position: fixed;
     z-index:999;
     top: -100px;
@@ -59,11 +59,11 @@
 }
 
 // Modal with fixed action footer
-.modal.modal-fixed-footer {
+.zdk-modal.modal-fixed-footer {
   padding: 0;
   height: 70%;
 
-  .modal-content {
+  .zdk-modal-content {
     position: absolute;
     height: calc(100% - 56px);
     max-height: 100%;
@@ -71,7 +71,7 @@
     overflow-y: auto;
   }
 
-  .modal-footer {
+  .zdk-modal-footer {
     border-top: 1px solid rgba(0,0,0,.1);
     position: absolute;
     bottom: 0;
@@ -79,7 +79,7 @@
 }
 
 // Modal Bottom Sheet Style
-.modal.bottom-sheet {
+.zdk-modal.zdk-bottom-sheet {
   top: auto;
   bottom: -100%;
   margin: 0;

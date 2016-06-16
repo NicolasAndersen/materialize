@@ -1,4 +1,4 @@
-.side-nav {
+.zdk-side-nav {
   position: fixed;
   width: 240px;
   left: 0;
@@ -20,14 +20,14 @@
   @extend .zdk-z-depth-1;
 
   // Right Align
-  &.right-aligned {
+  &.zdk-right-aligned {
     right: 0;
     transform: translateX(105%);
     left: auto;
     transform: translateX(100%);
   }
 
-  .collapsible {
+  .zdk-collapsible {
     margin: 0;
   }
 
@@ -66,7 +66,7 @@
 
 
 // Touch interaction
-.drag-target {
+.zdk-drag-target {
   height: 100%;
   width: 10px;
   position: fixed;
@@ -76,7 +76,7 @@
 
 
 // Hidden side-nav for all sizes
-.side-nav.fixed {
+.zdk-side-nav.zdk-fixed {
   a {
     display: block;
     padding: 0 $sidenav-padding-right;
@@ -86,13 +86,13 @@
 
 
 // Fixed side-nav shown
-.side-nav.fixed {
+.zdk-side-nav.zdk-fixed {
   left: 0;
   transform: translateX(0);
   position: fixed;
 
   // Right Align
-  &.right-aligned {
+  &.zdk-right-aligned {
     right: 0;
     left: auto;
   }
@@ -100,18 +100,18 @@
 
 // Fixed sideNav hide on smaller
 @media #{$medium-and-down} {
-  .side-nav.fixed {
+  .zdk-side-nav.zdk-fixed {
     transform: translateX(-105%);
 
-    &.right-aligned {
+    &.zdk-right-aligned {
       transform: translateX(105%);
     }
   }
 }
 
 
-.side-nav .collapsible-body li.zdk-active,
-.side-nav.fixed .collapsible-body li.zdk-active {
+.zdk-side-nav .zdk-collapsible-body li.zdk-active,
+.zdk-side-nav.zdk-fixed .zdk-collapsible-body li.zdk-active {
   background-color: $primary-color;
   a {
     color: $sidenav-bg-color;
@@ -119,7 +119,7 @@
 }
 
 
-#sidenav-overlay {
+#zdk-sidenav-overlay {
   position: fixed;
   top: 0;
   left: 0;

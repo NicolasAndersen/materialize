@@ -4,15 +4,26 @@
 //     box-shadow: $args1, $args2;
 // }
 
-@mixin boxsizingBorderBox {
-  box-sizing: border-box;
-  &::before, &::after {
-    box-sizing: border-box;
-  }
 
+@mixin mix-box-sizing($boxsizing) {
+  //-webkit-box-sizing: $boxsizing;
+  //-moz-box-sizing: $boxsizing;
+  box-sizing: $boxsizing;
+}
+
+@mixin mix-boxsizing-border-box {
+  @include mix-box-sizing(border-box);
+  &::before, &::after {
+    @include mix-box-sizing(border-box);
+  }
+}
+
+@mixin mix-wrap-boxsizing-border-box {
+  @include mix-boxsizing-border-box;
   & {
-    *, *::before, *::after {
-      box-sizing: border-box;
+    * {
+      @include mix-boxsizing-border-box;
     }
   }
 }
+

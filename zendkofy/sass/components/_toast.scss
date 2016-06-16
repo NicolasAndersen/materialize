@@ -1,4 +1,4 @@
-#toast-container {
+#zdk-toast-container {
   display:block;
   position: fixed;
   z-index: 10000;
@@ -19,7 +19,7 @@
   }
 }
 
-.toast {
+.zdk-toast {
   @extend .zdk-z-depth-1;
   border-radius: 2px;
   top: 0;
@@ -47,7 +47,7 @@
     margin-left: 3rem;
   }
 
-  &.rounded{
+  &.zdk-rounded {
     border-radius: 24px;
   }
 

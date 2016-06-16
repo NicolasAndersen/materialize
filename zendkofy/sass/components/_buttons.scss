@@ -1,6 +1,24 @@
+button.zdk-btn {
+  font: inherit;
+  margin: 0;
+  text-indent: 0;
+  text-shadow: none;
+  word-spacing: normal;
+  text-rendering: auto;
+  align-items: flex-start;
+  -webkit-writing-mode: horizontal-tb;
+  -webkit-appearance: button;
+  overflow: visible;
+  &:focus {
+    outline: none;
+    background-color: $button-background-focus;
+  }
+}
+
 // shared styles
 .zdk-btn,
 .zdk-btn-flat {
+  @include mix-boxsizing-border-box;
   border: $button-border;
   border-radius: $button-radius;
   display: inline-block;

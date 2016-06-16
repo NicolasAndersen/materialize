@@ -1,6 +1,7 @@
 
 
 .zdk-card-panel {
+  @include mix-wrap-boxsizing-border-box;
   transition: box-shadow .25s;
   padding: $card-padding;
   margin: $element-top-margin 0 $element-bottom-margin 0;
@@ -10,6 +11,7 @@
 }
 
 .zdk-card {
+  @include mix-wrap-boxsizing-border-box;
   position: relative;
   margin: $element-top-margin 0 $element-bottom-margin 0;
   background-color: $card-bg-color;

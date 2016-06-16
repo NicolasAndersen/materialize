@@ -1,10 +1,10 @@
-.slider {
+.zdk-slider {
   position: relative;
   height: 400px;
   width: 100%;
 
   // Fullscreen slider
-  &.fullscreen {
+  &.zdk-fullscreen {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -13,17 +13,17 @@
     right: 0;
     bottom: 0;
 
-    ul.slides {
+    ul.zdk-slides {
       height: 100%;
     }
 
-    ul.indicators {
+    ul.zdk-indicators {
       z-index: 2;
       bottom: 30px;
     }
   }
 
-  .slides {
+  .zdk-slides {
     background-color: $slider-bg-color;
     margin: 0;
     height: 400px;
@@ -45,7 +45,7 @@
         background-position: center;
       }
 
-      .caption {
+      .zdk-caption {
         color: #fff;
         position: absolute;
         top: 15%;
@@ -63,7 +63,7 @@
   }
 
 
-  .indicators {
+  .zdk-indicators {
     position: absolute;
     text-align: center;
     left: 0;
@@ -71,7 +71,7 @@
     bottom: 0;
     margin: 0;
 
-    .indicator-item {
+    .zdk-indicator-item {
       display: inline-block;
       position: relative;
       cursor: pointer;

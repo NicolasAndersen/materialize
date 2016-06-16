@@ -1,4 +1,4 @@
-.material-tooltip {
+.zdk-material-tooltip {
     padding: 10px 8px;
     font-size: 1rem;
     z-index: 2000;
@@ -19,7 +19,7 @@
     will-change: top, left;
 }
 
-.backdrop {
+.zdk-backdrop {
   position: absolute;
   opacity: 0;
   display: none;
