@@ -12,6 +12,7 @@ require.config({
             'zendkofy/material/tabs': 'components/tabs',
             'zendkofy/material/toasts': 'components/toasts',
             'zendkofy/material/tooltip': 'components/tooltip',
+            'zendkofy/material/leanModal': 'components/leanModal',
             'zendkofy': 'utils/zendkofy',
             'zendkofy/init': 'utils/zendkofy/init',
             'zendkofy/default': 'utils/zendkofy/default',
@@ -31,6 +32,7 @@ require.config({
         'jquery': 'lib/jquery/jquery-3.0.0',
         'jquery/ui': 'lib/jquery/jquery-ui',
         'jquery/ui/widget': 'lib/jquery/jquery.widget',
+        'jquery/ui/easing': 'lib/jquery/jquery.easing.1.3',
         'velocity': 'lib/jquery/velocity.min',
         'hammer': 'lib/hammer.min',
         'zendkofy/material/groupButton': 'widget/group-button',
@@ -39,6 +41,7 @@ require.config({
     shim: {
         'velocity': ['jquery'],
         'jquery/ui': ['jquery'],
+        'jquery/ui/easing': ['jquery'],
         'zendkofy/material/waves': {
             'exports': 'Waves'
         },
@@ -66,4 +69,5 @@ require([
     'zendkofy/material/tabs',
     'zendkofy/material/toasts',
     'zendkofy/material/tooltip',
+    'zendkofy/material/leanModal',
 ]);
