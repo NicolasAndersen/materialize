@@ -3099,15 +3099,15 @@ input[type=range] + .thumb {
     .zdk-nav-container .zdk-brand-logo i.zdk-material-icons {
       float: left;
       margin-right: 15px; }
-  .zdk-nav-container ul.navbar-links {
+  .zdk-nav-container ul.zdk-navbar-links {
     margin: 0; }
-    .zdk-nav-container ul.navbar-links li.navbar-link-item {
+    .zdk-nav-container ul.zdk-navbar-links li.zdk-navbar-link-item {
       transition: background-color .3s;
       float: left;
       padding: 0; }
-      .zdk-nav-container ul.navbar-links li.navbar-link-item.zdk-active {
+      .zdk-nav-container ul.zdk-navbar-links li.zdk-navbar-link-item.zdk-active {
         background-color: rgba(0, 0, 0, 0.1); }
-      .zdk-nav-container ul.navbar-links li.navbar-link-item > a {
+      .zdk-nav-container ul.zdk-navbar-links li.zdk-navbar-link-item > a {
         transition: background-color .3s;
         font-size: 1rem;
         color: #fff;
@@ -3115,13 +3115,13 @@ input[type=range] + .thumb {
         padding: 0 15px;
         cursor: pointer;
         text-decoration: none; }
-        .zdk-nav-container ul.navbar-links li.navbar-link-item > a.zdk-btn, .zdk-nav-container ul.navbar-links li.navbar-link-item > a.zdk-btn-large, .zdk-nav-container ul.navbar-links li.navbar-link-item > a.zdk-btn-large, .zdk-nav-container ul.navbar-links li.navbar-link-item > a.zdk-btn-flat, .zdk-nav-container ul.navbar-links li.navbar-link-item > a.zdk-btn-floating {
+        .zdk-nav-container ul.zdk-navbar-links li.zdk-navbar-link-item > a.zdk-btn, .zdk-nav-container ul.zdk-navbar-links li.zdk-navbar-link-item > a.zdk-btn-large, .zdk-nav-container ul.zdk-navbar-links li.zdk-navbar-link-item > a.zdk-btn-large, .zdk-nav-container ul.zdk-navbar-links li.zdk-navbar-link-item > a.zdk-btn-flat, .zdk-nav-container ul.zdk-navbar-links li.zdk-navbar-link-item > a.zdk-btn-floating {
           margin-top: -2px;
           margin-left: 15px;
           margin-right: 15px; }
-        .zdk-nav-container ul.navbar-links li.navbar-link-item > a:hover {
+        .zdk-nav-container ul.zdk-navbar-links li.zdk-navbar-link-item > a:hover {
           background-color: rgba(0, 0, 0, 0.1); }
-    .zdk-nav-container ul.navbar-links.zdk-left {
+    .zdk-nav-container ul.zdk-navbar-links.zdk-left {
       float: left; }
   .zdk-nav-container form {
     height: 100%; }

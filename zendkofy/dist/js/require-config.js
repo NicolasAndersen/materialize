@@ -15,6 +15,8 @@ require.config({
             'zendkofy/material/leanModal': 'components/leanModal',
             'zendkofy/material/collapsible': 'components/collapsible',
             'zendkofy/material/transitions': 'components/transitions',
+            'zendkofy/material/sideNav': 'components/sideNav',
+            'jquery/hammer': 'lib/jquery/jquery.hammer',
             'zendkofy': 'utils/zendkofy',
             'zendkofy/init': 'utils/zendkofy/init',
             'zendkofy/default': 'utils/zendkofy/default',
@@ -36,7 +38,7 @@ require.config({
         'jquery/ui/widget': 'lib/jquery/jquery.widget',
         'jquery/ui/easing': 'lib/jquery/jquery.easing.1.3',
         'velocity': 'lib/jquery/velocity.min',
-        'hammer': 'lib/hammer.min',
+        'hammerjs': 'lib/hammer.min',
         'zendkofy/material/groupButton': 'widget/group-button',
         'zendkofy/material/waves': 'components/waves'
     },
@@ -50,7 +52,7 @@ require.config({
         'zendkofy': {
             'exports': 'Zendkofy'
         },
-        'hammer': {
+        'hammerjs': {
             'exports': 'Hammer'
         },
         'zendkofy/material/groupButton': ['jquery', 'jquery/ui/widget']
@@ -74,4 +76,5 @@ require([
     'zendkofy/material/leanModal',
     'zendkofy/material/collapsible',
     'zendkofy/material/transitions',
+    'zendkofy/material/sideNav',
 ]);

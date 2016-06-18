@@ -10,7 +10,6 @@
     }
 }(function ($) {
     'use strict';
-    
     $.fn.extend({
         closeRevealCard: function () {
             var $card = $(this),

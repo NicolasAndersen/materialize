@@ -2,13 +2,13 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define(["jquery", "zendkofy", "hammer", "velocity"], factory);
+        define(["jquery", "zendkofy", "jquery/hammer", "velocity"], factory);
     } else {
 
         // Browser globals
-        factory(jQuery, Zendkofy, Hammer);
+        factory(jQuery, Zendkofy);
     }
-}(function ($, $z, Hammer) {
+}(function ($, $z) {
     'use strict';
 
     // Image transition function

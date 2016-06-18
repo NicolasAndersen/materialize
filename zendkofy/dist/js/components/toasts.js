@@ -2,7 +2,7 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define(["jquery", "zendkofy", "hammer", "velocity"], factory);
+        define(["jquery", "zendkofy", "hammerjs", "velocity"], factory);
     } else {
 
         // Browser globals
@@ -20,7 +20,7 @@
     $z.toast = function (message, displayLength, className, completeCallback) {
         className = className || "";
 
-        if (!$('#zdk-toast-container').length) {
+        if (!$('#' + CONST_STRING.TOAST_CONTAINER).length) {
             $(document.body).append('<div id="' + CONST_STRING.TOAST_CONTAINER + '"></div>');
         }
         var container = document.getElementById(CONST_STRING.TOAST_CONTAINER);
