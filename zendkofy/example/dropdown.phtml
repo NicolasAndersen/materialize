@@ -10,14 +10,16 @@
         <div class="zdk-col zdk-s12 zdk-m9 zdk-l10">
             <div class="zdk-row">
                 <div class="zdk-col zdk-s12 zdk-m6">
-                    <div class="zdk-chip">
-                        <img src="../images/yuna.jpg" class="zdk" alt="Contact Person">
-                        Jane Doe
-                    </div>
-                    <div class="zdk-chip">
-                        Tag
-                        <i class="zdk-material-icons zdk-close zdk">close</i>
-                    </div>
+                    <!-- Dropdown Trigger -->
+                    <a data-materialize-init=true class='zdk-dropdown-button zdk-btn zdk' href='#' data-activates='dropdown1'>Drop Me!</a>
+
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdown1' class='zdk-dropdown-content'>
+                        <li><a href="#!" class="zdk">one</a></li>
+                        <li><a href="#!" class="zdk">two</a></li>
+                        <li class="zdk-divider zdk" ></li>
+                        <li><a href="#!" class="zdk">three</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
