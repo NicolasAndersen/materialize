@@ -10,8 +10,6 @@
     }
 }(function ($) {
     var btnFloatingSelector = 'ul .zdk-btn-floating',
-        btnFloatingHoverSelector = '[data-materialize-init=true].zdk-fixed-action-btn:not(.zdk-click-to-toggle)',
-        btnFloatingClickSelector = '[data-materialize-init=true].zdk-fixed-action-btn.zdk-click-to-toggle > a',
         classHorizontal = 'zdk-horizontal',
         classActive = 'zdk-active';
 
@@ -72,7 +70,6 @@
     });
 
     $(document).ready(function () {
-
         // jQuery reverse
         $.fn.reverse = [].reverse;
 
@@ -84,12 +81,12 @@
             'mouseleave.fixedActionBtn': function (e) {
                 $(this).closeFABMenu();
             }
-        }, btnFloatingHoverSelector);
+        }, '[data-materialize-init=true].zdk-fixed-action-btn:not(.zdk-click-to-toggle)');
 
         // Toggle-on-click behaviour.
         $(document).on(
             'click.fixedActionBtn',
-            btnFloatingClickSelector,
+            '[data-materialize-init=true].zdk-fixed-action-btn.zdk-click-to-toggle > a',
             function (e) {
                 var $this = $(this);
                 var $menu = $this.parent();

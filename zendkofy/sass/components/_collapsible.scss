@@ -80,7 +80,7 @@
 
 // Popout Collapsible
 
-.zdk-collapsible.popout {
+.zdk-collapsible.zdk-popout {
   @include mix-wrap-boxsizing-border-box;
   border: none;
   box-shadow: none;

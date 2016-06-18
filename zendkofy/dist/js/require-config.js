@@ -13,6 +13,7 @@ require.config({
             'zendkofy/material/toasts': 'components/toasts',
             'zendkofy/material/tooltip': 'components/tooltip',
             'zendkofy/material/leanModal': 'components/leanModal',
+            'zendkofy/material/collapsible': 'components/collapsible',
             'zendkofy': 'utils/zendkofy',
             'zendkofy/init': 'utils/zendkofy/init',
             'zendkofy/default': 'utils/zendkofy/default',
@@ -70,4 +71,5 @@ require([
     'zendkofy/material/toasts',
     'zendkofy/material/tooltip',
     'zendkofy/material/leanModal',
+    'zendkofy/material/collapsible',
 ]);
