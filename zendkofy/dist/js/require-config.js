@@ -16,6 +16,7 @@ require.config({
             'zendkofy/material/collapsible': 'components/collapsible',
             'zendkofy/material/transitions': 'components/transitions',
             'zendkofy/material/materialbox': 'components/materialbox',
+            'zendkofy/material/slider': 'components/slider',
             'zendkofy/material/sideNav': 'components/sideNav',
             'jquery/hammer': 'lib/jquery/jquery.hammer',
             'zendkofy': 'utils/zendkofy',
@@ -79,4 +80,5 @@ require([
     'zendkofy/material/transitions',
     'zendkofy/material/sideNav',
     'zendkofy/material/materialbox',
+    'zendkofy/material/slider',
 ]);

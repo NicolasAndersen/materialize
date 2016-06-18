@@ -11,7 +11,7 @@
 }(function ($) {
     'use strict';
 
-    var CONST_STRING = {
+    var ZDK_STR = {
         MATERIALBOXED: 'zdk-materialboxed',
         INITIALIZED: 'zdk-initialized',
         MATERIAL_PLACEHOLDER: 'zdk-material-placeholder',
@@ -23,9 +23,9 @@
 
     function calculatePosition(materialbox, windowSize, newSize,  type) {
         if(type === 'left') {
-            return $(document).scrollLeft() + windowSize / 2 - materialbox.parent('.' + CONST_STRING.MATERIAL_PLACEHOLDER).offset().left - newSize / 2;
+            return $(document).scrollLeft() + windowSize / 2 - materialbox.parent('.' + ZDK_STR.MATERIAL_PLACEHOLDER).offset().left - newSize / 2;
         } else if(type === 'top') {
-            return $(document).scrollTop() + windowSize / 2 - materialbox.parent('.' + CONST_STRING.MATERIAL_PLACEHOLDER).offset().top - newSize / 2
+            return $(document).scrollTop() + windowSize / 2 - materialbox.parent('.' + ZDK_STR.MATERIAL_PLACEHOLDER).offset().top - newSize / 2
         } else {
             return 0;
         }
@@ -35,18 +35,18 @@
 
         return this.each(function () {
 
-            if ($(this).hasClass(CONST_STRING.INITIALIZED)) {
+            if ($(this).hasClass(ZDK_STR.INITIALIZED)) {
                 return;
             }
 
-            $(this).addClass(CONST_STRING.INITIALIZED);
+            $(this).addClass(ZDK_STR.INITIALIZED);
 
             var overlayActive = false;
             var doneAnimating = true;
             var inDuration = 275;
             var outDuration = 200;
             var origin = $(this);
-            var placeholder = $('<div></div>').addClass(CONST_STRING.MATERIAL_PLACEHOLDER);
+            var placeholder = $('<div></div>').addClass(ZDK_STR.MATERIAL_PLACEHOLDER);
             var originalWidth = 0;
             var originalHeight = 0;
             var ancestorsChanged;
@@ -55,7 +55,7 @@
 
 
             origin.on('click', function () {
-                var placeholder = origin.parent('.' + CONST_STRING.MATERIAL_PLACEHOLDER);
+                var placeholder = origin.parent('.' + ZDK_STR.MATERIAL_PLACEHOLDER);
                 var windowWidth = window.innerWidth;
                 var windowHeight = window.innerHeight;
                 var originalWidth = origin.width();
@@ -75,7 +75,7 @@
 
                 // Set states
                 doneAnimating = false;
-                origin.addClass(CONST_STRING.ACTIVE);
+                origin.addClass(ZDK_STR.ACTIVE);
                 overlayActive = true;
 
                 // Set positioning for placeholder
@@ -111,7 +111,7 @@
                     .data('height', originalHeight);
 
                 // Add overlay
-                var overlay = $('<div id="' + CONST_STRING.MATERIALBOX_OVERLAY + '"></div>')
+                var overlay = $('<div id="' + ZDK_STR.MATERIALBOX_OVERLAY + '"></div>')
                     .css({
                         opacity: 0
                     })
@@ -127,7 +127,7 @@
 
                 // Add and animate caption if it exists
                 if (origin.data('caption') !== "") {
-                    var $photo_caption = $('<div class="' + CONST_STRING.MATERIALBOX_CAPTION + '"></div>');
+                    var $photo_caption = $('<div class="' + ZDK_STR.MATERIALBOX_CAPTION + '"></div>');
                     $photo_caption.text(origin.data('caption'));
                     $('body').append($photo_caption);
                     $photo_caption.css({"display": "inline"});
@@ -153,7 +153,7 @@
                 }
 
                 // Animate image + set z-index
-                if (origin.hasClass(CONST_STRING.RESPONSIVE_IMG)) {
+                if (origin.hasClass(ZDK_STR.RESPONSIVE_IMG)) {
                     origin.velocity({'max-width': newWidth, 'width': originalWidth}, {
                         duration: 0, queue: false,
                         complete: function () {
@@ -224,7 +224,7 @@
 
                 doneAnimating = false;
 
-                var placeholder = origin.parent('.' + CONST_STRING.MATERIAL_PLACEHOLDER);
+                var placeholder = origin.parent('.' + ZDK_STR.MATERIAL_PLACEHOLDER);
                 var windowWidth = window.innerWidth;
                 var windowHeight = window.innerHeight;
                 var originalWidth = origin.data('width');
@@ -232,8 +232,8 @@
 
                 origin.velocity("stop", true);
 
-                var $materialboxOverlay = $('#' + CONST_STRING.MATERIALBOX_OVERLAY),
-                    $materialboxCaption = $('.' + CONST_STRING.MATERIALBOX_CAPTION);
+                var $materialboxOverlay = $('#' + ZDK_STR.MATERIALBOX_OVERLAY),
+                    $materialboxCaption = $('.' + ZDK_STR.MATERIALBOX_CAPTION);
 
                 $materialboxOverlay.velocity("stop", true);
                 $materialboxCaption.velocity("stop", true);
@@ -287,7 +287,7 @@
                         });
 
                         // Remove class
-                        origin.removeClass(CONST_STRING.ACTIVE);
+                        origin.removeClass(ZDK_STR.ACTIVE);
                         doneAnimating = true;
                         $(this).remove();
 
@@ -303,7 +303,7 @@
     };
 
     $(document).ready(function () {
-        $('[data-materialize-init="true"].' + CONST_STRING.MATERIALBOXED).materialbox();
+        $('[data-materialize-init="true"].' + ZDK_STR.MATERIALBOXED).materialbox();
     });
 
 }));

@@ -11,14 +11,14 @@
 }(function ($) {
     'use strict';
     
-    var CONST_STRING = {
+    var ZDK_STR = {
         TAB: 'zdk-tab',
         ACTIVE: 'zdk-active',
         DISABLED: 'zdk-disabled',
         INDICATOR: 'zdk-indicator'
     };
 
-    var linkSelector = 'li.' + CONST_STRING.TAB + ' a',
+    var linkSelector = 'li.' + ZDK_STR.TAB + ' a',
         linkActiveSelector = linkSelector + '.zdk-active';
 
     var methods = {
@@ -52,7 +52,7 @@
                     $active = $(this).find(linkSelector).first();
                 }
 
-                $active.addClass(CONST_STRING.ACTIVE);
+                $active.addClass(ZDK_STR.ACTIVE);
                 $index = $links.index($active);
                 if ($index < 0) {
                     $index = 0;
@@ -63,8 +63,8 @@
                 }
 
                 // append indicator then set indicator width to tab width
-                $this.append('<div class="' + CONST_STRING.INDICATOR + '"></div>');
-                var $indicator = $this.find('.' + CONST_STRING.INDICATOR);
+                $this.append('<div class="' + ZDK_STR.INDICATOR + '"></div>');
+                var $indicator = $this.find('.' + ZDK_STR.INDICATOR);
                 if ($this.is(":visible")) {
                     $indicator.css({"right": $tabs_width - (($index + 1) * $tab_width)});
                     $indicator.css({"left": $index * $tab_width});
@@ -89,7 +89,7 @@
 
                 // Bind the click event handler
                 $this.on('click', 'a', function (e) {
-                    if ($(this).parent().hasClass(CONST_STRING.DISABLED)) {
+                    if ($(this).parent().hasClass(ZDK_STR.DISABLED)) {
                         e.preventDefault();
                         return;
                     }
@@ -103,7 +103,7 @@
                     $tab_width = Math.max($tabs_width, $this[0].scrollWidth) / $links.length;
 
                     // Make the old tab inactive.
-                    $active.removeClass(CONST_STRING.ACTIVE);
+                    $active.removeClass(ZDK_STR.ACTIVE);
                     if ($content !== undefined) {
                         $content.hide();
                     }
@@ -114,7 +114,7 @@
                     $links = $this.find(linkSelector);
 
                     // Make the tab active.
-                    $active.addClass(CONST_STRING.ACTIVE);
+                    $active.addClass(ZDK_STR.ACTIVE);
                     var $prev_index = $index;
                     $index = $links.index($(this));
                     if ($index < 0) {

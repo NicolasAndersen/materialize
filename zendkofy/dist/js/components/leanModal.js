@@ -11,7 +11,7 @@
 }(function ($) {
     'use strict';
     
-    var CONST_STRING = {
+    var ZDK_STR = {
         LEAN_OVERLAY: 'zdk-lean-overlay',
         OPEN: 'zdk-open',
         MODAL_CLOSE: 'zdk-modal-close',
@@ -44,18 +44,18 @@
             };
             var $modal = $(this);
 
-            if ($modal.hasClass(CONST_STRING.OPEN)) {
+            if ($modal.hasClass(ZDK_STR.OPEN)) {
                 return;
             }
 
             var overlayID = _generateID();
-            var $overlay = $('<div class="' + CONST_STRING.LEAN_OVERLAY +'"></div>');
+            var $overlay = $('<div class="' + ZDK_STR.LEAN_OVERLAY +'"></div>');
             var lStack = (++_stack);
 
             // Store a reference of the overlay
             $overlay.attr('id', overlayID).css('z-index', 1000 + lStack * 2);
             $modal.data('overlay-id', overlayID).css('z-index', 1000 + lStack * 2 + 1);
-            $modal.addClass(CONST_STRING.OPEN);
+            $modal.addClass(ZDK_STR.OPEN);
 
             $body.append($overlay);
 
@@ -74,7 +74,7 @@
                 });
             }
 
-            $modal.find("." + CONST_STRING.MODAL_CLOSE).on('click.close', function (e) {
+            $modal.find("." + ZDK_STR.MODAL_CLOSE).on('click.close', function (e) {
                 $modal.closeModal(options);
             });
 
@@ -93,7 +93,7 @@
             $modal.data('associated-overlay', $overlay[0]);
 
             // Define Bottom Sheet animation
-            if ($modal.hasClass(CONST_STRING.BOTTOM_SHEET)) {
+            if ($modal.hasClass(ZDK_STR.BOTTOM_SHEET)) {
                 $modal.velocity({bottom: "0", opacity: 1}, {
                     duration: options.in_duration,
                     queue: false,
@@ -135,7 +135,7 @@
             var $modal = $(this);
             var overlayID = $modal.data('overlay-id');
             var $overlay = $('#' + overlayID);
-            $modal.removeClass(CONST_STRING.OPEN);
+            $modal.removeClass(ZDK_STR.OPEN);
 
             options = $.extend(defaults, options);
 
@@ -145,14 +145,14 @@
                 width: ''
             });
 
-            $modal.find('.' + CONST_STRING.MODAL_CLOSE).off('click.close');
+            $modal.find('.' + ZDK_STR.MODAL_CLOSE).off('click.close');
             $(document).off('keyup.leanModal' + overlayID);
 
             $overlay.velocity({opacity: 0}, {duration: options.out_duration, queue: false, ease: "easeOutQuart"});
 
 
             // Define Bottom Sheet animation
-            if ($modal.hasClass(CONST_STRING.BOTTOM_SHEET)) {
+            if ($modal.hasClass(ZDK_STR.BOTTOM_SHEET)) {
                 $modal.velocity({bottom: "-100%", opacity: 0}, {
                     duration: options.out_duration,
                     queue: false,

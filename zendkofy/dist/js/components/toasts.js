@@ -11,7 +11,7 @@
 }(function ($, $z, Hammer) {
     'use strict';
     
-    var CONST_STRING = {
+    var ZDK_STR = {
         TOAST_CONTAINER: 'zdk-toast-container',
         TOAST: 'zdk-toast',
         PANNING: 'zdk-panning',
@@ -20,10 +20,10 @@
     $z.toast = function (message, displayLength, className, completeCallback) {
         className = className || "";
 
-        if (!$('#' + CONST_STRING.TOAST_CONTAINER).length) {
-            $(document.body).append('<div id="' + CONST_STRING.TOAST_CONTAINER + '"></div>');
+        if (!$('#' + ZDK_STR.TOAST_CONTAINER).length) {
+            $(document.body).append('<div id="' + ZDK_STR.TOAST_CONTAINER + '"></div>');
         }
-        var container = document.getElementById(CONST_STRING.TOAST_CONTAINER);
+        var container = document.getElementById(ZDK_STR.TOAST_CONTAINER);
 
         // Select and append toast
         var newToast = createToast(message);
@@ -52,7 +52,7 @@
                 window.clearInterval(counterInterval);
 
             // If toast is not being dragged, decrease its time remaining
-            if (!newToast.classList.contains(CONST_STRING.PANNING)) {
+            if (!newToast.classList.contains(ZDK_STR.PANNING)) {
                 timeLeft -= 20;
             }
 
@@ -79,7 +79,7 @@
 
             // Create toast
             var toast = document.createElement('div');
-            toast.classList.add(CONST_STRING.TOAST);
+            toast.classList.add(ZDK_STR.TOAST);
             if (className) {
                 var classes = className.split(' ');
 
@@ -107,8 +107,8 @@
                 var activationDistance = 80;
 
                 // Change toast state
-                if (!toast.classList.contains(CONST_STRING.PANNING)) {
-                    toast.classList.add(CONST_STRING.PANNING);
+                if (!toast.classList.contains(ZDK_STR.PANNING)) {
+                    toast.classList.add(ZDK_STR.PANNING);
                 }
 
                 var opacityPercent = 1 - Math.abs(deltaX / activationDistance);
@@ -142,7 +142,7 @@
                     });
 
                 } else {
-                    toast.classList.remove(CONST_STRING.PANNING);
+                    toast.classList.remove(ZDK_STR.PANNING);
                     // Put toast back into original position
                     $.Velocity(toast, {left: 0, opacity: 1}, {
                         duration: 300,

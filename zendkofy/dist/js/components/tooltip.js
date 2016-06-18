@@ -12,7 +12,7 @@
 }(function ($, $z) {
     'use strict';
     
-    var CONST_STRING = {
+    var ZDK_STR = {
         MATERIAL_TOOLTIP: 'zdk-material-tooltip',
         BACKDROP: 'zdk-backdrop'
     };
@@ -49,11 +49,11 @@
 
                 // Create tooltip
                 var newTooltip = $('<div></div>');
-                newTooltip.addClass(CONST_STRING.MATERIAL_TOOLTIP).append(tooltip_text)
+                newTooltip.addClass(ZDK_STR.MATERIAL_TOOLTIP).append(tooltip_text)
                     .appendTo($('body'))
                     .attr('id', tooltipId);
 
-                var backdrop = $('<div></div>').addClass(CONST_STRING.BACKDROP);
+                var backdrop = $('<div></div>').addClass(ZDK_STR.BACKDROP);
                 backdrop.appendTo(newTooltip);
                 backdrop.css({ top: 0, left:0 });
 

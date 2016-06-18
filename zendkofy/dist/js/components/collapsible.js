@@ -11,7 +11,7 @@
 }(function ($) {
     'use strict';
     
-    var CONST_STRING = {
+    var ZDK_STR = {
         COLLAPSIBLE: 'zdk-collapsible',
         COLLAPSIBLE_HEADER: 'zdk-collapsible-header',
         COLLAPSIBLE_BODY: 'zdk-collapsible-body',
@@ -21,7 +21,7 @@
     $.widget('zdkMaterial.zdk_collapible', {
         options: {
             collapsibleType: 'accordion',
-            panelHeaderSelector: '> li > .' + CONST_STRING.COLLAPSIBLE_HEADER
+            panelHeaderSelector: '> li > .' + ZDK_STR.COLLAPSIBLE_HEADER
         },
         _create: function () {
             var self = this,
@@ -37,13 +37,13 @@
             $element.off('click', options.panelHeaderSelector);
             $element.find(options.panelHeaderSelector).off('click');
 
-            self.openPanel($element.find('> li.' + CONST_STRING.ACTIVE));
+            self.openPanel($element.find('> li.' + ZDK_STR.ACTIVE));
             
             events['click ' + options.panelHeaderSelector] = function (event) {
                 var $collapsibleItem = $(event.currentTarget).parent();
-                if(!$collapsibleItem.hasClass(CONST_STRING.ACTIVE)) {
+                if(!$collapsibleItem.hasClass(ZDK_STR.ACTIVE)) {
                     if($element.data('collapsible') === 'accordion') {
-                        self.closePanel($element.find('> li.' + CONST_STRING.ACTIVE));
+                        self.closePanel($element.find('> li.' + ZDK_STR.ACTIVE));
                     }
                     self.openPanel($collapsibleItem);
                 } else {
@@ -60,7 +60,7 @@
          * @private
          */
         _getHeaderPanel: function ($collapsibleItem) {
-            return $collapsibleItem.find('> .' + CONST_STRING.COLLAPSIBLE_HEADER);
+            return $collapsibleItem.find('> .' + ZDK_STR.COLLAPSIBLE_HEADER);
         },
 
         /**
@@ -69,7 +69,7 @@
          * @private
          */
         _getBodyPanel: function ($collapsibleItem) {
-            return $collapsibleItem.find('> .' + CONST_STRING.COLLAPSIBLE_BODY);
+            return $collapsibleItem.find('> .' + ZDK_STR.COLLAPSIBLE_BODY);
         },
 
         /**
@@ -92,8 +92,8 @@
          * @param $collapsibleItem
          */
         closePanel: function ($collapsibleItem) {
-            $collapsibleItem.removeClass(CONST_STRING.ACTIVE);
-            this._getHeaderPanel($collapsibleItem).removeClass(CONST_STRING.ACTIVE);
+            $collapsibleItem.removeClass(ZDK_STR.ACTIVE);
+            this._getHeaderPanel($collapsibleItem).removeClass(ZDK_STR.ACTIVE);
             this._getBodyPanel($collapsibleItem).stop(true, false).slideUp({
                 duration: 350,
                 easing: "easeOutQuart",
@@ -106,7 +106,7 @@
     });
 
     $(document).ready(function () {
-        $('[data-materialize-init=true].' + CONST_STRING.COLLAPSIBLE).zdk_collapible();
+        $('[data-materialize-init=true].' + ZDK_STR.COLLAPSIBLE).zdk_collapible();
     });
 
     return $.zdkMaterial.zdk_collapible;

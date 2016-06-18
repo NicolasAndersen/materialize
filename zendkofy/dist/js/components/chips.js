@@ -18,7 +18,7 @@
         secondaryPlaceholder: '',
     };
 
-    var CONST_STRING = {
+    var ZDK_STR = {
         CHIPS: 'zdk-chips',
         CHIP: 'zdk-chip',
         SELECTED: 'zdk-selected',
@@ -78,8 +78,8 @@
                 $chips.data('index', i);
                 $chips.data('initialized', true);
 
-                if (!$chips.hasClass(CONST_STRING.CHIPS)) {
-                    $chips.addClass(CONST_STRING.CHIPS);
+                if (!$chips.hasClass(ZDK_STR.CHIPS)) {
+                    $chips.addClass(ZDK_STR.CHIPS);
                 }
 
                 self.chips($chips);
@@ -95,8 +95,8 @@
             });
 
             self.$document.on('click', SELS.CHIP, function (e) {
-                $(SELS.CHIP).removeClass(CONST_STRING.SELECTED);
-                $(this).toggleClass(CONST_STRING.SELECTED);
+                $(SELS.CHIP).removeClass(ZDK_STR.SELECTED);
+                $(this).toggleClass(ZDK_STR.SELECTED);
             });
 
             self.$document.on('keydown', function (e) {
@@ -141,13 +141,13 @@
                     if (index < 0) {
                         return;
                     }
-                    $(SELS.CHIP).removeClass(CONST_STRING.SELECTED);
+                    $(SELS.CHIP).removeClass(ZDK_STR.SELECTED);
                     self.selectChip($chips.data('index'), index, $chips);
 
                     // right
                 } else if (e.which === 39) {
                     index = $chip.index() + 1;
-                    $(SELS.CHIP).removeClass(CONST_STRING.SELECTED);
+                    $(SELS.CHIP).removeClass(ZDK_STR.SELECTED);
                     if (index > length) {
                         $chips.find('input').focus();
                         return;
@@ -157,12 +157,12 @@
             });
 
             self.$document.on('focusin', SELS.CHIPS + ' ' + SELS.INPUT, function (e) {
-                $(e.target).closest(SELS.CHIPS).addClass(CONST_STRING.FOCUS);
-                $(SELS.CHIP).removeClass(CONST_STRING.SELECTED);
+                $(e.target).closest(SELS.CHIPS).addClass(ZDK_STR.FOCUS);
+                $(SELS.CHIP).removeClass(ZDK_STR.SELECTED);
             });
 
             self.$document.on('focusout', SELS.CHIPS + ' ' + SELS.INPUT, function (e) {
-                $(e.target).closest(SELS.CHIPS).removeClass(CONST_STRING.FOCUS);
+                $(e.target).closest(SELS.CHIPS).removeClass(ZDK_STR.FOCUS);
             });
 
             self.$document.on('keydown', SELS.CHIPS + ' ' + SELS.INPUT, function (e) {
@@ -215,11 +215,11 @@
         this.renderChip = function (elem) {
             if (!elem.tag) return;
 
-            var html = '<div class="' + CONST_STRING.CHIP + '">' + elem.tag;
+            var html = '<div class="' + ZDK_STR.CHIP + '">' + elem.tag;
             if (elem.image) {
                 html += ' <img src="' + elem.image + '"> ';
             }
-            html += '<i class="' + CONST_STRING.MATERIALIZE_ICON + ' ' + CONST_STRING.CLOSE + '">close</i>';
+            html += '<i class="' + ZDK_STR.MATERIALIZE_ICON + ' ' + ZDK_STR.CLOSE + '">close</i>';
             html += '</div>';
             return html;
         };
@@ -269,8 +269,8 @@
         this.selectChip = function (chipsIndex, chipIndex, $chips) {
             var SELS = self.SELS;
             var $chip = $chips.find(SELS.CHIP).eq(chipIndex);
-            if ($chip && false === $chip.hasClass(CONST_STRING.SELECTED)) {
-                $chip.addClass(CONST_STRING.SELECTED);
+            if ($chip && false === $chip.hasClass(ZDK_STR.SELECTED)) {
+                $chip.addClass(ZDK_STR.SELECTED);
                 $chips.trigger('chip.select', $chips.data('chips')[chipIndex]);
             }
         };

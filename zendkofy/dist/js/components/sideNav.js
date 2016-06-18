@@ -11,7 +11,7 @@
 }(function ($) {
     'use strict';
     
-    var CONST_STRING = {
+    var ZDK_STR = {
         SIDENAV_OVERLAY: 'zdk-sidenav-overlay',
         SIDENAV_OVERLAY_HTML: '<div id="zdk-sidenav-overlay"></div>',
         DRAG_TARGET: 'zdk-drag-target',
@@ -38,7 +38,7 @@
                 }
 
                 // Add Touch Area
-                var dragTarget = $('<div class="' + CONST_STRING.DRAG_TARGET + '"></div>');
+                var dragTarget = $('<div class="' + ZDK_STR.DRAG_TARGET + '"></div>');
                 $('body').append(dragTarget);
 
                 if (options.edge == 'left') {
@@ -46,24 +46,24 @@
                     dragTarget.css({'left': 0}); // Add Touch Area
                 }
                 else {
-                    menu_id.addClass(CONST_STRING.RIGHT_ALIGNED) // Change text-alignment to right
+                    menu_id.addClass(ZDK_STR.RIGHT_ALIGNED) // Change text-alignment to right
                         .css('transform', 'translateX(100%)');
                     dragTarget.css({'right': 0}); // Add Touch Area
                 }
 
                 // If fixed sidenav, bring menu out
-                if (menu_id.hasClass(CONST_STRING.FIXED)) {
+                if (menu_id.hasClass(ZDK_STR.FIXED)) {
                     if (window.innerWidth > 992) {
                         menu_id.css('transform', 'translateX(0)');
                     }
                 }
 
                 // Window resize to reset on large screens fixed
-                if (menu_id.hasClass(CONST_STRING.FIXED)) {
+                if (menu_id.hasClass(ZDK_STR.FIXED)) {
                     $(window).resize(function () {
                         if (window.innerWidth > 992) {
                             // Close menu if window is resized bigger than 992 and user has fixed sidenav
-                            if ($('#' + CONST_STRING.SIDENAV_OVERLAY).length !== 0 && menuOut) {
+                            if ($('#' + ZDK_STR.SIDENAV_OVERLAY).length !== 0 && menuOut) {
                                 removeMenu(true);
                             }
                             else {
@@ -100,7 +100,7 @@
                         width: ''
                     });
 
-                    $('#' + CONST_STRING.SIDENAV_OVERLAY).velocity({opacity: 0}, {
+                    $('#' + ZDK_STR.SIDENAV_OVERLAY).velocity({opacity: 0}, {
                         duration: 200,
                         queue: false, easing: 'easeOutQuad',
                         complete: function () {
@@ -173,11 +173,11 @@
                         var oldWidth = $body.innerWidth();
                         $body.css('overflow', 'hidden');
                         $body.width(oldWidth);
-                        var $sideNavOverlay = $('#' + CONST_STRING.SIDENAV_OVERLAY);
+                        var $sideNavOverlay = $('#' + ZDK_STR.SIDENAV_OVERLAY);
 
                         // If overlay does not exist, create one and if it is clicked, close menu
                         if ($sideNavOverlay.length === 0) {
-                            $sideNavOverlay = $(CONST_STRING.SIDENAV_OVERLAY_HTML);
+                            $sideNavOverlay = $(ZDK_STR.SIDENAV_OVERLAY_HTML);
                             $sideNavOverlay.css('opacity', 0).click(function () {
                                 removeMenu();
                             });
@@ -271,7 +271,7 @@
                                     });
                                 }
 
-                                $('#' + CONST_STRING.SIDENAV_OVERLAY).velocity({opacity: 1}, {
+                                $('#' + ZDK_STR.SIDENAV_OVERLAY).velocity({opacity: 1}, {
                                     duration: 50,
                                     queue: false,
                                     easing: 'easeOutQuad'
@@ -291,7 +291,7 @@
                                     queue: false,
                                     easing: 'easeOutQuad'
                                 });
-                                $('#' + CONST_STRING.SIDENAV_OVERLAY).velocity({opacity: 0}, {
+                                $('#' + ZDK_STR.SIDENAV_OVERLAY).velocity({opacity: 0}, {
                                     duration: 200, queue: false, easing: 'easeOutQuad',
                                     complete: function () {
                                         $(this).remove();
@@ -311,7 +311,7 @@
                                     });
                                 }
 
-                                $('#' + CONST_STRING.SIDENAV_OVERLAY).velocity({opacity: 1}, {
+                                $('#' + ZDK_STR.SIDENAV_OVERLAY).velocity({opacity: 1}, {
                                     duration: 50,
                                     queue: false,
                                     easing: 'easeOutQuad'
@@ -332,7 +332,7 @@
                                     queue: false,
                                     easing: 'easeOutQuad'
                                 });
-                                $('#' + CONST_STRING.SIDENAV_OVERLAY).velocity({opacity: 0}, {
+                                $('#' + ZDK_STR.SIDENAV_OVERLAY).velocity({opacity: 0}, {
                                     duration: 200, queue: false, easing: 'easeOutQuad',
                                     complete: function () {
                                         $(this).remove();
@@ -379,7 +379,7 @@
                             });
                         }
 
-                        var overlay = $(CONST_STRING.SIDENAV_OVERLAY_HTML);
+                        var overlay = $(ZDK_STR.SIDENAV_OVERLAY_HTML);
                         overlay.css('opacity', 0)
                             .click(function () {
                                 menuOut = false;
@@ -413,7 +413,7 @@
             this.trigger('click');
         },
         hide: function () {
-            $('#' + CONST_STRING.SIDENAV_OVERLAY).trigger('click');
+            $('#' + ZDK_STR.SIDENAV_OVERLAY).trigger('click');
         }
     };
 
