@@ -9,7 +9,8 @@
         factory(jQuery, Zendkofy, Hammer);
     }
 }(function ($, $z, Hammer) {
-
+    'use strict';
+    
     var CONST_STRING = {
         TOAST_CONTAINER: 'zdk-toast-container',
         TOAST: 'zdk-toast',

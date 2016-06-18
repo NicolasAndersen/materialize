@@ -9,6 +9,8 @@
         factory(jQuery);
     }
 }(function ($) {
+    'use strict';
+    
     var CONST_STRING = {
         LEAN_OVERLAY: 'zdk-lean-overlay',
         OPEN: 'zdk-open',
@@ -48,7 +50,7 @@
 
             var overlayID = _generateID();
             var $overlay = $('<div class="' + CONST_STRING.LEAN_OVERLAY +'"></div>');
-            lStack = (++_stack);
+            var lStack = (++_stack);
 
             // Store a reference of the overlay
             $overlay.attr('id', overlayID).css('z-index', 1000 + lStack * 2);

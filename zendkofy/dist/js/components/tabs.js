@@ -9,6 +9,8 @@
         factory(jQuery);
     }
 }(function ($) {
+    'use strict';
+    
     var CONST_STRING = {
         TAB: 'zdk-tab',
         ACTIVE: 'zdk-active',

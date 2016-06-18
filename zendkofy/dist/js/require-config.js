@@ -14,6 +14,7 @@ require.config({
             'zendkofy/material/tooltip': 'components/tooltip',
             'zendkofy/material/leanModal': 'components/leanModal',
             'zendkofy/material/collapsible': 'components/collapsible',
+            'zendkofy/material/transitions': 'components/transitions',
             'zendkofy': 'utils/zendkofy',
             'zendkofy/init': 'utils/zendkofy/init',
             'zendkofy/default': 'utils/zendkofy/default',
@@ -72,4 +73,5 @@ require([
     'zendkofy/material/tooltip',
     'zendkofy/material/leanModal',
     'zendkofy/material/collapsible',
+    'zendkofy/material/transitions',
 ]);

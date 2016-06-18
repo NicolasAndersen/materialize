@@ -9,6 +9,8 @@
         factory(jQuery);
     }
 }(function ($) {
+    'use strict';
+    
     var classActive = 'zdk-active';
     
     // Add posibility to scroll to selected option

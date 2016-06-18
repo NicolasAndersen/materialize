@@ -10,6 +10,8 @@
         factory(jQuery, Zendkofy);
     }
 }(function ($, $z) {
+    'use strict';
+    
     var CONST_STRING = {
         MATERIAL_TOOLTIP: 'zdk-material-tooltip',
         BACKDROP: 'zdk-backdrop'

@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Transition</title>
+    <?php include './include/head.html'?>
+    <style>
+        #image-test {
+            display: none;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="zdk-container zdk" style="position: relative; top: 20px;">
+    <div class="zdk-row">
+        <div class="zdk-col zdk-s12 zdk-m9 zdk-l10">
+            <div class="zdk-row">
+                <div class="zdk-col zdk-s12 zdk-m6">
+                    <a href="#!" class="zdk-btn zdk" onclick="Zendkofy.showStaggeredList('#staggered-test')">Click Me</a>
+                    <ul id="staggered-test">
+                        <li>
+                            <h4><a href="#" class="zdk">List Item</a></h4>
+                            <p>This is a description</p>
+                        </li>
+                        <li>
+                            <h4><a href="#" class="zdk">List Item</a></h4>
+                            <p>This is a description</p>
+                        </li>
+                        <li>
+                            <h4><a href="#" class="zdk">List Item</a></h4>
+                            <p>This is a description</p>
+                        </li>
+                        <li>
+                            <h4><a href="#" class="zdk">List Item</a></h4>
+                            <p>This is a description</p>
+                        </li>
+                        <li>
+                            <h4><a href="#" class="zdk">List Item</a></h4>
+                            <p>This is a description</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="zdk-col zdk-s12 zdk-m6">
+                    <a href="#!" class="zdk-btn zdk" onclick="Zendkofy.fadeInImage('#image-test')">Click Me</a>
+                    <img id="image-test" class="zdk-responsive-img zdk" src="https://unsplash.imgix.net/reserve/nE6neNVdRPSIasnmePZe_IMG_1950.jpg?dpr=1.25&amp;fit=crop&amp;fm=jpg&amp;h=700&amp;q=75&amp;w=1050" style="opacity: 1;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

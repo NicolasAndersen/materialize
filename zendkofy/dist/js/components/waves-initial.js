@@ -9,6 +9,8 @@
         factory(jQuery, Waves);
     }
 }(function ($, Waves) {
+    'use strict';
+    
     $(document).ready(function ($) {
         Waves.displayEffect();
     });

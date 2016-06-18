@@ -9,6 +9,8 @@
         factory(jQuery);
     }
 }(function ($) {
+    'use strict';
+    
     var CONST_STRING = {
         COLLAPSIBLE: 'zdk-collapsible',
         COLLAPSIBLE_HEADER: 'zdk-collapsible-header',

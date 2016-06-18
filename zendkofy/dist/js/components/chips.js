@@ -9,6 +9,8 @@
         factory(jQuery);
     }
 }(function ($) {
+    'use strict';
+    
     var chipsHandleEvents = false;
     var materialChipsDefaults = {
         data: [],

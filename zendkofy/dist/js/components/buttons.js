@@ -9,6 +9,8 @@
         factory(jQuery);
     }
 }(function ($) {
+    'use strict';
+    
     var btnFloatingSelector = 'ul .zdk-btn-floating',
         classHorizontal = 'zdk-horizontal',
         classActive = 'zdk-active';
@@ -45,7 +47,7 @@
             }
         },
         closeFABMenu: function () {
-            $this = $(this);
+            var $this = $(this);
             // Get direction option
             var horizontal = $this.hasClass(classHorizontal);
             var offsetY, offsetX;
