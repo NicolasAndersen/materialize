@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Scrollfire</title>
+    <?php include './include/head.html'?>
+</head>
+<body>
+<div class="zdk-container zdk" style="position: relative; top: 20px;">
+    <div class="zdk-row">
+        <div class="zdk-col zdk-s12 zdk-m9 zdk-l10">
+            <div class="zdk-row">
+                <button class="zdk-btn zdk" style="position: relative; top: 3500px;">test</button>
+                <button class="zdk-btn zdk"  id="staggered-test" style="position: relative; top: 1000px;">test</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        require(['jquery', 'zendkofy', 'zendkofy/material/scrollFire', 'zendkofy/material/toasts'], function ($, $z) {
+            $(document).ready(function ($) {
+                var options = [
+                    {selector: '#staggered-test', offset: 320, callback: function() {
+                        $z.toast("This is our ScrollFire Demo!", 1500 );
+                    } },
+                    {selector: '#staggered-test', offset: 205, callback: function() {
+                        $z.toast("Please continue scrolling!", 1500 );
+                    } },
+                    {selector: '#staggered-test', offset: 400, callback: function() {
+                        $z.showStaggeredList("#staggered-test");
+                    } },
+                    {selector: '#staggered-test', offset: 500, callback: function() {
+                        $z.fadeInImage("#image-test");
+                    } }
+                ];
+
+                $z.scrollFire(options);
+            });
+        });
+    </script>
+</div>
+</body>
+</html>

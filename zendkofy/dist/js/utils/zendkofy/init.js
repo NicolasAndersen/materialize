@@ -18,17 +18,11 @@
         } );
     }
 
-    var _Zendkofy = window.Zendkofy,
-        _$z = window.$z;
+    var _$z = window.$z;
 
-    window.$z = Zendkofy;
-    Zendkofy.noConflict = function (deep) {
+    Zendkofy.noConflict = function () {
         if ( window.$z === Zendkofy ) {
             window.$z = _$z;
-        }
-
-        if ( deep && window.Zendkofy === Zendkofy ) {
-            window.jQuery = _Zendkofy;
         }
 
         return window.Zendkofy;

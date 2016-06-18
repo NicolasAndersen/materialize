@@ -19,6 +19,7 @@ require.config({
             'zendkofy/material/slider': 'components/slider',
             'zendkofy/material/carousel': 'components/carousel',
             'zendkofy/material/sideNav': 'components/sideNav',
+            'zendkofy/material/scrollFire': 'components/scrollFire',
             'jquery/hammer': 'lib/jquery/jquery.hammer',
             'zendkofy': 'utils/zendkofy',
             'zendkofy/init': 'utils/zendkofy/init',
@@ -83,4 +84,5 @@ require([
     'zendkofy/material/materialbox',
     'zendkofy/material/slider',
     'zendkofy/material/carousel',
+    'zendkofy/material/scrollFire',
 ]);
