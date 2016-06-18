@@ -2,14 +2,15 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define(["jquery", "zendkofy", "jquery/hammer", "velocity"], factory);
+        define(["jquery", "jquery/hammer", "velocity"], factory);
     } else {
 
         // Browser globals
         factory(jQuery, Zendkofy);
     }
-}(function ($, $z) {
+}(function ($) {
     'use strict';
+    
     var CONST_STRING = {
         SIDENAV_OVERLAY: 'zdk-sidenav-overlay',
         SIDENAV_OVERLAY_HTML: '<div id="zdk-sidenav-overlay"></div>',
@@ -17,7 +18,6 @@
         RIGHT_ALIGNED: 'zdk-right-aligned',
         FIXED: 'zdk-fixed'
     };
-
 
     var methods = {
         init: function (options) {
@@ -431,8 +431,8 @@
 
 
     $(document).ready(function () {
-        $('.zdk-button-collapse').sideNav({
-            'edge': 'right'
+        $('[data-materialize-init="true"].zdk-button-collapse').sideNav({
+            'edge': 'left'
         });
     });
 }));
