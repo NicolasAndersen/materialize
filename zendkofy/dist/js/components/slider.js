@@ -22,7 +22,6 @@
         CENTER_ALIGN: 'zdk-center-align',
         RIGHT_ALIGN: 'zdk-right-align',
         LEFT_ALIGN: 'zdk-left-align'
-        
     };
 
     var methods = {
@@ -346,6 +345,6 @@
 
 
     $(document).ready(function () {
-        $('.' + ZDK_STR.SLIDER).slider({full_width: true});
-    })
+        $('[data-materialize-init=true].' + ZDK_STR.SLIDER).slider({full_width: true});
+    });
 }));

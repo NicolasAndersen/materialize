@@ -17,6 +17,7 @@ require.config({
             'zendkofy/material/transitions': 'components/transitions',
             'zendkofy/material/materialbox': 'components/materialbox',
             'zendkofy/material/slider': 'components/slider',
+            'zendkofy/material/carousel': 'components/carousel',
             'zendkofy/material/sideNav': 'components/sideNav',
             'jquery/hammer': 'lib/jquery/jquery.hammer',
             'zendkofy': 'utils/zendkofy',
@@ -35,7 +36,7 @@ require.config({
     },
     paths: {
         // 'jquery': 'lib/jquery/jquery-1.9.1.min',
-        'jquery': 'lib/jquery/jquery-3.0.0',
+        'jquery': 'lib/jquery/jquery-1.11.3',
         'jquery/ui': 'lib/jquery/jquery-ui',
         'jquery/ui/widget': 'lib/jquery/jquery.widget',
         'jquery/ui/easing': 'lib/jquery/jquery.easing.1.3',
@@ -81,4 +82,5 @@ require([
     'zendkofy/material/sideNav',
     'zendkofy/material/materialbox',
     'zendkofy/material/slider',
+    'zendkofy/material/carousel',
 ]);
