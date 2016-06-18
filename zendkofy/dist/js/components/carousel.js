@@ -20,7 +20,7 @@
 
     var methods = {
 
-        init : function(options) {
+        init: function (options) {
             var defaults = {
                 time_constant: 200, // ms
                 dist: -100, // zoom scale TODO: make this more intuitive as an option
@@ -30,7 +30,7 @@
             };
             options = $.extend(defaults, options);
 
-            return this.each(function() {
+            return this.each(function () {
 
                 var images, offset, center, pressed, dim, count,
                     reference, referenceY, amplitude, target, velocity,
@@ -39,7 +39,7 @@
                 // Initialize
                 var view = $(this);
                 // Don't double initialize.
-                if (view.hasClass('initialized')) {
+                if (view.hasClass(ZDK_STR.INITIALIZED)) {
                     // Redraw carousel.
                     $(this).trigger('carouselNext', [.000001]);
                     return true;
@@ -48,7 +48,7 @@
                 // Options
                 if (options.full_width) {
                     options.dist = 0;
-                    imageHeight = view.find('.' + ZDK_STR.CAROUSEL_ITEM + ' img').first().load(function(){
+                    imageHeight = view.find('.' + ZDK_STR.CAROUSEL_ITEM + ' img').first().load(function () {
                         view.css('height', $(this).height());
                     });
                 }
@@ -126,8 +126,12 @@
                         ' translateX(' + (dir * options.shift * tween * i) + 'px)' +
                         ' translateZ(' + (options.dist * tween) + 'px)';
                     el.style.zIndex = 0;
-                    if (options.full_width) { tweenedOpacity = 1; }
-                    else { tweenedOpacity = 1 - 0.2 * tween; }
+                    if (options.full_width) {
+                        tweenedOpacity = 1;
+                    }
+                    else {
+                        tweenedOpacity = 1 - 0.2 * tween;
+                    }
                     el.style.opacity = tweenedOpacity;
                     half = count >> 1;
 
@@ -171,8 +175,12 @@
                         ' translateX(' + (dir * options.shift * tween) + 'px)' +
                         ' translateZ(' + (options.dist * tween) + 'px)';
                     el.style.zIndex = 0;
-                    if (options.full_width) { tweenedOpacity = 1; }
-                    else { tweenedOpacity = 1 - 0.2 * tween; }
+                    if (options.full_width) {
+                        tweenedOpacity = 1;
+                    }
+                    else {
+                        tweenedOpacity = 1 - 0.2 * tween;
+                    }
                     el.style.opacity = tweenedOpacity;
                 }
 
@@ -212,15 +220,19 @@
                         return false;
 
                     } else if (!options.full_width) {
-                        var clickedIndex = $(e.target).closest('.carousel-item').index();
+                        var clickedIndex = $(e.target).closest('.' + ZDK_STR.CAROUSEL_ITEM).index();
                         var diff = (center % count) - clickedIndex;
 
                         // Account for wraparound.
                         if (diff < 0) {
-                            if (Math.abs(diff + count) < Math.abs(diff)) { diff += count; }
+                            if (Math.abs(diff + count) < Math.abs(diff)) {
+                                diff += count;
+                            }
 
                         } else if (diff > 0) {
-                            if (Math.abs(diff - count) < diff) { diff -= count; }
+                            if (Math.abs(diff - count) < diff) {
+                                diff -= count;
+                            }
                         }
 
                         // Call prev or next accordingly.
@@ -249,7 +261,7 @@
                 }
 
                 function drag(e) {
-                    var x, y,  delta, deltaY;
+                    var x, y, delta, deltaY;
                     if (pressed) {
                         x = xpos(e);
                         y = ypos(e);
@@ -313,13 +325,12 @@
                 });
 
 
-
                 window.onresize = scroll;
 
                 setupEvents();
                 scroll(offset);
 
-                $(this).on('carouselNext', function(e, n) {
+                $(this).on('carouselNext', function (e, n) {
                     if (n === undefined) {
                         n = 1;
                     }
@@ -331,7 +342,7 @@
                     }
                 });
 
-                $(this).on('carouselPrev', function(e, n) {
+                $(this).on('carouselPrev', function (e, n) {
                     if (n === undefined) {
                         n = 1;
                     }
@@ -346,25 +357,24 @@
             });
 
 
-
         },
-        next : function(n) {
+        next: function (n) {
             $(this).trigger('carouselNext', [n]);
         },
-        prev : function(n) {
+        prev: function (n) {
             $(this).trigger('carouselPrev', [n]);
         },
     };
 
 
-    $.fn.carousel = function(methodOrOptions) {
-        if ( methods[methodOrOptions] ) {
-            return methods[ methodOrOptions ].apply( this, Array.prototype.slice.call( arguments, 1 ));
-        } else if ( typeof methodOrOptions === 'object' || ! methodOrOptions ) {
+    $.fn.carousel = function (methodOrOptions) {
+        if (methods[methodOrOptions]) {
+            return methods[methodOrOptions].apply(this, Array.prototype.slice.call(arguments, 1));
+        } else if (typeof methodOrOptions === 'object' || !methodOrOptions) {
             // Default to "init"
-            return methods.init.apply( this, arguments );
+            return methods.init.apply(this, arguments);
         } else {
-            $.error( 'Method ' +  methodOrOptions + ' does not exist on jQuery.carousel' );
+            $.error('Method ' + methodOrOptions + ' does not exist on jQuery.carousel');
         }
     }; // Plugin end
 
