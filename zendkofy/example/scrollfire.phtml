@@ -11,11 +11,12 @@
             <div class="zdk-row">
                 <button class="zdk-btn zdk" style="position: relative; top: 3500px;">test</button>
                 <button class="zdk-btn zdk"  id="staggered-test" style="position: relative; top: 1000px;">test</button>
+                <img style="opacity: 0;" width="500px" id="image-test" class="responsive-img" src="https://unsplash.imgix.net/reserve/nE6neNVdRPSIasnmePZe_IMG_1950.jpg?dpr=1.25&amp;fit=crop&amp;fm=jpg&amp;h=700&amp;q=75&amp;w=1050">
             </div>
         </div>
     </div>
     <script type="text/javascript">
-        require(['jquery', 'zendkofy', 'zendkofy/material/scrollFire', 'zendkofy/material/toasts'], function ($, $z) {
+        require(['jquery', 'zendkofy', 'material/scrollFire', 'material/toasts'], function ($, $z) {
             $(document).ready(function ($) {
                 var options = [
                     {selector: '#staggered-test', offset: 320, callback: function() {
@@ -27,7 +28,7 @@
                     {selector: '#staggered-test', offset: 400, callback: function() {
                         $z.showStaggeredList("#staggered-test");
                     } },
-                    {selector: '#staggered-test', offset: 500, callback: function() {
+                    {selector: '#image-test', offset: 500, callback: function() {
                         $z.fadeInImage("#image-test");
                     } }
                 ];
