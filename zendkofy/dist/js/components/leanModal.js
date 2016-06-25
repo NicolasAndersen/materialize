@@ -2,7 +2,7 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define(["jquery"], factory);
+        define('material/leanModal', ["jquery"], factory);
     } else {
 
         // Browser globals

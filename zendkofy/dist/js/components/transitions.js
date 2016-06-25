@@ -2,7 +2,7 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define(["jquery", "zendkofy", "jquery/hammer", "velocity"], factory);
+        define('material/transitions', ["jquery", "zendkofy", "jquery/hammer", "velocity"], factory);
     } else {
 
         // Browser globals

@@ -2,7 +2,7 @@
   if (typeof define === "function" && define.amd) {
 
     // AMD. Register as an anonymous module.
-    define(["jquery", "zendkofy"], factory);
+    define('material/scrollFire', ["jquery", "zendkofy"], factory);
   } else {
 
     // Browser globals

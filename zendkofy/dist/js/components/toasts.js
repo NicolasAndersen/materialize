@@ -2,7 +2,7 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define(["jquery", "zendkofy", "hammerjs", "velocity"], factory);
+        define('material/toasts', ["jquery", "zendkofy", "hammerjs", "velocity"], factory);
     } else {
 
         // Browser globals

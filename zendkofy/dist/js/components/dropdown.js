@@ -2,7 +2,7 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define(["jquery", "jquery/ui/easing"], factory);
+        define('material/dropdown', ["jquery", "jquery/ui/easing"], factory);
     } else {
 
         // Browser globals
