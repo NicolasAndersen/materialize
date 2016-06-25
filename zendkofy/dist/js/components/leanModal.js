@@ -16,8 +16,8 @@
         OPEN: 'zdk-open',
         MODAL_CLOSE: 'zdk-modal-close',
         BOTTOM_SHEET: 'zdk-bottom-sheet'
-
     };
+    
     var _stack = 0,
         _lastID = 0,
         _generateID = function () {

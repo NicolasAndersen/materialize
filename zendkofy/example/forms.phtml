@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <?php include './include/head.html'?>
+</head>
+<body>
+<div class="zdk-container zdk" style="position: relative; top: 20px;">
+    <div class="zdk-row">
+        <div class="zdk-col zdk-s12 zdk-m9 zdk-l10">
+            <div class="zdk-row">
+                <form class="zdk-col zdk-s12" method="post" enctype="multipart/form-data" action="forms.phtml">
+                    <div class="zdk-row">
+                        <div class="zdk-input-field zdk-col zdk-s6">
+                            <input data-materialize-init="true" placeholder="Placeholder" id="first_name" type="text" class="zdk-validate zdk">
+                            <label for="first_name" class="zdk-active">First Name</label>
+                        </div>
+                        <div class="zdk-input-field zdk-col zdk-s6">
+                            <input data-materialize-init="true" id="last_name" type="text" class="zdk-validate zdk">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="zdk-row">
+                        <div class="zdk-input-field zdk-col zdk-s12">
+                            <input data-materialize-init="true" disabled value="I am not editable" id="disabled" type="text" class="zdk-validate zdk">
+                            <label for="disabled" class="zdk-active">Disabled</label>
+                        </div>
+                    </div>
+                    <div class="zdk-row">
+                        <div class="zdk-input-field zdk-col zdk-s12">
+                            <input data-materialize-init="true" id="password" type="password" class="zdk-validate zdk">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="zdk-row">
+                        <div class="zdk-input-field zdk-col zdk-s12">
+                            <input data-materialize-init="true" id="email" type="email" class="zdk-validate zdk">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
