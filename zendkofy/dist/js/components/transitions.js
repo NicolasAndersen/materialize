@@ -2,17 +2,17 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define('material/transitions', ["jquery", "zendkofy", "jquery/hammer", "velocity"], factory);
+        define('material/transitions', ["jquery", "material", "jquery/hammer", "velocity"], factory);
     } else {
 
         // Browser globals
-        factory(jQuery, Zendkofy);
+        factory(jQuery, zMeterial);
     }
-}(function ($, $z) {
+}(function ($, $m) {
     'use strict';
 
     // Image transition function
-    $z.fadeInImage = function (selectorOrEl) {
+    $m.fadeInImage = function (selectorOrEl) {
         var element;
         if (typeof(selectorOrEl) === 'string') {
             element = $(selectorOrEl);
@@ -56,7 +56,7 @@
     };
 
     // Horizontal staggered list
-    $z.showStaggeredList = function (selectorOrEl) {
+    $m.showStaggeredList = function (selectorOrEl) {
         var element;
         if (typeof(selectorOrEl) === 'string') {
             element = $(selectorOrEl);

@@ -2,7 +2,7 @@
     if ( typeof define === "function" && define.amd ) {
 
         // AMD. Register as an anonymous module.
-        define([], factory );
+        define('zendkofy/init', [], factory );
     } else {
 
         // Browser globals
@@ -13,7 +13,7 @@
     var Zendkofy = {};
     
     if ( typeof define === "function" && define.amd ) {
-        define( "zendkofy-init", [], function() {
+        define( 'zendkofy/init', [], function() {
             return Zendkofy;
         } );
     }

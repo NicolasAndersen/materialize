@@ -2,8 +2,7 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define(
-            [
+        define('zendkofy/selector-class', [
                 'zendkofy/init',
                 'zendkofy/default',
                 'zendkofy/classnames'

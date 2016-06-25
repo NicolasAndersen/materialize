@@ -2,7 +2,7 @@
     if ( typeof define === "function" && define.amd ) {
 
         // AMD. Register as an anonymous module.
-        define(['zendkofy/init'], factory );
+        define('zendkofy/default', ['zendkofy/init'], factory );
     } else {
 
         // Browser globals
@@ -13,8 +13,8 @@
     $z.utils = $z.utils || {};
     $z.utils.DEFAULT = $z.utils.DEFAULT || {};
 
-    $z.utils.DEFAULT.CLASSNAMES_PREFIX = '';
-    $z.utils.DEFAULT.CLASSNAMES_SEPERATOR = '';
+    $z.utils.DEFAULT.CLASSNAMES_PREFIX = 'zdk-';
+    $z.utils.DEFAULT.CLASSNAMES_SEPERATOR = ' ';
 
     return $z;
 }));

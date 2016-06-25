@@ -2,13 +2,13 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define('material/toasts', ["jquery", "zendkofy", "hammerjs", "velocity"], factory);
+        define('material/toasts', ["jquery", "material", "hammerjs", "velocity"], factory);
     } else {
 
         // Browser globals
-        factory(jQuery, Zendkofy, Hammer);
+        factory(jQuery, Material, Hammer);
     }
-}(function ($, $z, Hammer) {
+}(function ($, $m, Hammer) {
     'use strict';
     
     var ZDK_STR = {
@@ -17,7 +17,7 @@
         PANNING: 'zdk-panning',
     };
 
-    $z.toast = function (message, displayLength, className, completeCallback) {
+    $m.toast = function (message, displayLength, className, completeCallback) {
         className = className || "";
 
         if (!$('#' + ZDK_STR.TOAST_CONTAINER).length) {
@@ -156,5 +156,7 @@
             return toast;
         }
     };
+    
+    return $m.toast;
 }));
 

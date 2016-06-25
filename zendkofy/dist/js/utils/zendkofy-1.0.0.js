@@ -2,15 +2,15 @@
     if ( typeof define === "function" && define.amd ) {
 
         // AMD. Register as an anonymous module.
-        define([
+        define('zendkofy', [
             'zendkofy/init', 
             'zendkofy/default',
             'zendkofy/classnames',
             'zendkofy/selector-attribute',
             'zendkofy/selector-class',
             'zendkofy/selector-builder',
-            'material/guid',
-            'material/element-or-parent-is-fixed'
+            'zendkofy/guid',
+            'zendkofy/element-or-parent-is-fixed'
         ], factory );
     } else {
 
@@ -19,9 +19,6 @@
     }
 }(function($z) {
     'use strict';
-    
-    $z.utils.DEFAULT.CLASSNAMES_PREFIX = 'zdk-';
-    $z.utils.DEFAULT.CLASSNAMES_SEPERATOR = ' ';
     
     return $z;
 }));

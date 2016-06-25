@@ -2,17 +2,15 @@
     if ( typeof define === "function" && define.amd ) {
 
         // AMD. Register as an anonymous module.
-        define('zendkofy/element-or-parent-is-fixed', ['zendkofy/init', 'zendkofy/default'], factory );
+        define('material/element-or-parent-is-fixed', ['material/init'], factory );
     } else {
 
         // Browser globals
-        factory(Zendkofy);
+        factory(zMeterial);
     }
-}(function($z) {
+}(function($m) {
     'use strict';
-    $z.utils = $z.utils || {};
-
-    $z.utils.elementOrParentIsFixed = function(element) {
+    $m.elementOrParentIsFixed = function(element) {
         var $element = $(element);
         var $checkElements = $element.add($element.parents());
         var isFixed = false;
@@ -25,5 +23,5 @@
         return isFixed;
     };
 
-    return $z.utils.elementOrParentIsFixed;
+    return $m.elementOrParentIsFixed;
 }));

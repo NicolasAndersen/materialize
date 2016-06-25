@@ -2,17 +2,15 @@
     if ( typeof define === "function" && define.amd ) {
 
         // AMD. Register as an anonymous module.
-        define('zendkofy/guid', ['zendkofy/init', 'zendkofy/default'], factory );
+        define('material/guid', ['material/init'], factory );
     } else {
 
         // Browser globals
-        factory(Zendkofy);
+        factory(zMeterial);
     }
-}(function($z) {
+}(function($m) {
     'use strict';
-    $z.utils = $z.utils || {};
-    
-    $z.utils.guid = (function() {
+    $m.guid = (function() {
         function s4() {
             return Math.floor((1 + Math.random()) * 0x10000)
                 .toString(16)
@@ -24,5 +22,5 @@
         };
     })();
 
-    return $z.utils.guid;
+    return $m.guid;
 }));

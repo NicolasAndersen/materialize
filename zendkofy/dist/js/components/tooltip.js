@@ -3,13 +3,13 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define('material/tooltip', ["jquery", "zendkofy", "velocity"], factory);
+        define('material/tooltip', ["jquery", "material", "velocity"], factory);
     } else {
 
         // Browser globals
-        factory(jQuery, Zendkofy);
+        factory(jQuery, zMeterial);
     }
-}(function ($, $z) {
+}(function ($, $m) {
     'use strict';
     
     var ZDK_STR = {
@@ -40,7 +40,7 @@
 
 
             return this.each(function(){
-                var tooltipId = $z.utils.guid();
+                var tooltipId = $m.guid();
                 var origin = $(this);
                 origin.attr('data-tooltip-id', tooltipId);
 
