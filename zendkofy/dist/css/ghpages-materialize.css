@@ -4623,7 +4623,7 @@ textarea {
   transform: scale(0.5); }
 
 /* Focused styles */
-[type="radio"].tabbed:focus + label:before {
+[type="radio"].zdk-tabbed:focus + label:before {
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1); }
 
 /* Disabled Radio With gap */
@@ -4653,23 +4653,23 @@ textarea {
 /* Checkboxes
    ========================================================================== */
 /* CUSTOM CSS CHECKBOXES */
-form p {
+form p.zdk {
   margin-bottom: 10px;
   text-align: left; }
 
-form p:last-child {
+form p.zdk:last-child {
   margin-bottom: 0; }
 
 /* Remove default checkbox */
-[type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
+[type="checkbox"].zdk:not(:checked),
+[type="checkbox"].zdk:checked {
   position: absolute;
   left: -9999px;
   opacity: 0; }
 
-[type="checkbox"] {
+[type="checkbox"].zdk {
   /* checkbox aspect */ }
-  [type="checkbox"] + label {
+  [type="checkbox"].zdk + label {
     position: relative;
     padding-left: 35px;
     cursor: pointer;
@@ -4685,7 +4685,7 @@ form p:last-child {
     /* webkit (konqueror) browsers */
     -ms-user-select: none;
     /* IE10+ */ }
-  [type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after {
+  [type="checkbox"].zdk + label:before, [type="checkbox"].zdk:not(.zdk-filled-in) + label:after {
     content: '';
     position: absolute;
     top: 0;
@@ -4697,20 +4697,20 @@ form p:last-child {
     border-radius: 1px;
     margin-top: 2px;
     transition: .2s; }
-  [type="checkbox"]:not(.filled-in) + label:after {
+  [type="checkbox"].zdk:not(.zdk-filled-in) + label:after {
     border: 0;
     transform: scale(0); }
-  [type="checkbox"]:not(:checked):disabled + label:before {
+  [type="checkbox"].zdk:not(:checked):disabled + label:before {
     border: none;
     background-color: rgba(0, 0, 0, 0.26); }
-  [type="checkbox"].tabbed:focus + label:after {
+  [type="checkbox"].zdk.zdk-tabbed:focus + label:after {
     transform: scale(1);
     border: 0;
     border-radius: 50%;
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgba(0, 0, 0, 0.1); }
 
-[type="checkbox"]:checked + label:before {
+[type="checkbox"].zdk:checked + label:before {
   top: -4px;
   left: -5px;
   width: 12px;
@@ -4722,12 +4722,12 @@ form p:last-child {
   transform: rotate(40deg);
   backface-visibility: hidden;
   transform-origin: 100% 100%; }
-[type="checkbox"]:checked:disabled + label:before {
+[type="checkbox"].zdk:checked:disabled + label:before {
   border-right: 2px solid rgba(0, 0, 0, 0.26);
   border-bottom: 2px solid rgba(0, 0, 0, 0.26); }
 
 /* Indeterminate checkbox */
-[type="checkbox"]:indeterminate + label:before {
+[type="checkbox"].zdk:indeterminate + label:before {
   top: -11px;
   left: -12px;
   width: 10px;
@@ -4739,21 +4739,21 @@ form p:last-child {
   transform: rotate(90deg);
   backface-visibility: hidden;
   transform-origin: 100% 100%; }
-[type="checkbox"]:indeterminate:disabled + label:before {
+[type="checkbox"].zdk:indeterminate:disabled + label:before {
   border-right: 2px solid rgba(0, 0, 0, 0.26);
   background-color: transparent; }
 
-[type="checkbox"].filled-in + label:after {
+[type="checkbox"].zdk.zdk-filled-in + label:after {
   border-radius: 2px; }
-[type="checkbox"].filled-in + label:before,
-[type="checkbox"].filled-in + label:after {
+[type="checkbox"].zdk.zdk-filled-in + label:before,
+[type="checkbox"].zdk.zdk-filled-in + label:after {
   content: '';
   left: 0;
   position: absolute;
   /* .1s delay is for check animation */
   transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
   z-index: 1; }
-[type="checkbox"].filled-in:not(:checked) + label:before {
+[type="checkbox"].zdk.zdk-filled-in:not(:checked) + label:before {
   width: 0;
   height: 0;
   border: 3px solid transparent;
@@ -4763,14 +4763,14 @@ form p:last-child {
   transform: rotateZ(37deg);
   -webkit-transform-origin: 20% 40%;
   transform-origin: 100% 100%; }
-[type="checkbox"].filled-in:not(:checked) + label:after {
+[type="checkbox"].zdk.zdk-filled-in:not(:checked) + label:after {
   height: 20px;
   width: 20px;
   background-color: transparent;
   border: 2px solid #5a5a5a;
   top: 0px;
   z-index: 0; }
-[type="checkbox"].filled-in:checked + label:before {
+[type="checkbox"].zdk.zdk-filled-in:checked + label:before {
   top: 0;
   left: 1px;
   width: 8px;
@@ -4783,30 +4783,30 @@ form p:last-child {
   transform: rotateZ(37deg);
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%; }
-[type="checkbox"].filled-in:checked + label:after {
+[type="checkbox"].zdk.zdk-filled-in:checked + label:after {
   top: 0;
   width: 20px;
   height: 20px;
   border: 2px solid #26a69a;
   background-color: #26a69a;
   z-index: 0; }
-[type="checkbox"].filled-in.tabbed:focus + label:after {
+[type="checkbox"].zdk.zdk-filled-in.zdk-tabbed:focus + label:after {
   border-radius: 2px;
   border-color: #5a5a5a;
   background-color: rgba(0, 0, 0, 0.1); }
-[type="checkbox"].filled-in.tabbed:checked:focus + label:after {
+[type="checkbox"].zdk.zdk-filled-in.zdk-tabbed:checked:focus + label:after {
   border-radius: 2px;
   background-color: #26a69a;
   border-color: #26a69a; }
-[type="checkbox"].filled-in:disabled:not(:checked) + label:before {
+[type="checkbox"].zdk.zdk-filled-in:disabled:not(:checked) + label:before {
   background-color: transparent;
   border: 2px solid transparent; }
-[type="checkbox"].filled-in:disabled:not(:checked) + label:after {
+[type="checkbox"].zdk.zdk-filled-in:disabled:not(:checked) + label:after {
   border-color: transparent;
   background-color: #BDBDBD; }
-[type="checkbox"].filled-in:disabled:checked + label:before {
+[type="checkbox"].zdk.zdk-filled-in:disabled:checked + label:before {
   background-color: transparent; }
-[type="checkbox"].filled-in:disabled:checked + label:after {
+[type="checkbox"].zdk.zdk-filled-in:disabled:checked + label:after {
   background-color: #BDBDBD;
   border-color: #BDBDBD; }
 
@@ -4858,11 +4858,11 @@ form p:last-child {
     transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease; }
 
 input[type=checkbox]:checked:not(:disabled) ~ .lever:active::after,
-input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::after {
+input[type=checkbox]:checked:not(:disabled).zdk-tabbed:focus ~ .lever::after {
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(38, 166, 154, 0.1); }
 
 input[type=checkbox]:not(:disabled) ~ .lever:active:after,
-input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
+input[type=checkbox]:not(:disabled).zdk-tabbed:focus ~ .lever::after {
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.08); }
 
 .switch input[type=checkbox][disabled] + .lever {
@@ -4888,12 +4888,12 @@ select {
   border-radius: 2px;
   height: 3rem; }
 
-.select-label {
+.zdk-select-label {
   position: absolute; }
 
-.select-wrapper {
+.zdk-select-wrapper {
   position: relative; }
-  .select-wrapper input.select-dropdown {
+  .zdk-select-wrapper input.zdk-select-dropdown {
     position: relative;
     cursor: pointer;
     background-color: transparent;
@@ -4907,15 +4907,15 @@ select {
     margin: 0 0 15px 0;
     padding: 0;
     display: block; }
-  .select-wrapper span.caret {
+  .zdk-select-wrapper span.zdk-caret {
     color: initial;
     position: absolute;
     right: 0;
     top: 16px;
     font-size: 10px; }
-    .select-wrapper span.caret.zdk-disabled {
+    .zdk-select-wrapper span.zdk-caret.zdk-disabled {
       color: rgba(0, 0, 0, 0.26); }
-  .select-wrapper + label {
+  .zdk-select-wrapper + label {
     position: absolute;
     top: -14px;
     font-size: 0.8rem; }
@@ -4923,7 +4923,7 @@ select {
 select:disabled {
   color: rgba(0, 0, 0, 0.3); }
 
-.select-wrapper input.select-dropdown:disabled {
+.zdk-select-wrapper input.zdk-select-dropdown:disabled {
   color: rgba(0, 0, 0, 0.3);
   cursor: default;
   -webkit-user-select: none;
@@ -4934,16 +4934,16 @@ select:disabled {
   /* IE10+ */
   border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
 
-.select-wrapper i {
+.zdk-select-wrapper i {
   color: rgba(0, 0, 0, 0.3); }
 
-.select-dropdown li.zdk-disabled,
-.select-dropdown li.zdk-disabled > span,
-.select-dropdown li.optgroup {
+.zdk-select-dropdown li.zdk-disabled,
+.zdk-select-dropdown li.zdk-disabled > span,
+.zdk-select-dropdown li.zdk-optgroup {
   color: rgba(0, 0, 0, 0.3);
   background-color: transparent; }
 
-.zdk-prefix ~ .select-wrapper {
+.zdk-prefix ~ .zdk-select-wrapper {
   margin-left: 3rem;
   width: 92%;
   width: calc(100% - 3rem); }
@@ -4951,19 +4951,19 @@ select:disabled {
 .zdk-prefix ~ label {
   margin-left: 3rem; }
 
-.select-dropdown li img {
+.zdk-select-dropdown li img {
   height: 40px;
   width: 40px;
   margin: 5px 15px;
   float: right; }
 
-.select-dropdown li.optgroup {
+.zdk-select-dropdown li.zdk-optgroup {
   border-top: 1px solid #eee; }
-  .select-dropdown li.optgroup.zdk-selected > span {
+  .zdk-select-dropdown li.zdk-optgroup.zdk-selected > span {
     color: rgba(0, 0, 0, 0.7); }
-  .select-dropdown li.optgroup > span {
+  .zdk-select-dropdown li.zdk-optgroup > span {
     color: rgba(0, 0, 0, 0.4); }
-  .select-dropdown li.optgroup ~ li.optgroup-option {
+  .zdk-select-dropdown li.zdk-optgroup ~ li.optgroup-option {
     padding-left: 1rem; }
 
 /* File Input

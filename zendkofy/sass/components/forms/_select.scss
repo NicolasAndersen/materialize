@@ -13,14 +13,14 @@ select {
   height: $input-height;
 }
 
-.select-label {
+.zdk-select-label {
   position: absolute;
 }
 
-.select-wrapper {
+.zdk-select-wrapper {
   position: relative;
 
-  input.select-dropdown {
+  input.zdk-select-dropdown {
     position: relative;
     cursor: pointer;
     background-color: transparent;
@@ -36,7 +36,7 @@ select {
     display: block;
   }
 
-  span.caret {
+  span.zdk-caret {
     color: initial;
     position: absolute;
     right: 0;
@@ -59,7 +59,7 @@ select:disabled {
   color: rgba(0,0,0,.3);
 }
 
-.select-wrapper input.select-dropdown:disabled {
+.zdk-select-wrapper input.zdk-select-dropdown:disabled {
   color: rgba(0,0,0,.3);
   cursor: default;
   -webkit-user-select: none; /* webkit (safari, chrome) browsers */
@@ -68,19 +68,19 @@ select:disabled {
   border-bottom: 1px solid rgba(0,0,0,.3);
 }
 
-.select-wrapper i {
+.zdk-select-wrapper i {
   color: $select-disabled-color;
 }
 
-.select-dropdown li.zdk-disabled,
-.select-dropdown li.zdk-disabled > span,
-.select-dropdown li.optgroup {
+.zdk-select-dropdown li.zdk-disabled,
+.zdk-select-dropdown li.zdk-disabled > span,
+.zdk-select-dropdown li.zdk-optgroup {
   color: $select-disabled-color;
   background-color: transparent;
 }
 
 // Prefix Icons
-.zdk-prefix ~ .select-wrapper {
+.zdk-prefix ~ .zdk-select-wrapper {
   margin-left: 3rem;
   width: 92%;
   width: calc(100% - 3rem);
@@ -89,7 +89,7 @@ select:disabled {
 .zdk-prefix ~ label { margin-left: 3rem; }
 
 // Icons
-.select-dropdown li {
+.zdk-select-dropdown li {
   img {
     height: $dropdown-item-height - 10;
     width: $dropdown-item-height - 10;
@@ -99,7 +99,7 @@ select:disabled {
 }
 
 // Optgroup styles
-.select-dropdown li.optgroup {
+.zdk-select-dropdown li.zdk-optgroup {
   border-top: 1px solid $dropdown-hover-bg-color;
 
   &.zdk-selected > span {

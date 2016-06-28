@@ -25,7 +25,9 @@ require.config({
         'material/element-or-parent-is-fixed': 'components/global/element-or-parent-is-fixed',
         'material/buttons': 'components/buttons',
         'material/dropdown': 'components/dropdown',
-        'material/forms': 'components/forms',
+        'material/form/input-fields': 'components/form/input-fields',
+        'material/form/material-select': 'components/form/material-select',
+        'material/form/checkboxes': 'components/form/checkboxes',
         'material/cards': 'components/cards',
         'material/chips': 'components/chips',
         'material/tabs': 'components/tabs',
@@ -40,7 +42,6 @@ require.config({
         'material/sideNav': 'components/sideNav',
         'material/scrollFire': 'components/scrollFire',
         'material/character_counter': 'components/character_counter',
-        'material/groupButton': 'widget/group-button',
         'material/waves': 'components/waves',
         'material/scrollspy': 'components/scrollspy',
         'zendkofy': 'utils/zendkofy-1.0.0',
@@ -69,8 +70,7 @@ require.config({
         },
         'hammerjs': {
             'exports': 'Hammer'
-        },
-        'material/groupButton': ['jquery', 'jquery/ui/widget']
+        }
     },
     deps: [
         'zendkofy/selector-builder',
@@ -84,7 +84,9 @@ require([
     'material/waves',
     'material/buttons',
     'material/dropdown',
-    'material/forms',
+    'material/form/input-fields',
+    'material/form/material-select',
+    'material/form/checkboxes',
     'material/cards',
     'material/chips',
     'material/tabs',

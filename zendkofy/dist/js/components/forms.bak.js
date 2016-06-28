@@ -132,11 +132,11 @@
         $(document).on('keyup.radio', radio_checkbox, function (e) {
             // TAB, check if tabbing to radio or checkbox.
             if (e.which === 9) {
-                $(this).addClass('tabbed');
+                $(this).addClass('zdk-tabbed');
                 var $this = $(this);
                 $this.one('blur', function (e) {
 
-                    $(this).removeClass('tabbed');
+                    $(this).removeClass('zdk-tabbed');
                 });
                 return;
             }
@@ -434,7 +434,7 @@
 
             var uniqueID = Materialize.guid();
             $select.data('select-id', uniqueID);
-            var wrapper = $('<div class="select-wrapper"></div>');
+            var wrapper = $('<div class="zdk-select-wrapper"></div>');
             wrapper.addClass($select.attr('class'));
             var options = $('<ul id="select-options-' + uniqueID + '" class="dropdown-content select-dropdown ' + (multiple ? 'multiple-select-dropdown' : '') + '"></ul>'),
                 selectChildren = $select.children('option, optgroup'),
@@ -500,7 +500,7 @@
             options.find('li:not(.optgroup)').each(function (i) {
                 $(this).click(function (e) {
                     // Check if option element is disabled
-                    if (!$(this).hasClass('disabled') && !$(this).hasClass('optgroup')) {
+                    if (!$(this).hasClass('disabled') && !$(this).hasClass('zdk-optgroup')) {
                         var selected = true;
 
                         if (multiple) {
@@ -529,14 +529,14 @@
             // Wrap Elements
             $select.wrap(wrapper);
             // Add Select Display Element
-            var dropdownIcon = $('<span class="caret">&#9660;</span>');
+            var dropdownIcon = $('<span class="zdk-caret">&#9660;</span>');
             if ($select.is(':disabled'))
                 dropdownIcon.addClass('disabled');
 
             // escape double quotes
             var sanitizedLabelHtml = label.replace(/"/g, '&quot;');
 
-            var $newSelect = $('<input type="text" class="select-dropdown" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '') + ' data-activates="select-options-' + uniqueID + '" value="' + sanitizedLabelHtml + '"/>');
+            var $newSelect = $('<input type="text" class="zdk-select-dropdown" readonly="true" ' + (($select.is(':disabled')) ? 'disabled' : '') + ' data-activates="select-options-' + uniqueID + '" value="' + sanitizedLabelHtml + '"/>');
             $select.before($newSelect);
             $newSelect.before(dropdownIcon);
 
@@ -555,8 +555,8 @@
 
             $newSelect.on({
                 'focus': function () {
-                    if ($('ul.select-dropdown').not(options[0]).is(':visible')) {
-                        $('input.select-dropdown').trigger('close');
+                    if ($('ul.zdk-select-dropdown').not(options[0]).is(':visible')) {
+                        $('input.zdk-select-dropdown').trigger('close');
                     }
                     if (!options.is(':visible')) {
                         $(this).trigger('open', ['focus']);

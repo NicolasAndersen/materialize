@@ -2,25 +2,25 @@
    ========================================================================== */
 
 /* CUSTOM CSS CHECKBOXES */
-form p {
+form p.zdk {
   margin-bottom: 10px;
   text-align: left;
 }
 
-form p:last-child {
+form p.zdk:last-child {
   margin-bottom: 0;
 }
 
 /* Remove default checkbox */
-[type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
+[type="checkbox"].zdk:not(:checked),
+[type="checkbox"].zdk:checked {
   position: absolute;
   left: -9999px;
   opacity: 0;
 }
 
 // Checkbox Styles
-[type="checkbox"] {
+[type="checkbox"].zdk {
   // Text Label Style
   + label {
     position: relative;
@@ -39,7 +39,7 @@ form p:last-child {
 
   /* checkbox aspect */
   + label:before,
-  &:not(.filled-in) + label:after {
+  &:not(.zdk-filled-in) + label:after {
     content: '';
     position: absolute;
     top: 0;
@@ -53,7 +53,7 @@ form p:last-child {
     transition: .2s;
   }
 
-  &:not(.filled-in) + label:after {
+  &:not(.zdk-filled-in) + label:after {
     border: 0;
     transform: scale(0);
   }
@@ -64,7 +64,7 @@ form p:last-child {
   }
 
   // Focused styles
-  &.tabbed:focus + label:after {
+  &.zdk-tabbed:focus + label:after {
     transform: scale(1);
     border: 0;
     border-radius: 50%;
@@ -73,7 +73,7 @@ form p:last-child {
   }
 }
 
-[type="checkbox"]:checked {
+[type="checkbox"].zdk:checked {
   + label:before {
     top: -4px;
     left: -5px;
@@ -95,7 +95,7 @@ form p:last-child {
 }
 
 /* Indeterminate checkbox */
-[type="checkbox"]:indeterminate {
+[type="checkbox"].zdk:indeterminate {
   +label:before {
     top: -11px;
     left: -12px;
@@ -118,7 +118,7 @@ form p:last-child {
 }
 
 // Filled in Style
-[type="checkbox"].filled-in {
+[type="checkbox"].zdk.zdk-filled-in {
   // General
   + label:after {
     border-radius: 2px;
@@ -186,13 +186,13 @@ form p:last-child {
   }
 
   // Focused styles
-  &.tabbed:focus + label:after {
+  &.zdk-tabbed:focus + label:after {
     border-radius: 2px;
     border-color: $radio-empty-color;
     background-color: rgba(0,0,0,.1);
   }
 
-  &.tabbed:checked:focus + label:after {
+  &.zdk-tabbed:checked:focus + label:after {
     border-radius: 2px;
     background-color: $secondary-color;
     border-color: $secondary-color;
