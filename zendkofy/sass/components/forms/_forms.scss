@@ -1,5 +1,5 @@
 // Remove Focus Boxes
-select:focus {
+select.zdk:focus {
   outline: $select-focus;
 }
 
@@ -8,7 +8,7 @@ button.zdk-btn:focus {
   background-color: $button-background-focus;
 }
 
-label {
+label.zdk {
   font-size: $label-font-size;
   color: $input-border-color;
 }
@@ -19,4 +19,5 @@ label {
 @import 'switches';
 @import 'select';
 @import 'file-input';
+@import 'autocomplete';
 @import 'range';

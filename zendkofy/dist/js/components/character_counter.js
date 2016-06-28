@@ -12,7 +12,7 @@
     var ZDK_STR = {
         CHARACTER_COUNTER: 'zdk-character-counter',
         VALID: 'zdk-valid',
-        INVALID: 'zdk-invalid',
+        INVALID: 'zdk-invalid'
     };
 
     $.fn.characterCounter = function () {
@@ -81,7 +81,6 @@
     }
 
     $(document).ready(function () {
-        $('input, textarea').characterCounter();
+        $('input[data-materialize-init=true].character-counter, textarea[data-materialize-init=true].character-counter').characterCounter();
     });
-
 }));

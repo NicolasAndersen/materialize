@@ -1,10 +1,10 @@
 /* Select Field
    ========================================================================== */
 
-select { display: none; }
+select.zdk { display: none; }
 select.zdk-browser-default { display: block; }
 
-select {
+select.zdk {
   background-color: $select-background;
   width: 100%;
   padding: $select-padding;
@@ -52,10 +52,19 @@ select {
     top: -14px;
     font-size: $label-font-size;
   }
+
+  .zdk-multiple-select-dropdown {
+    & > li > span > [type="checkbox"] {
+      // Text Label Style
+      & + label {
+        height: 18px;
+      }
+    }
+  }
 }
 
 // Disabled styles
-select:disabled {
+select.zdk:disabled {
   color: rgba(0,0,0,.3);
 }
 
@@ -110,7 +119,7 @@ select:disabled {
     color: rgba(0, 0, 0, .4);
   }
 
-  & ~ li.optgroup-option {
+  & ~ li.zdk-optgroup-option {
     padding-left: 1rem;
   }
 }

@@ -2,7 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Form</title>
-    <?php include './include/head.html'?>
+    <link rel="stylesheet" href="../dist/css/ghpages-materialize.css">
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../dist/js/extras/noUiSlider/nouislider.css" rel="stylesheet">
+    <script type="text/javascript" src="../dist/js/lib/require.js"></script>
+    <script type="text/javascript" src="../dist/js/require-config.js"></script>
 </head>
 <body>
 <div class="zdk-container zdk" style="position: relative; top: 20px;">
@@ -13,17 +18,17 @@
                     <div class="zdk-row">
                         <div class="zdk-input-field zdk-col zdk-s6">
                             <input data-materialize-init="true" placeholder="Placeholder" id="first_name" type="text" class="zdk-validate zdk">
-                            <label for="first_name" class="zdk-active">First Name</label>
+                            <label for="first_name" class="zdk-active zdk">First Name</label>
                         </div>
                         <div class="zdk-input-field zdk-col zdk-s6">
                             <input data-materialize-init="true" id="last_name" type="text" class="zdk-validate zdk">
-                            <label for="last_name">Last Name</label>
+                            <label for="last_name" class="zdk">Last Name</label>
                         </div>
                     </div>
                     <div class="zdk-row">
                         <div class="zdk-input-field zdk-col zdk-s12">
                             <input data-materialize-init="true" disabled value="I am not editable" id="disabled" type="text" class="zdk-validate zdk">
-                            <label for="disabled" class="zdk-active">Disabled</label>
+                            <label for="disabled" class="zdk-active zdk">Disabled</label>
                         </div>
                     </div>
                     <div class="zdk-row">
@@ -35,7 +40,7 @@
                     <div class="zdk-row">
                         <div class="zdk-input-field zdk-col zdk-s12">
                             <input data-materialize-init="true" id="email" type="email" class="zdk-validate zdk">
-                            <label for="email">Email</label>
+                            <label for="email" class="zdk">Email</label>
                         </div>
                     </div>
                 </form>
@@ -44,34 +49,34 @@
                 <form class="zdk-col zdk-s12" method="post" enctype="multipart/form-data" action="forms.phtml">
                     <p class="zdk">
                         <input data-materialize-init="true" type="checkbox" id="test5" class="zdk" />
-                        <label for="test5">Red</label>
+                        <label for="test5" class="zdk">Red</label>
                     </p>
                     <p class="zdk">
                         <input data-materialize-init="true" type="checkbox" id="test6" class="zdk" checked="checked" />
-                        <label for="test6">Yellow</label>
+                        <label for="test6" class="zdk">Yellow</label>
                     </p>
                     <p class="zdk">
                         <input data-materialize-init="true" type="checkbox" class="zdk-filled-in zdk" id="filled-in-box" checked="checked" />
-                        <label for="filled-in-box">Filled in</label>
+                        <label for="filled-in-box" class="zdk">Filled in</label>
                     </p>
                     <p class="zdk">
                         <input data-materialize-init="true" type="checkbox" class="zdk" id="indeterminate-checkbox" />
-                        <label for="indeterminate-checkbox">Indeterminate Style</label>
+                        <label for="indeterminate-checkbox" class="zdk">Indeterminate Style</label>
                     </p>
                     <p class="zdk">
                         <input data-materialize-init="true" type="checkbox" class="zdk" id="test7" checked="checked" disabled="disabled" />
-                        <label for="test7">Green</label>
+                        <label for="test7" class="zdk">Green</label>
                     </p>
                     <p class="zdk">
                         <input data-materialize-init="true" type="checkbox" class="zdk" id="test8" disabled="disabled" />
-                        <label for="test8">Brown</label>
+                        <label for="test8" class="zdk">Brown</label>
                     </p>
                 </form>
                 <form class="zdk-col zdk-s12" method="post" enctype="multipart/form-data" action="forms.phtml">
                     <div class="zdk-row">
                         <div class="zdk-input-field zdk-col zdk-s12">
                             <textarea  data-materialize-init="true" id="textarea1" class="zdk-materialize-textarea zdk"></textarea>
-                            <label for="textarea1">Textarea</label>
+                            <label for="textarea1" class="zdk">Textarea</label>
                         </div>
                     </div>
                 </form>
@@ -79,19 +84,19 @@
                     <div class="zdk-row">
                         <p class="zdk">
                             <input class="zdk" name="group1" type="radio" id="test1" />
-                            <label for="test1">Red</label>
+                            <label for="test1" class="zdk">Red</label>
                         </p>
                         <p class="zdk">
                             <input class="zdk" name="group1" type="radio" id="test2" />
-                            <label for="test2">Yellow</label>
+                            <label for="test2" class="zdk">Yellow</label>
                         </p>
                         <p class="zdk">
-                            <input class="with-gap zdk" name="group1" type="radio" id="test3"  />
-                            <label for="test3">Green</label>
+                            <input class="zdk-with-gap zdk" name="group1" type="radio" id="test3"  />
+                            <label for="test3" class="zdk">Green</label>
                         </p>
                         <p class="zdk">
                             <input class="zdk" name="group1" type="radio" id="test4" disabled="disabled" />
-                            <label for="test4">Brown</label>
+                            <label for="test4" class="zdk">Brown</label>
                         </p>
                     </div>
                 </form>
@@ -99,7 +104,7 @@
             <div class="zdk-row">
                 <!-- Switch -->
                 <div class="zdk-switch">
-                    <label>
+                    <label class="zdk">
                         Off
                         <input class="zdk" type="checkbox">
                         <span class="zdk-lever zdk"></span>
@@ -110,7 +115,7 @@
             <div class="zdk-row">
                 <!-- Disabled Switch -->
                 <div class="zdk-switch">
-                    <label>
+                    <label class="zdk">
                         Off
                         <input class="zdk" disabled type="checkbox">
                         <span class="zdk-lever zdk"></span>
@@ -152,13 +157,12 @@
                 </form>
             </div>
             <div class="zdk-row">
-                <div class="zdk-col zdk-s6" id="test-slider" class="test-slider"></div>
+                <div id="test-slider" class="test-slider"></div>
                 <script type="text/javascript">
                     require(['nouislider'], function (noUiSlider ) {
                         var slider = document.getElementById('test-slider');
                         noUiSlider.create(slider, {
-                            start: [20, 80],
-                            connect: true,
+                            start: 0,
                             step: 1,
                             range: {
                                 'min': 0,
@@ -171,6 +175,128 @@
                     });
                 </script>
             </div>
+            <div class="zdk-row">
+                <form class="zdk-col zdk-s12">
+                    <div class="zdk-row">
+                        <div class="zdk-input-field zdk-col zdk-s6">
+                            <input data-materialize-init="true" class="zdk" id="input_text" type="text" length="10" maxlength="10">
+                            <label class="zdk" for="input_text">Input text</label>
+                        </div>
+                    </div>
+                    <div class="zdk-row">
+                        <div class="zdk-input-field zdk-col zdk-s12">
+                            <textarea data-materialize-init="true" id="textarea1" class="zdk-materialize-textarea zdk" length="120" maxlength="120"></textarea>
+                            <label class="zdk" for="textarea1">Textarea</label>
+                        </div>
+                    </div>
+                </form>
+                <script type="text/javascript">
+                    require(['jquery', 'material/character_counter'], function ($) {
+                        $(document).ready(function ($) {
+                            $('input#input_text, textarea#textarea1').characterCounter();
+                        });
+                    });
+                </script>
+            </div>
+            <div class="zdk-row">
+                <input type="date" class="datepicker zdk">
+                <script type="text/javascript">
+                    require(['jquery', 'material/form/datepicker'], function ($) {
+                        $(document).ready(function ($) {
+                            $('.datepicker').pickadate({
+                                selectMonths: true, // Creates a dropdown to control month
+                                selectYears: 15 // Creates a dropdown of 15 years to control year
+                            });
+                        });
+                    });
+                </script>
+            </div>
+            <div class="zdk-row">
+                <div class="zdk-input-field zdk-col zdk-s12">
+                    <select data-materialize-init="true"  class="zdk material-select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label class="zdk">Materialize Select</label>
+                </div>
+
+                <div class="zdk-input-field zdk-col zdk-s12">
+                    <select data-materialize-init="true"  class="zdk material-select" multiple>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label class="zdk">Materialize Multiple Select</label>
+                </div>
+
+                <div class="zdk-input-field zdk-col zdk-s12">
+                    <select data-materialize-init="true"  class="zdk material-select">
+                        <optgroup label="team 1">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </optgroup>
+                        <optgroup label="team 2">
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                        </optgroup>
+                    </select>
+                    <label class="zdk">Optgroups</label>
+                </div>
+
+                <div class="zdk-input-field zdk-col zdk-s12 zdk-m6">
+                    <select data-materialize-init="true"  class="zdk zdk-icons material-select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" data-icon="../images/sample-1.jpg" class="zdk-circle">example 1</option>
+                        <option value="" data-icon="../images/office.jpg" class="zdk-circle">example 2</option>
+                        <option value="" data-icon="../images/yuna.jpg" class="zdk-circle">example 1</option>
+                    </select>
+                    <label class="zdk">Images in select</label>
+                </div>
+                <div class="zdk-input-field zdk-col zdk-s12 zdk-m6">
+                    <select data-materialize-init="true"  class="zdk zdk-icons material-select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="" data-icon="../images/sample-1.jpg" class="zdk-left zdk-circle">example 1</option>
+                        <option value="" data-icon="../images/office.jpg" class="zdk-left zdk-circle">example 2</option>
+                        <option value="" data-icon="../images/yuna.jpg" class="zdk-left zdk-circle">example 3</option>
+                    </select>
+                    <label class="zdk">Images in select</label>
+                </div>
+
+                <label class="zdk">Browser Select</label>
+                <select data-materialize-init="true"  class="zdk material-select zdk-browser-default">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </div>
+<!--            <div class="zdk-row">-->
+<!--                <div class="zdk-col zdk-s12">-->
+<!--                    <div class="zdk-row">-->
+<!--                        <div class="zdk-input-field zdk-col zdk-s12">-->
+<!--                            <i class="zdk-material-icons zdk-prefix">textsms</i>-->
+<!--                            <input data-materialize-init="true" class="zdk" type="text" id="autocomplete">-->
+<!--                            <label class="zdk" for="autocomplete">Autocomplete</label>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <script type="text/javascript">-->
+<!--                    require(['jquery', ''], function ($) {-->
+<!--                        $(document).ready(function ($) {-->
+<!--                            $('input#autocomplete').autocomplete({-->
+<!--                                data: {-->
+<!--                                    "Apple": null,-->
+<!--                                    "Microsoft": null,-->
+<!--                                    "Google": 'http://placehold.it/250x250'-->
+<!--                                }-->
+<!--                            });-->
+<!--                        });-->
+<!--                    })-->
+<!--                </script>-->
+<!--            </div>-->
         </div>
     </div>
 </div>

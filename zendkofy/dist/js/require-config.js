@@ -20,7 +20,7 @@ require.config({
         'jquery/ui/easing': 'lib/jquery/jquery.easing.1.3',
         'velocity': 'lib/jquery/velocity.min',
         'hammerjs': 'lib/hammer.min',
-        'nouislider': 'extras/noUiSlider/nouislider',
+        'nouislider': 'extras/noUiSlider/nouislider.min',
         'material': 'components/materialize-global',
         'material/init': 'components/global/init',
         'material/guid': 'components/global/guid',
@@ -28,7 +28,10 @@ require.config({
         'material/buttons': 'components/buttons',
         'material/dropdown': 'components/dropdown',
         'material/form/input-fields': 'components/form/input-fields',
+        'material/form/auto-complete': 'components/form/auto-complete',
         'material/form/material-select': 'components/form/material-select',
+        'picker': 'components/form/date_picker/picker',
+        'material/form/datepicker': 'components/form/date_picker/picker.date',
         'material/cards': 'components/cards',
         'material/chips': 'components/chips',
         'material/tabs': 'components/tabs',
@@ -73,7 +76,7 @@ require.config({
             'exports': 'Hammer'
         },
         'nouislider': {
-            'deps': ['css!extras/noUiSlider/nouislider_style'],
+            // 'deps': ['css!extras/noUiSlider/nouislider'],
             'exports': 'noUiSlider'
         }
     },
@@ -90,6 +93,7 @@ require([
     'material/buttons',
     'material/dropdown',
     'material/form/input-fields',
+    'material/form/auto-complete',
     'material/form/material-select',
     'material/cards',
     'material/chips',

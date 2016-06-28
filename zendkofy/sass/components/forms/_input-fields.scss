@@ -242,7 +242,7 @@ textarea.zdk-materialize-textarea {
   min-height: $input-height;
 }
 // Default textarea
-textarea {
+textarea.zdk {
   width: 100%;
   height: $input-height;
   background-color: transparent;
@@ -263,23 +263,4 @@ textarea {
   word-wrap: break-word;
   overflow-wrap: break-word; /* future version of deprecated 'word-wrap' */
   padding-top: 1.2rem; /* prevents text jump on Enter keypress */
-}
-
-
-/* Autocomplete */
-.zdk-autocomplete-content {
-  margin-top: -15px;
-  display: block;
-  opacity: 1;
-  position: static;
-
-  li {
-    .zdk-highlight { color: #444; }
-
-    img {
-      height: $dropdown-item-height - 10;
-      width: $dropdown-item-height - 10;
-      margin: 5px 15px;
-    }
-  }
 }

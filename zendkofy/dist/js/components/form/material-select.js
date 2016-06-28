@@ -2,13 +2,13 @@
     if (typeof define === "function" && define.amd) {
 
         // AMD. Register as an anonymous module.
-        define('material/form/material-select', ["jquery"], factory);
+        define('material/form/material-select', ["jquery", "material", "material/dropdown"], factory);
     } else {
 
         // Browser globals
-        factory(jQuery);
+        factory(jQuery, zMeterial);
     }
-}(function ($) {
+}(function ($, $m) {
     'use strict';
     var ZDK_STR = {
         ACTIVE: 'zdk-active',
@@ -16,6 +16,7 @@
         DISABLED: 'zdk-disabled',
         SELECTED: 'zdk-selected',
         OPTGROUP: 'zdk-optgroup',
+        OPTGROUP_OPTION: 'zdk-optgroup-option',
         SELECT_WRAPPER: 'zdk-select-wrapper',
         BROWSER_DEFAULT: 'zdk-browser-default',
         INITIALIZED: 'zdk-initialized',
@@ -23,6 +24,7 @@
         DROPDOWN_CONTENT: 'zdk-dropdown-content',
         MULTIPLE_SELECT_DROPDOWN: 'zdk-multiple-select-dropdown'
     };
+
     $.fn.extend({
         material_select: function (callback) {
             $(this).each(function () {
@@ -49,7 +51,7 @@
                     return;
                 }
 
-                var uniqueID = Materialize.guid();
+                var uniqueID = $m.guid();
                 $select.data('select-id', uniqueID);
                 var wrapper = $('<div class="' + ZDK_STR.SELECT_WRAPPER + '"></div>');
                 wrapper.addClass($select.attr('class'));
@@ -64,8 +66,9 @@
                 // account type and possible image icon.
                 var appendOptionWithIcon = function (select, option, type) {
                     // Add disabled attr if disabled
-                    var disabledClass = (option.is(':disabled')) ? 'disabled ' : '';
-                    var optgroupClass = (type === 'optgroup-option') ? 'optgroup-option ' : '';
+                    var disabled = (option.is(':disabled')) ? 'disabled ' : '',
+                        disabledClass = (option.is(':disabled')) ? ZDK_STR.DISABLED + ' ' : '',
+                        optgroupClass = (type === 'optgroup-option') ? ZDK_STR.OPTGROUP_OPTION + ' ' : '';
 
                     // add icons
                     var icon_url = option.data('icon');
@@ -76,18 +79,18 @@
 
                         // Check for multiple type.
                         if (type === 'multiple') {
-                            options.append($('<li class="' + disabledClass + '"><img src="' + icon_url + '"' + classString + '><span><input type="checkbox"' + disabledClass + '/><label></label>' + option.html() + '</span></li>'));
+                            options.append($('<li class="' + disabledClass + '"><img class="zdk" src="' + icon_url + '"' + classString + '><span class="zdk"><input class="zdk" type="checkbox"' + disabled + '/><label class="zdk"></label>' + option.html() + '</span></li>'));
                         } else {
-                            options.append($('<li class="' + disabledClass + optgroupClass + '"><img src="' + icon_url + '"' + classString + '><span>' + option.html() + '</span></li>'));
+                            options.append($('<li class="' + disabledClass + optgroupClass + '"><img class="zdk" src="' + icon_url + '"' + classString + '><span class="zdk">' + option.html() + '</span></li>'));
                         }
                         return true;
                     }
 
                     // Check for multiple type.
                     if (type === 'multiple') {
-                        options.append($('<li class="' + disabledClass + '"><span><input type="checkbox"' + disabledClass + '/><label></label>' + option.html() + '</span></li>'));
+                        options.append($('<li class="' + disabledClass + '"><span class="zdk"><input class="zdk" type="checkbox"' + disabled + '/><label class="zdk"></label>' + option.html() + '</span></li>'));
                     } else {
-                        options.append($('<li class="' + disabledClass + optgroupClass + '"><span>' + option.html() + '</span></li>'));
+                        options.append($('<li class="' + disabledClass + optgroupClass + '"><span class="zdk">' + option.html() + '</span></li>'));
                     }
                 };
 
@@ -105,7 +108,7 @@
                         } else if ($(this).is('optgroup')) {
                             // Optgroup.
                             var selectOptions = $(this).children('option');
-                            options.append($('<li class="' + ZDK_STR.OPTGROUP + '"><span>' + $(this).attr('label') + '</span></li>'));
+                            options.append($('<li class="' + ZDK_STR.OPTGROUP + '"><span class="zdk">' + $(this).attr('label') + '</span></li>'));
 
                             selectOptions.each(function () {
                                 appendOptionWithIcon($select, $(this), 'optgroup-option');
@@ -146,7 +149,7 @@
                 // Wrap Elements
                 $select.wrap(wrapper);
                 // Add Select Display Element
-                var dropdownIcon = $('<span class="' + ZDK_STR.CARET + '">&#9660;</span>');
+                var dropdownIcon = $('<span class="' + ZDK_STR.CARET + ' zdk">&#9660;</span>');
                 if ($select.is(':disabled'))
                     dropdownIcon.addClass(ZDK_STR.DISABLED);
 
@@ -344,5 +347,9 @@
                 select.siblings('input.' + ZDK_STR.SELECT_DROPDOWN).val(value);
             }
         }
+    });
+
+    $(document).ready(function ($) {
+        $('select[data-materialize-init=true].material-select').not('.disabled').material_select();
     });
 }));
