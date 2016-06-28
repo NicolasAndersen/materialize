@@ -235,7 +235,12 @@ textarea.zdk-materialize-textarea {
 
 
 /* Textarea */
-
+@mixin materialize-textarea {
+  overflow-y: hidden; /* prevents scroll bar flash */
+  padding: 1.6rem 0; /* prevents text jump on Enter keypress */
+  resize: none;
+  min-height: $input-height;
+}
 // Default textarea
 textarea {
   width: 100%;
@@ -243,10 +248,11 @@ textarea {
   background-color: transparent;
 
   &.zdk-materialize-textarea {
-    overflow-y: hidden; /* prevents scroll bar flash */
-    padding: 1.6rem 0; /* prevents text jump on Enter keypress */
-    resize: none;
-    min-height: $input-height;
+    @include materialize-textarea;
+  }
+
+  &.zdk.zdk-materialize-textarea {
+    @include materialize-textarea;
   }
 }
 

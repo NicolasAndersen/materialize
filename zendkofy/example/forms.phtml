@@ -43,30 +43,133 @@
             <div class="zdk-row">
                 <form class="zdk-col zdk-s12" method="post" enctype="multipart/form-data" action="forms.phtml">
                     <p class="zdk">
-                        <input type="checkbox" id="test5" class="zdk" />
+                        <input data-materialize-init="true" type="checkbox" id="test5" class="zdk" />
                         <label for="test5">Red</label>
                     </p>
                     <p class="zdk">
-                        <input type="checkbox" id="test6" class="zdk" checked="checked" />
+                        <input data-materialize-init="true" type="checkbox" id="test6" class="zdk" checked="checked" />
                         <label for="test6">Yellow</label>
                     </p>
                     <p class="zdk">
-                        <input type="checkbox" class="zdk-filled-in zdk" id="filled-in-box" checked="checked" />
+                        <input data-materialize-init="true" type="checkbox" class="zdk-filled-in zdk" id="filled-in-box" checked="checked" />
                         <label for="filled-in-box">Filled in</label>
                     </p>
                     <p class="zdk">
-                        <input type="checkbox" class="zdk" id="indeterminate-checkbox" />
+                        <input data-materialize-init="true" type="checkbox" class="zdk" id="indeterminate-checkbox" />
                         <label for="indeterminate-checkbox">Indeterminate Style</label>
                     </p>
                     <p class="zdk">
-                        <input type="checkbox" class="zdk" id="test7" checked="checked" disabled="disabled" />
+                        <input data-materialize-init="true" type="checkbox" class="zdk" id="test7" checked="checked" disabled="disabled" />
                         <label for="test7">Green</label>
                     </p>
                     <p class="zdk">
-                        <input type="checkbox" class="zdk" id="test8" disabled="disabled" />
+                        <input data-materialize-init="true" type="checkbox" class="zdk" id="test8" disabled="disabled" />
                         <label for="test8">Brown</label>
                     </p>
                 </form>
+                <form class="zdk-col zdk-s12" method="post" enctype="multipart/form-data" action="forms.phtml">
+                    <div class="zdk-row">
+                        <div class="zdk-input-field zdk-col zdk-s12">
+                            <textarea  data-materialize-init="true" id="textarea1" class="zdk-materialize-textarea zdk"></textarea>
+                            <label for="textarea1">Textarea</label>
+                        </div>
+                    </div>
+                </form>
+                <form class="zdk-col zdk-s12" method="post" enctype="multipart/form-data" action="forms.phtml">
+                    <div class="zdk-row">
+                        <p class="zdk">
+                            <input class="zdk" name="group1" type="radio" id="test1" />
+                            <label for="test1">Red</label>
+                        </p>
+                        <p class="zdk">
+                            <input class="zdk" name="group1" type="radio" id="test2" />
+                            <label for="test2">Yellow</label>
+                        </p>
+                        <p class="zdk">
+                            <input class="with-gap zdk" name="group1" type="radio" id="test3"  />
+                            <label for="test3">Green</label>
+                        </p>
+                        <p class="zdk">
+                            <input class="zdk" name="group1" type="radio" id="test4" disabled="disabled" />
+                            <label for="test4">Brown</label>
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <div class="zdk-row">
+                <!-- Switch -->
+                <div class="zdk-switch">
+                    <label>
+                        Off
+                        <input class="zdk" type="checkbox">
+                        <span class="zdk-lever zdk"></span>
+                        On
+                    </label>
+                </div>
+            </div>
+            <div class="zdk-row">
+                <!-- Disabled Switch -->
+                <div class="zdk-switch">
+                    <label>
+                        Off
+                        <input class="zdk" disabled type="checkbox">
+                        <span class="zdk-lever zdk"></span>
+                        On
+                    </label>
+                </div>
+            </div>
+            <div class="zdk-row">
+                <form class="zdk-col zdk-s12" method="post" enctype="multipart/form-data" action="forms.phtml">
+                    <div class="zdk-file-field zdk-input-field">
+                        <div class="zdk-btn">
+                            <span class="zdk">File</span>
+                            <input type="file" class="zdk">
+                        </div>
+                        <div class="zdk-file-path-wrapper">
+                            <input class="zdk-file-path zdk-validate zdk" type="text"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="zdk-row">
+                <form class="zdk-col zdk-s12" method="post" enctype="multipart/form-data" action="forms.phtml">
+                    <div class="zdk-file-field zdk-input-field">
+                        <div class="zdk-btn">
+                            <span class="zdk">File</span>
+                            <input type="file" class="zdk" multiple>
+                        </div>
+                        <div class="zdk-file-path-wrapper">
+                            <input class="zdk-file-path zdk-validate zdk" type="text"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="zdk-row">
+                <form class="zdk-col zdk-s12" method="post" enctype="multipart/form-data" action="forms.phtml">
+                    <p data-materialize-init="true" class="zdk-range-field">
+                        <input data-materialize-init="true" class="zdk" type="range" id="test5" min="0" max="100" />
+                    </p>
+                </form>
+            </div>
+            <div class="zdk-row">
+                <div class="zdk-col zdk-s6" id="test-slider" class="test-slider"></div>
+                <script type="text/javascript">
+                    require(['nouislider'], function (noUiSlider ) {
+                        var slider = document.getElementById('test-slider');
+                        noUiSlider.create(slider, {
+                            start: [20, 80],
+                            connect: true,
+                            step: 1,
+                            range: {
+                                'min': 0,
+                                'max': 100
+                            },
+                            format: wNumb({
+                                decimals: 0
+                            })
+                        });
+                    });
+                </script>
             </div>
         </div>
     </div>

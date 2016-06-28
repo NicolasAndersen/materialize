@@ -15,7 +15,7 @@
     };
 
     $(document).ready(function () {
-        var radio_checkbox = 'input[type=radio], input[type=checkbox]';
+        var radio_checkbox = 'input[data-materialize-init=true][type=radio], input[data-materialize-init=true][type=checkbox]';
         $(document).on('keyup.radio', radio_checkbox, function (e) {
             // TAB, check if tabbing to radio or checkbox.
             if (e.which === 9) {

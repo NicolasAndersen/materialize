@@ -2546,8 +2546,8 @@ nav ul a span.zdk-badge {
 .zdk-right {
   float: right !important; }
 
-.zdk-no-select, input[type=range],
-input[type=range] + .thumb {
+.zdk-no-select, input[type=range].zdk,
+input[type=range].zdk + .zdk-thumb {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -4527,6 +4527,13 @@ textarea {
     /* prevents text jump on Enter keypress */
     resize: none;
     min-height: 3rem; }
+  textarea.zdk.zdk-materialize-textarea {
+    overflow-y: hidden;
+    /* prevents scroll bar flash */
+    padding: 1.6rem 0;
+    /* prevents text jump on Enter keypress */
+    resize: none;
+    min-height: 3rem; }
 
 .zdk-hiddendiv {
   display: none;
@@ -4812,27 +4819,27 @@ form p.zdk:last-child {
 
 /* Switch
    ========================================================================== */
-.switch,
-.switch * {
+.zdk-switch,
+.zdk-switch * {
   -webkit-user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
   -ms-user-select: none; }
 
-.switch label {
+.zdk-switch label {
   cursor: pointer; }
 
-.switch label input[type=checkbox] {
+.zdk-switch label input[type=checkbox] {
   opacity: 0;
   width: 0;
   height: 0; }
-  .switch label input[type=checkbox]:checked + .lever {
+  .zdk-switch label input[type=checkbox]:checked + .zdk-lever {
     background-color: #84c7c1; }
-    .switch label input[type=checkbox]:checked + .lever:after {
+    .zdk-switch label input[type=checkbox]:checked + .zdk-lever:after {
       background-color: #26a69a;
       left: 24px; }
 
-.switch label .lever {
+.zdk-switch label .zdk-lever {
   content: "";
   display: inline-block;
   position: relative;
@@ -4844,7 +4851,7 @@ form p.zdk:last-child {
   transition: background 0.3s ease;
   vertical-align: middle;
   margin: 0 16px; }
-  .switch label .lever:after {
+  .zdk-switch label .zdk-lever:after {
     content: "";
     position: absolute;
     display: inline-block;
@@ -4857,19 +4864,19 @@ form p.zdk:last-child {
     top: -3px;
     transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease; }
 
-input[type=checkbox]:checked:not(:disabled) ~ .lever:active::after,
-input[type=checkbox]:checked:not(:disabled).zdk-tabbed:focus ~ .lever::after {
+input[type=checkbox]:checked:not(:disabled) ~ .zdk-lever:active::after,
+input[type=checkbox]:checked:not(:disabled).zdk-tabbed:focus ~ .zdk-lever::after {
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(38, 166, 154, 0.1); }
 
-input[type=checkbox]:not(:disabled) ~ .lever:active:after,
-input[type=checkbox]:not(:disabled).zdk-tabbed:focus ~ .lever::after {
+input[type=checkbox]:not(:disabled) ~ .zdk-lever:active:after,
+input[type=checkbox]:not(:disabled).zdk-tabbed:focus ~ .zdk-lever::after {
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.08); }
 
-.switch input[type=checkbox][disabled] + .lever {
+.zdk-switch input[type=checkbox][disabled] + .zdk-lever {
   cursor: default; }
 
-.switch label input[type=checkbox][disabled] + .lever:after,
-.switch label input[type=checkbox][disabled]:checked + .lever:after {
+.zdk-switch label input[type=checkbox][disabled] + .zdk-lever:after,
+.zdk-switch label input[type=checkbox][disabled]:checked + .zdk-lever:after {
   background-color: #BDBDBD; }
 
 /* Select Field
@@ -4997,14 +5004,14 @@ select:disabled {
 
 /* Range
    ========================================================================== */
-.range-field {
+.zdk-range-field {
   position: relative; }
 
-input[type=range],
-input[type=range] + .thumb {
+input[type=range].zdk,
+input[type=range].zdk + .zdk-thumb {
   cursor: pointer; }
 
-input[type=range] {
+input[type=range].zdk {
   position: relative;
   background-color: transparent;
   border: none;
@@ -5012,10 +5019,10 @@ input[type=range] {
   width: 100%;
   margin: 15px 0;
   padding: 0; }
-  input[type=range]:focus {
+  input[type=range].zdk:focus {
     outline: none; }
 
-input[type=range] + .thumb {
+input[type=range].zdk + .zdk-thumb {
   position: absolute;
   border: none;
   height: 0;
@@ -5026,30 +5033,30 @@ input[type=range] + .thumb {
   margin-left: -6px;
   transform-origin: 50% 50%;
   transform: rotate(-45deg); }
-  input[type=range] + .thumb .value {
+  input[type=range].zdk + .zdk-thumb .zdk-value {
     display: block;
     width: 30px;
     text-align: center;
     color: #26a69a;
     font-size: 0;
     transform: rotate(45deg); }
-  input[type=range] + .thumb.zdk-active {
+  input[type=range].zdk + .zdk-thumb.zdk-active {
     border-radius: 50% 50% 50% 0; }
-    input[type=range] + .thumb.zdk-active .value {
+    input[type=range].zdk + .zdk-thumb.zdk-active .zdk-value {
       color: #fff;
       margin-left: -1px;
       margin-top: 8px;
       font-size: 10px; }
 
-input[type=range] {
+input[type=range].zdk {
   -webkit-appearance: none; }
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type=range].zdk::-webkit-slider-runnable-track {
   height: 3px;
   background: #c2c0c2;
   border: none; }
 
-input[type=range]::-webkit-slider-thumb {
+input[type=range].zdk::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: none;
   height: 14px;
@@ -5060,20 +5067,20 @@ input[type=range]::-webkit-slider-thumb {
   margin: -5px 0 0 0;
   transition: .3s; }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
+input[type=range].zdk:focus::-webkit-slider-runnable-track {
   background: #ccc; }
 
-input[type=range] {
+input[type=range].zdk {
   /* fix for FF unable to apply focus style bug  */
   border: 1px solid white;
   /*required for proper track sizing in FF*/ }
 
-input[type=range]::-moz-range-track {
+input[type=range].zdk::-moz-range-track {
   height: 3px;
   background: #ddd;
   border: none; }
 
-input[type=range]::-moz-range-thumb {
+input[type=range].zdk::-moz-range-thumb {
   border: none;
   height: 14px;
   width: 14px;
@@ -5081,14 +5088,14 @@ input[type=range]::-moz-range-thumb {
   background: #26a69a;
   margin-top: -5px; }
 
-input[type=range]:-moz-focusring {
+input[type=range].zdk:-moz-focusring {
   outline: 1px solid #fff;
   outline-offset: -1px; }
 
-input[type=range]:focus::-moz-range-track {
+input[type=range].zdk:focus::-moz-range-track {
   background: #ccc; }
 
-input[type=range]::-ms-track {
+input[type=range].zdk::-ms-track {
   height: 3px;
   background: transparent;
   border-color: transparent;
@@ -5096,23 +5103,23 @@ input[type=range]::-ms-track {
   /*remove default tick marks*/
   color: transparent; }
 
-input[type=range]::-ms-fill-lower {
+input[type=range].zdk::-ms-fill-lower {
   background: #777; }
 
-input[type=range]::-ms-fill-upper {
+input[type=range].zdk::-ms-fill-upper {
   background: #ddd; }
 
-input[type=range]::-ms-thumb {
+input[type=range].zdk::-ms-thumb {
   border: none;
   height: 14px;
   width: 14px;
   border-radius: 50%;
   background: #26a69a; }
 
-input[type=range]:focus::-ms-fill-lower {
+input[type=range].zdk:focus::-ms-fill-lower {
   background: #888; }
 
-input[type=range]:focus::-ms-fill-upper {
+input[type=range].zdk:focus::-ms-fill-upper {
   background: #ccc; }
 
 /***************

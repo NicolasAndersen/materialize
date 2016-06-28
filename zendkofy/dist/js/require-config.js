@@ -5,6 +5,7 @@ require.config({
             'material/waves': 'components/waves-initial',
             'classnames': 'lib/classnames',
             'jquery/hammer': 'lib/jquery/jquery.hammer',
+            'css': 'lib/require-css/css'
 
         },
         'components/waves-initial': {
@@ -19,6 +20,7 @@ require.config({
         'jquery/ui/easing': 'lib/jquery/jquery.easing.1.3',
         'velocity': 'lib/jquery/velocity.min',
         'hammerjs': 'lib/hammer.min',
+        'nouislider': 'extras/noUiSlider/nouislider',
         'material': 'components/materialize-global',
         'material/init': 'components/global/init',
         'material/guid': 'components/global/guid',
@@ -27,7 +29,6 @@ require.config({
         'material/dropdown': 'components/dropdown',
         'material/form/input-fields': 'components/form/input-fields',
         'material/form/material-select': 'components/form/material-select',
-        'material/form/checkboxes': 'components/form/checkboxes',
         'material/cards': 'components/cards',
         'material/chips': 'components/chips',
         'material/tabs': 'components/tabs',
@@ -70,6 +71,10 @@ require.config({
         },
         'hammerjs': {
             'exports': 'Hammer'
+        },
+        'nouislider': {
+            'deps': ['css!extras/noUiSlider/nouislider_style'],
+            'exports': 'noUiSlider'
         }
     },
     deps: [
@@ -86,7 +91,6 @@ require([
     'material/dropdown',
     'material/form/input-fields',
     'material/form/material-select',
-    'material/form/checkboxes',
     'material/cards',
     'material/chips',
     'material/tabs',

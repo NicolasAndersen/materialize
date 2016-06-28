@@ -223,23 +223,23 @@
         var left;
 
         $(range_type).each(function () {
-            var thumb = $('<span class="thumb"><span class="value"></span></span>');
+            var thumb = $('<span class="thumb"><span class="zdk-value"></span></span>');
             $(this).after(thumb);
         });
 
         var range_wrapper = '.range-field';
         $(document).on('change', range_type, function (e) {
-            var thumb = $(this).siblings('.thumb');
+            var thumb = $(this).siblings('.zdk-thumb');
             thumb.find('.value').html($(this).val());
         });
 
         $(document).on('input mousedown touchstart', range_type, function (e) {
-            var thumb = $(this).siblings('.thumb');
+            var thumb = $(this).siblings('.zdk-thumb');
             var width = $(this).outerWidth();
 
             // If thumb indicator does not exist yet, create it
             if (thumb.length <= 0) {
-                thumb = $('<span class="thumb"><span class="value"></span></span>');
+                thumb = $('<span class="thumb"><span class="zdk-value"></span></span>');
                 $(this).after(thumb);
             }
 
@@ -281,7 +281,7 @@
         });
 
         $(document).on('mousemove touchmove', range_wrapper, function (e) {
-            var thumb = $(this).children('.thumb');
+            var thumb = $(this).children('.zdk-thumb');
             var left;
             if (range_mousedown) {
                 if (!thumb.hasClass(ZDK_STR.ACTIVE)) {
@@ -312,7 +312,7 @@
         $(document).on('mouseout touchleave', range_wrapper, function () {
             if (!range_mousedown) {
 
-                var thumb = $(this).children('.thumb');
+                var thumb = $(this).children('.zdk-thumb');
 
                 if (thumb.hasClass(ZDK_STR.ACTIVE)) {
                     thumb.velocity({height: '0', width: '0', top: '10px', marginLeft: '-6px'}, {duration: 100});
