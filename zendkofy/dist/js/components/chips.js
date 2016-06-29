@@ -23,7 +23,7 @@
         CHIP: 'zdk-chip',
         SELECTED: 'zdk-selected',
         FOCUS: 'zdk-focus',
-        MATERIALIZE_ICON: 'zdk-material-icons',
+        MATERIALIZE_ICON: 'material-icons',
         CLOSE: 'zdk-close'
     };
 
@@ -46,7 +46,7 @@
             CHIPS: '.zdk-chips',
             CHIP: '.zdk-chip',
             INPUT: 'input',
-            DELETE: '.zdk-material-icons',
+            DELETE: '.material-icons',
             SELECTED_CHIP: '.zdk-selected'
         };
 

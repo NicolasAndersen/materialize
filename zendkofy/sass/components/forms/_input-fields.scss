@@ -212,7 +212,7 @@ textarea.zdk-materialize-textarea {
 
     & + label i,
     & ~ .mdi-navigation-close,
-    & ~ .zdk-material-icons {
+    & ~ .material-icons {
       color: #444;
     }
   }
@@ -222,7 +222,7 @@ textarea.zdk-materialize-textarea {
   }
 
   & ~ .mdi-navigation-close,
-  & ~ .zdk-material-icons {
+  & ~ .material-icons {
     position: absolute;
     top: 0;
     right: 1rem;

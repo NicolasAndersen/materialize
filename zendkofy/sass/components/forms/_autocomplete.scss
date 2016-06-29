@@ -1,5 +1,6 @@
 /* Autocomplete */
 .zdk-autocomplete-content {
+  @include mix-wrap-boxsizing-border-box;
   margin-top: -15px;
   display: block;
   opacity: 1;

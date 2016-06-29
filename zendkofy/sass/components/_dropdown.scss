@@ -1,4 +1,5 @@
 .zdk-dropdown-content {
+  @include mix-wrap-boxsizing-border-box;
   @extend .zdk-z-depth-1;
   background-color: $dropdown-bg-color;
   margin: 0;

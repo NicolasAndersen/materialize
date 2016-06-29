@@ -1,4 +1,5 @@
 .zdk-slider {
+  @include mix-wrap-boxsizing-border-box;
   position: relative;
   height: 400px;
   width: 100%;

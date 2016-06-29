@@ -28,6 +28,7 @@
 
 
 .zdk-preloader-wrapper {
+  @include mix-wrap-boxsizing-border-box;
   display: inline-block;
   position: relative;
   width: 48px;

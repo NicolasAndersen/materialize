@@ -2,6 +2,7 @@
     Nav List
 ***************/
 .zdk-table-of-contents {
+  @include mix-wrap-boxsizing-border-box;
   &.zdk-fixed {
       position: fixed;
     }

@@ -1,4 +1,5 @@
 .zdk-tabs {
+  @include mix-wrap-boxsizing-border-box;
   display: flex;
   position: relative;
   overflow-x: auto;

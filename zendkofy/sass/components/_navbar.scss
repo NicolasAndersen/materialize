@@ -1,4 +1,5 @@
 .zdk-nav-container {
+  @include mix-wrap-boxsizing-border-box;
   display: block;
   color: $navbar-font-color;
   @extend .zdk-z-depth-1;
@@ -13,7 +14,7 @@
 
   i,
   [class^="mdi-"], [class*="mdi-"],
-  i.zdk-material-icons {
+  i.material-icons {
     display: block;
     font-size: 2rem;
     height: $navbar-height-mobile;
@@ -82,7 +83,7 @@
 
     i,
     [class^="mdi-"], [class*="mdi-"],
-    i.zdk-material-icons {
+    i.material-icons {
       float: left;
       margin-right: 15px;
     }

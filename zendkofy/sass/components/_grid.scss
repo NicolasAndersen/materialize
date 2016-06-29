@@ -1,8 +1,10 @@
 .zdk-container {
+  @include mix-wrap-boxsizing-border-box;
   margin: 0 auto;
   max-width: 1280px;
   width: 90%;
 }
+
 @media #{$medium-and-up} {
   .zdk-container {
     width: 85%;

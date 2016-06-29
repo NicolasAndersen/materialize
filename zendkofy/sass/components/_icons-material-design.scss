@@ -1,5 +1,5 @@
 /* This is needed for some mobile phones to display the Google Icon font properly */
-.zdk-material-icons {
+.material-icons {
   text-rendering: optimizeLegibility;
   font-feature-settings: 'liga';
 }
@@ -14,7 +14,7 @@
   format('woff2');
 }
 
-.zdk-material-icons {
+.material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;

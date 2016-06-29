@@ -1,4 +1,5 @@
 .zdk-modal {
+  @include mix-wrap-boxsizing-border-box;
   @extend .zdk-z-depth-4;
 
   display: none;

@@ -1,4 +1,5 @@
 #zdk-toast-container {
+  @include mix-wrap-boxsizing-border-box;
   display:block;
   position: fixed;
   z-index: 10000;
@@ -20,6 +21,7 @@
 }
 
 .zdk-toast {
+  @include mix-wrap-boxsizing-border-box;
   @extend .zdk-z-depth-1;
   border-radius: 2px;
   top: 0;

@@ -1,4 +1,5 @@
 .zdk-side-nav {
+  @include mix-wrap-boxsizing-border-box;
   position: fixed;
   width: 240px;
   left: 0;

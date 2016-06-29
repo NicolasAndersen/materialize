@@ -3,8 +3,16 @@
 html {
  box-sizing: border-box;
 }
-*, *:before, *:after {
- box-sizing: inherit;
+//*, *:before, *:after {
+// box-sizing: inherit;
+//}
+
+.zdk-boxsizing-border-box {
+  @include mix-wrap-boxsizing-border-box;
+}
+
+.zdk {
+  @include mix-wrap-boxsizing-border-box;
 }
 
 body {
