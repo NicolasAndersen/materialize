@@ -211,8 +211,12 @@ button.zdk-btn-floating {
   display: block;
 }
 
-button, a  {
-  &.zdk.zdk-btn {
+button, a, span, div  {
+  &.zdk-btn {
     @extend .zdk-btn;
+  }
+
+  &.zdk-btn-flat {
+    @extend .zdk-btn-flat;
   }
 }

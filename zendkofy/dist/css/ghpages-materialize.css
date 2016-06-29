@@ -2060,10 +2060,10 @@ a.zdk {
 .zdk-z-depth-0 {
   box-shadow: none !important; }
 
-.zdk-z-depth-1, .zdk-nav-container, .zdk-card-panel, .zdk-card, .zdk-toast, .zdk-btn, .zdk-btn-large, button.zdk.zdk-btn, a.zdk.zdk-btn, .zdk-btn-floating, .zdk-dropdown-content, .zdk-collapsible, .zdk-side-nav {
+.zdk-z-depth-1, .zdk-nav-container, .zdk-card-panel, .zdk-card, .zdk-toast, .zdk-btn, .zdk-btn-large, button.zdk-btn, a.zdk-btn, span.zdk-btn, div.zdk-btn, .zdk-btn-floating, .zdk-dropdown-content, .zdk-collapsible, .zdk-side-nav {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
-.zdk-z-depth-1-half, .zdk-btn:hover, .zdk-btn-large:hover, button.zdk.zdk-btn:hover, a.zdk.zdk-btn:hover, .zdk-btn-floating:hover {
+.zdk-z-depth-1-half, .zdk-btn:hover, .zdk-btn-large:hover, .zdk-btn-floating:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
 .zdk-z-depth-2 {
@@ -3466,7 +3466,7 @@ small.zdk {
   display: flex;
   align-items: center;
   justify-content: space-between; }
-  .zdk-toast .zdk-btn, .zdk-toast .zdk-btn-large, .zdk-toast button.zdk.zdk-btn, .zdk-toast a.zdk.zdk-btn, .zdk-toast .zdk-btn-flat {
+  .zdk-toast .zdk-btn, .zdk-toast .zdk-btn-large, .zdk-toast .zdk-btn-flat {
     margin: 0;
     margin-left: 3rem; }
   .zdk-toast.zdk-rounded {
@@ -3562,8 +3562,12 @@ small.zdk {
   transform-origin: 50% 10%;
   will-change: transform, opacity; }
 
-.zdk-btn, .zdk-btn-large, button.zdk.zdk-btn, a.zdk.zdk-btn,
-.zdk-btn-flat {
+.zdk-btn, .zdk-btn-large, button.zdk-btn, a.zdk-btn, span.zdk-btn, div.zdk-btn,
+.zdk-btn-flat,
+button.zdk-btn-flat,
+a.zdk-btn-flat,
+span.zdk-btn-flat,
+div.zdk-btn-flat {
   box-sizing: border-box;
   border: none;
   border-radius: 2px;
@@ -3575,43 +3579,35 @@ small.zdk {
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent; }
-  .zdk-btn::before, .zdk-btn-large::before, button.zdk.zdk-btn::before, a.zdk.zdk-btn::before, .zdk-btn::after, .zdk-btn-large::after, button.zdk.zdk-btn::after, a.zdk.zdk-btn::after,
+  .zdk-btn::before, .zdk-btn-large::before, .zdk-btn::after, .zdk-btn-large::after,
   .zdk-btn-flat::before,
   .zdk-btn-flat::after {
     box-sizing: border-box; }
 
-.zdk-btn.zdk-disabled, .zdk-disabled.zdk-btn-large, button.zdk-disabled.zdk.zdk-btn, a.zdk-disabled.zdk.zdk-btn,
+.zdk-btn.zdk-disabled, .zdk-disabled.zdk-btn-large,
 .zdk-btn-floating.zdk-disabled,
 .zdk-btn-large.zdk-disabled,
 .zdk-btn:disabled,
 .zdk-btn-large:disabled,
-button.zdk.zdk-btn:disabled,
-a.zdk.zdk-btn:disabled,
 .zdk-btn-large:disabled,
 .zdk-btn-floating:disabled,
 .zdk-btn[disabled],
 [disabled].zdk-btn-large,
-button[disabled].zdk.zdk-btn,
-a[disabled].zdk.zdk-btn,
 .zdk-btn-large[disabled],
 .zdk-btn-floating[disabled] {
   background-color: #DFDFDF !important;
   box-shadow: none;
   color: #9F9F9F !important;
   cursor: default; }
-  .zdk-btn.zdk-disabled *, .zdk-disabled.zdk-btn-large *, button.zdk-disabled.zdk.zdk-btn *, a.zdk-disabled.zdk.zdk-btn *,
+  .zdk-btn.zdk-disabled *, .zdk-disabled.zdk-btn-large *,
   .zdk-btn-floating.zdk-disabled *,
   .zdk-btn-large.zdk-disabled *,
   .zdk-btn:disabled *,
   .zdk-btn-large:disabled *,
-  button.zdk.zdk-btn:disabled *,
-  a.zdk.zdk-btn:disabled *,
   .zdk-btn-large:disabled *,
   .zdk-btn-floating:disabled *,
   .zdk-btn[disabled] *,
   [disabled].zdk-btn-large *,
-  button[disabled].zdk.zdk-btn *,
-  a[disabled].zdk.zdk-btn *,
   .zdk-btn-large[disabled] *,
   .zdk-btn-floating[disabled] * {
     pointer-events: none; }
@@ -3629,14 +3625,14 @@ a[disabled].zdk.zdk-btn,
     background-color: #DFDFDF !important;
     color: #9F9F9F !important; }
 
-.zdk-btn i, .zdk-btn-large i, button.zdk.zdk-btn i, a.zdk.zdk-btn i,
+.zdk-btn i, .zdk-btn-large i,
 .zdk-btn-floating i,
 .zdk-btn-large i,
 .zdk-btn-flat i {
   font-size: 1.3rem;
   line-height: inherit; }
 
-.zdk-btn, .zdk-btn-large, button.zdk.zdk-btn, a.zdk.zdk-btn {
+.zdk-btn, .zdk-btn-large, button.zdk-btn, a.zdk-btn, span.zdk-btn, div.zdk-btn {
   text-decoration: none;
   color: #fff;
   background-color: #26a69a;
@@ -3644,7 +3640,7 @@ a[disabled].zdk.zdk-btn,
   letter-spacing: .5px;
   transition: .2s ease-out;
   cursor: pointer; }
-  .zdk-btn:hover, .zdk-btn-large:hover, button.zdk.zdk-btn:hover, a.zdk.zdk-btn:hover {
+  .zdk-btn:hover, .zdk-btn-large:hover {
     background-color: #2bbbad; }
 
 .zdk-btn-floating {
@@ -3718,7 +3714,7 @@ button.zdk-btn-floating {
     .zdk-fixed-action-btn ul a.zdk-btn-floating {
       opacity: 0; }
 
-.zdk-btn-flat {
+.zdk-btn-flat, button.zdk-btn-flat, a.zdk-btn-flat, span.zdk-btn-flat, div.zdk-btn-flat {
   box-shadow: none;
   background-color: transparent;
   color: #343434;
@@ -4971,7 +4967,7 @@ select.zdk:disabled {
     padding-left: 10px; }
   .zdk-file-field input.zdk-file-path {
     width: 100%; }
-  .zdk-file-field .zdk-btn, .zdk-file-field .zdk-btn-large, .zdk-file-field button.zdk.zdk-btn, .zdk-file-field a.zdk.zdk-btn {
+  .zdk-file-field .zdk-btn, .zdk-file-field .zdk-btn-large {
     float: left;
     height: 3rem;
     line-height: 3rem; }

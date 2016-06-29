@@ -18,7 +18,8 @@ require.config({
         'jquery/ui': 'lib/jquery/jquery-ui',
         'jquery/ui/widget': 'lib/jquery/jquery.widget',
         'jquery/ui/easing': 'lib/jquery/jquery.easing.1.3',
-        'velocity': 'lib/jquery/velocity.min',
+        'velocity': 'lib/velocity/velocity.min',
+        'velocity-ui': 'lib/velocity/velocity.ui.min',
         'hammerjs': 'lib/hammer.min',
         'nouislider': 'extras/noUiSlider/nouislider.min',
         'material': 'components/materialize-global',
@@ -60,6 +61,9 @@ require.config({
     },
     shim: {
         'velocity': ['jquery'],
+        'velocity-ui': {
+            deps: [ 'velocity' ]
+        },
         'jquery/ui': ['jquery'],
         'jquery/ui/easing': ['jquery'],
         'material/waves': {
